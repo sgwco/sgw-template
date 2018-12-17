@@ -6,7 +6,7 @@ import sagas from '../sagas';
 
 const sagaMiddleware = createSagaMiddleware();
 
-export default (initialState, options) => {
+export default initialState => {
   let store = null;
 
   if (process.env.NODE_ENV === 'development') {

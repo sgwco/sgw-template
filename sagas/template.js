@@ -11,7 +11,7 @@ export function* getTemplates({ page = 0 }) {
     const templates = yield call(getApi, `http://localhost:3000/api/template?page=${page}`);
     yield put({ type: GET_TEMPLATES_SUCCESS, listTemplates: templates.data });
   } catch (error) {
-    console.log(error);
+    // Code
   }
 }
 

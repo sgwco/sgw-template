@@ -1,9 +1,11 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { GET_TEMPLATES } from '../../reducers/template';
+import { GET_TEMPLATES, SELECT_TEMPLATE_CATEGORY } from '../../reducers/template';
+import { WEB_CATEGORY } from '../../commons/enum';
 
 function mapStateToProps(state) {
   return {
+    selectedTemplateCategory: state.template.selectedTemplateCategory,
     listTemplates: state.template.listTemplates,
   };
 }
@@ -11,6 +13,7 @@ function mapStateToProps(state) {
 function mapDispatchToProps(dispatch) {
   return {
     getTemplates: () => dispatch({ type: GET_TEMPLATES }),
+    selectTemplateCategory: cat => dispatch({ type: SELECT_TEMPLATE_CATEGORY, category: cat }),
   };
 }
 
@@ -20,7 +23,23 @@ class Project extends React.Component {
     // this.props.getTemplates();
   }
 
+  renderCategoryItem = item => {
+    const { selectedTemplateCategory, selectTemplateCategory } = this.props;
+    return (
+      <a
+        className={`filter btn btn-common btn-effect ${selectedTemplateCategory === item &&
+          'active'}`}
+        data-filter={`.${item.toLowerCase()}`}
+        onClick={() => selectTemplateCategory(item)}
+      >
+        {WEB_CATEGORY[item]}
+      </a>
+    );
+  };
+
   render() {
+    const { selectedTemplateCategory, selectTemplateCategory } = this.props;
+    const templateCategories = Object.keys(WEB_CATEGORY);
     return (
       <section id="portfolios" className="section">
         <div className="container">
@@ -34,18 +53,15 @@ class Project extends React.Component {
           <div className="row">
             <div className="col-md-12">
               <div className="controls text-center">
-                <a className="filter active btn btn-common btn-effect" data-filter="all">
+                <a
+                  className={`filter btn btn-common btn-effect ${selectedTemplateCategory === '' &&
+                    'active'}`}
+                  data-filter="all"
+                  onClick={() => selectTemplateCategory('')}
+                >
                   Tất cả
                 </a>
-                <a className="filter btn btn-common btn-effect" data-filter=".design">
-                  Bán hàng
-                </a>
-                <a className="filter btn btn-common btn-effect" data-filter=".development">
-                  Bất động sản
-                </a>
-                <a className="filter btn btn-common btn-effect" data-filter=".print">
-                  Print
-                </a>
+                {templateCategories.map(this.renderCategoryItem)}
               </div>
             </div>
           </div>
