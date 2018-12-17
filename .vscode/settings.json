@@ -1,0 +1,12 @@
+{
+    "files.associations": {
+      "*.js": "javascriptreact"
+    },
+    "[javascriptreact]": {
+      "editor.formatOnSave": true
+    },
+    "prettier.singleQuote": true,
+    "prettier.trailingComma": "es5",
+    "prettier.printWidth": 100,
+    "prettier.semi": true
+  }
