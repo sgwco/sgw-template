@@ -1,5 +1,6 @@
 import express from 'express';
 import next from 'next';
+import models from './models';
 
 const dev = process.env.NODE_ENV !== 'production';
 const app = next({ dev });

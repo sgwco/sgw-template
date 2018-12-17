@@ -1,12 +1,22 @@
+import React from 'react';
 import Header from './header';
 import Footer from './footer';
 
-const Layout = props => (
-  <div>
-    <Header />
-    {props.children}
-    <Footer />
-  </div>
-);
+export default class Layout extends React.Component {
+  componentDidMount() {
+    if (typeof window !== 'undefined') {
+      const WOW = require('wow.js');
+      new WOW().init();
+    }
+  }
 
-export default Layout;
+  render() {
+    return (
+      <div>
+        <Header />
+        {this.props.children}
+        <Footer />
+      </div>
+    );
+  }
+}

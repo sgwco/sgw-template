@@ -1,0 +1,1082 @@
+[
+  {
+    "Name": "aloshop.webonl.com",
+    "Owner": "khanhnguyen",
+    "Root directory": "/var/www/khanhnguyen/data/www/aloshop.webonl.com",
+    "IP addresses": "139.99.96.174",
+    "Parameters": "Off; This option allows to execute PHP scripts for this web-domain",
+    "PHP mode": "FastCGI (Nginx + PHP-FPM)",
+    "PHP version": "7.0.32 (alt)",
+    "": ""
+  },
+  {
+    "Name": "andekor.webonl.com",
+    "Owner": "khanhnguyen",
+    "Root directory": "/var/www/khanhnguyen/data/www/andekor.webonl.com",
+    "IP addresses": "139.99.96.174",
+    "Parameters": "Off; This option allows to execute PHP scripts for this web-domain",
+    "PHP mode": "FastCGI (Nginx + PHP-FPM)",
+    "PHP version": "7.0.32 (alt)",
+    "": ""
+  },
+  {
+    "Name": "aomua.webonl.com",
+    "Owner": "khanhnguyen",
+    "Root directory": "/var/www/khanhnguyen/data/www/aomua.webonl.com",
+    "IP addresses": "139.99.96.174",
+    "Parameters": "Off; This option allows to execute PHP scripts for this web-domain",
+    "PHP mode": "FastCGI (Nginx + PHP-FPM)",
+    "PHP version": "7.0.32 (alt)",
+    "": ""
+  },
+  {
+    "Name": "arc.webonl.com",
+    "Owner": "khanhnguyen",
+    "Root directory": "/var/www/khanhnguyen/data/www/arc.webonl.com",
+    "IP addresses": "139.99.96.174",
+    "Parameters": "Off; This option allows to execute PHP scripts for this web-domain",
+    "PHP mode": "FastCGI (Nginx + PHP-FPM)",
+    "PHP version": "7.0.32 (alt)",
+    "": ""
+  },
+  {
+    "Name": "art.webonl.com",
+    "Owner": "khanhnguyen",
+    "Root directory": "/var/www/khanhnguyen/data/www/art.webonl.com",
+    "IP addresses": "139.99.96.174",
+    "Parameters": "Off; This option allows to execute PHP scripts for this web-domain",
+    "PHP mode": "FastCGI (Nginx + PHP-FPM)",
+    "PHP version": "7.0.32 (alt)",
+    "": ""
+  },
+  {
+    "Name": "babyshop.webonl.com",
+    "Owner": "khanhnguyen",
+    "Root directory": "/var/www/khanhnguyen/data/www/babyshop.webonl.com",
+    "IP addresses": "139.99.96.174",
+    "Parameters": "Off; This option allows to execute PHP scripts for this web-domain",
+    "PHP mode": "FastCGI (Nginx + PHP-FPM)",
+    "PHP version": "7.0.32 (alt)",
+    "": ""
+  },
+  {
+    "Name": "bbq.webonl.com",
+    "Owner": "khanhnguyen",
+    "Root directory": "/var/www/khanhnguyen/data/www/bbq.webonl.com",
+    "IP addresses": "139.99.96.174",
+    "Parameters": "Off; This option allows to execute PHP scripts for this web-domain",
+    "PHP mode": "FastCGI (Nginx + PHP-FPM)",
+    "PHP version": "7.0.32 (alt)",
+    "": ""
+  },
+  {
+    "Name": "bds.webonl.com",
+    "Owner": "khanhnguyen",
+    "Root directory": "/var/www/khanhnguyen/data/www/bds.webonl.com",
+    "IP addresses": "139.99.96.174",
+    "Parameters": "Off; This option allows to execute PHP scripts for this web-domain",
+    "PHP mode": "FastCGI (Nginx + PHP-FPM)",
+    "PHP version": "7.0.32 (alt)",
+    "": ""
+  },
+  {
+    "Name": "bds2.webonl.com",
+    "Owner": "khanhnguyen",
+    "Root directory": "/var/www/khanhnguyen/data/www/bds2.webonl.com",
+    "IP addresses": "139.99.96.174",
+    "Parameters": "Off; This option allows to execute PHP scripts for this web-domain",
+    "PHP mode": "FastCGI (Nginx + PHP-FPM)",
+    "PHP version": "7.0.32 (alt)",
+    "": ""
+  },
+  {
+    "Name": "bds3.webonl.com",
+    "Owner": "khanhnguyen",
+    "Root directory": "/var/www/khanhnguyen/data/www/bds3.webonl.com",
+    "IP addresses": "139.99.96.174",
+    "Parameters": "Off; This option allows to execute PHP scripts for this web-domain",
+    "PHP mode": "FastCGI (Nginx + PHP-FPM)",
+    "PHP version": "7.0.32 (alt)",
+    "": ""
+  },
+  {
+    "Name": "bds4.webonl.com",
+    "Owner": "khanhnguyen",
+    "Root directory": "/var/www/khanhnguyen/data/www/bds4.webonl.com",
+    "IP addresses": "139.99.96.174",
+    "Parameters": "Off; This option allows to execute PHP scripts for this web-domain",
+    "PHP mode": "FastCGI (Nginx + PHP-FPM)",
+    "PHP version": "7.0.32 (alt)",
+    "": ""
+  },
+  {
+    "Name": "benhvien.webonl.com",
+    "Owner": "khanhnguyen",
+    "Root directory": "/var/www/khanhnguyen/data/www/benhvien.webonl.com",
+    "IP addresses": "139.99.96.174",
+    "Parameters": "Off; This option allows to execute PHP scripts for this web-domain",
+    "PHP mode": "FastCGI (Nginx + PHP-FPM)",
+    "PHP version": "7.0.32 (alt)",
+    "": ""
+  },
+  {
+    "Name": "bepbbq.webonl.com",
+    "Owner": "khanhnguyen",
+    "Root directory": "/var/www/khanhnguyen/data/www/bepbbq.webonl.com",
+    "IP addresses": "139.99.96.174",
+    "Parameters": "Off; This option allows to execute PHP scripts for this web-domain",
+    "PHP mode": "FastCGI (Nginx + PHP-FPM)",
+    "PHP version": "7.0.32 (alt)",
+    "": ""
+  },
+  {
+    "Name": "bienchucdanh.webonl.com",
+    "Owner": "khanhnguyen",
+    "Root directory": "/var/www/khanhnguyen/data/www/bienchucdanh.webonl.com",
+    "IP addresses": "139.99.96.174",
+    "Parameters": "Off; This option allows to execute PHP scripts for this web-domain",
+    "PHP mode": "FastCGI (Nginx + PHP-FPM)",
+    "PHP version": "7.0.32 (alt)",
+    "": ""
+  },
+  {
+    "Name": "book.webonl.com",
+    "Owner": "khanhnguyen",
+    "Root directory": "/var/www/khanhnguyen/data/www/book.webonl.com",
+    "IP addresses": "139.99.96.174",
+    "Parameters": "Off; This option allows to execute PHP scripts for this web-domain",
+    "PHP mode": "FastCGI (Nginx + PHP-FPM)",
+    "PHP version": "7.0.32 (alt)",
+    "": ""
+  },
+  {
+    "Name": "boxshop.webonl.com",
+    "Owner": "khanhnguyen",
+    "Root directory": "/var/www/khanhnguyen/data/www/boxshop.webonl.com",
+    "IP addresses": "139.99.96.174",
+    "Parameters": "Off; This option allows to execute PHP scripts for this web-domain",
+    "PHP mode": "FastCGI (Nginx + PHP-FPM)",
+    "PHP version": "7.0.32 (alt)",
+    "": ""
+  },
+  {
+    "Name": "buoi.webonl.com",
+    "Owner": "khanhnguyen",
+    "Root directory": "/var/www/khanhnguyen/data/www/buoi.webonl.com",
+    "IP addresses": "139.99.96.174",
+    "Parameters": "Off; This option allows to execute PHP scripts for this web-domain",
+    "PHP mode": "FastCGI (Nginx + PHP-FPM)",
+    "PHP version": "7.0.32 (alt)",
+    "": ""
+  },
+  {
+    "Name": "cake.webonl.com",
+    "Owner": "khanhnguyen",
+    "Root directory": "/var/www/khanhnguyen/data/www/cake.webonl.com",
+    "IP addresses": "139.99.96.174",
+    "Parameters": "Off; This option allows to execute PHP scripts for this web-domain",
+    "PHP mode": "FastCGI (Nginx + PHP-FPM)",
+    "PHP version": "7.0.32 (alt)",
+    "": ""
+  },
+  {
+    "Name": "cake2.webonl.com",
+    "Owner": "khanhnguyen",
+    "Root directory": "/var/www/khanhnguyen/data/www/cake2.webonl.com",
+    "IP addresses": "139.99.96.174",
+    "Parameters": "Off; This option allows to execute PHP scripts for this web-domain",
+    "PHP mode": "FastCGI (Nginx + PHP-FPM)",
+    "PHP version": "7.0.32 (alt)",
+    "": ""
+  },
+  {
+    "Name": "caoboket.webonl.com",
+    "Owner": "khanhnguyen",
+    "Root directory": "/var/www/khanhnguyen/data/www/caoboket.webonl.com",
+    "IP addresses": "139.99.96.174",
+    "Parameters": "Off; This option allows to execute PHP scripts for this web-domain",
+    "PHP mode": "FastCGI (Nginx + PHP-FPM)",
+    "PHP version": "7.0.32 (alt)",
+    "": ""
+  },
+  {
+    "Name": "cayxanh.webonl.com",
+    "Owner": "khanhnguyen",
+    "Root directory": "/var/www/khanhnguyen/data/www/cayxanh.webonl.com",
+    "IP addresses": "139.99.96.174",
+    "Parameters": "Off; This option allows to execute PHP scripts for this web-domain",
+    "PHP mode": "FastCGI (Nginx + PHP-FPM)",
+    "PHP version": "7.0.32 (alt)",
+    "": ""
+  },
+  {
+    "Name": "cayxanh2.webonl.com",
+    "Owner": "khanhnguyen",
+    "Root directory": "/var/www/khanhnguyen/data/www/cayxanh2.webonl.com",
+    "IP addresses": "139.99.96.174",
+    "Parameters": "Off; This option allows to execute PHP scripts for this web-domain",
+    "PHP mode": "FastCGI (Nginx + PHP-FPM)",
+    "PHP version": "7.0.32 (alt)",
+    "": ""
+  },
+  {
+    "Name": "clinic.webonl.com",
+    "Owner": "khanhnguyen",
+    "Root directory": "/var/www/khanhnguyen/data/www/clinic.webonl.com",
+    "IP addresses": "139.99.96.174",
+    "Parameters": "Off; This option allows to execute PHP scripts for this web-domain",
+    "PHP mode": "FastCGI (Nginx + PHP-FPM)",
+    "PHP version": "7.0.32 (alt)",
+    "": ""
+  },
+  {
+    "Name": "dienmay.webonl.com",
+    "Owner": "khanhnguyen",
+    "Root directory": "/var/www/khanhnguyen/data/www/dienmay.webonl.com",
+    "IP addresses": "139.99.96.174",
+    "Parameters": "Off; This option allows to execute PHP scripts for this web-domain",
+    "PHP mode": "FastCGI (Nginx + PHP-FPM)",
+    "PHP version": "7.0.32 (alt)",
+    "": ""
+  },
+  {
+    "Name": "dienmay2.webonl.com",
+    "Owner": "khanhnguyen",
+    "Root directory": "/var/www/khanhnguyen/data/www/dienmay2.webonl.com",
+    "IP addresses": "139.99.96.174",
+    "Parameters": "Off; This option allows to execute PHP scripts for this web-domain",
+    "PHP mode": "FastCGI (Nginx + PHP-FPM)",
+    "PHP version": "7.0.32 (alt)",
+    "": ""
+  },
+  {
+    "Name": "docu.webonl.com",
+    "Owner": "khanhnguyen",
+    "Root directory": "/var/www/khanhnguyen/data/www/docu.webonl.com",
+    "IP addresses": "139.99.96.174",
+    "Parameters": "Off; This option allows to execute PHP scripts for this web-domain",
+    "PHP mode": "FastCGI (Nginx + PHP-FPM)",
+    "PHP version": "7.0.32 (alt)",
+    "": ""
+  },
+  {
+    "Name": "dongphuc.webonl.com",
+    "Owner": "khanhnguyen",
+    "Root directory": "/var/www/khanhnguyen/data/www/dongphuc.webonl.com",
+    "IP addresses": "139.99.96.174",
+    "Parameters": "Off; This option allows to execute PHP scripts for this web-domain",
+    "PHP mode": "FastCGI (Nginx + PHP-FPM)",
+    "PHP version": "7.0.32 (alt)",
+    "": ""
+  },
+  {
+    "Name": "drinkme.webonl.com",
+    "Owner": "khanhnguyen",
+    "Root directory": "/var/www/khanhnguyen/data/www/drinkme.webonl.com",
+    "IP addresses": "139.99.96.174",
+    "Parameters": "Off; This option allows to execute PHP scripts for this web-domain",
+    "PHP mode": "FastCGI (Nginx + PHP-FPM)",
+    "PHP version": "7.0.32 (alt)",
+    "": ""
+  },
+  {
+    "Name": "dulich.webonl.com",
+    "Owner": "khanhnguyen",
+    "Root directory": "/var/www/khanhnguyen/data/www/dulich.webonl.com",
+    "IP addresses": "139.99.96.174",
+    "Parameters": "Off; This option allows to execute PHP scripts for this web-domain",
+    "PHP mode": "FastCGI (Nginx + PHP-FPM)",
+    "PHP version": "7.0.32 (alt)",
+    "": ""
+  },
+  {
+    "Name": "duocpham.webonl.com",
+    "Owner": "khanhnguyen",
+    "Root directory": "/var/www/khanhnguyen/data/www/duocpham.webonl.com",
+    "IP addresses": "139.99.96.174",
+    "Parameters": "Off; This option allows to execute PHP scripts for this web-domain",
+    "PHP mode": "FastCGI (Nginx + PHP-FPM)",
+    "PHP version": "7.0.32 (alt)",
+    "": ""
+  },
+  {
+    "Name": "duocpham2.webonl.com",
+    "Owner": "khanhnguyen",
+    "Root directory": "/var/www/khanhnguyen/data/www/duocpham2.webonl.com",
+    "IP addresses": "139.99.96.174",
+    "Parameters": "Off; This option allows to execute PHP scripts for this web-domain",
+    "PHP mode": "FastCGI (Nginx + PHP-FPM)",
+    "PHP version": "7.0.32 (alt)",
+    "": ""
+  },
+  {
+    "Name": "duocpham3.webonl.com",
+    "Owner": "khanhnguyen",
+    "Root directory": "/var/www/khanhnguyen/data/www/duocpham3.webonl.com",
+    "IP addresses": "139.99.96.174",
+    "Parameters": "Off; This option allows to execute PHP scripts for this web-domain",
+    "PHP mode": "FastCGI (Nginx + PHP-FPM)",
+    "PHP version": "7.0.32 (alt)",
+    "": ""
+  },
+  {
+    "Name": "edu.webonl.com",
+    "Owner": "khanhnguyen",
+    "Root directory": "/var/www/khanhnguyen/data/www/edu.webonl.com",
+    "IP addresses": "139.99.96.174",
+    "Parameters": "Off; This option allows to execute PHP scripts for this web-domain",
+    "PHP mode": "FastCGI (Nginx + PHP-FPM)",
+    "PHP version": "7.0.32 (alt)",
+    "": ""
+  },
+  {
+    "Name": "edu2.webonl.com",
+    "Owner": "khanhnguyen",
+    "Root directory": "/var/www/khanhnguyen/data/www/edu2.webonl.com",
+    "IP addresses": "139.99.96.174",
+    "Parameters": "Off; This option allows to execute PHP scripts for this web-domain",
+    "PHP mode": "FastCGI (Nginx + PHP-FPM)",
+    "PHP version": "7.0.32 (alt)",
+    "": ""
+  },
+  {
+    "Name": "event.webonl.com",
+    "Owner": "khanhnguyen",
+    "Root directory": "/var/www/khanhnguyen/data/www/event.webonl.com",
+    "IP addresses": "139.99.96.174",
+    "Parameters": "Off; This option allows to execute PHP scripts for this web-domain",
+    "PHP mode": "FastCGI (Nginx + PHP-FPM)",
+    "PHP version": "7.0.32 (alt)",
+    "": ""
+  },
+  {
+    "Name": "event2.webonl.com",
+    "Owner": "khanhnguyen",
+    "Root directory": "/var/www/khanhnguyen/data/www/event2.webonl.com",
+    "IP addresses": "139.99.96.174",
+    "Parameters": "Off; This option allows to execute PHP scripts for this web-domain",
+    "PHP mode": "FastCGI (Nginx + PHP-FPM)",
+    "PHP version": "7.0.32 (alt)",
+    "": ""
+  },
+  {
+    "Name": "event3.webonl.com",
+    "Owner": "khanhnguyen",
+    "Root directory": "/var/www/khanhnguyen/data/www/event3.webonl.com",
+    "IP addresses": "139.99.96.174",
+    "Parameters": "Off; This option allows to execute PHP scripts for this web-domain",
+    "PHP mode": "FastCGI (Nginx + PHP-FPM)",
+    "PHP version": "7.0.32 (alt)",
+    "": ""
+  },
+  {
+    "Name": "fashion.webonl.com",
+    "Owner": "khanhnguyen",
+    "Root directory": "/var/www/khanhnguyen/data/www/fashion.webonl.com",
+    "IP addresses": "139.99.96.174",
+    "Parameters": "Off; This option allows to execute PHP scripts for this web-domain",
+    "PHP mode": "FastCGI (Nginx + PHP-FPM)",
+    "PHP version": "7.0.32 (alt)",
+    "": ""
+  },
+  {
+    "Name": "fashion2.webonl.com",
+    "Owner": "khanhnguyen",
+    "Root directory": "/var/www/khanhnguyen/data/www/fashion2.webonl.com",
+    "IP addresses": "139.99.96.174",
+    "Parameters": "Off; This option allows to execute PHP scripts for this web-domain",
+    "PHP mode": "FastCGI (Nginx + PHP-FPM)",
+    "PHP version": "7.0.32 (alt)",
+    "": ""
+  },
+  {
+    "Name": "fashion3.webonl.com",
+    "Owner": "khanhnguyen",
+    "Root directory": "/var/www/khanhnguyen/data/www/fashion3.webonl.com",
+    "IP addresses": "139.99.96.174",
+    "Parameters": "Off; This option allows to execute PHP scripts for this web-domain",
+    "PHP mode": "FastCGI (Nginx + PHP-FPM)",
+    "PHP version": "7.0.32 (alt)",
+    "": ""
+  },
+  {
+    "Name": "funiture.webonl.com",
+    "Owner": "khanhnguyen",
+    "Root directory": "/var/www/khanhnguyen/data/www/funiture.webonl.com",
+    "IP addresses": "139.99.96.174",
+    "Parameters": "Off; This option allows to execute PHP scripts for this web-domain",
+    "PHP mode": "FastCGI (Nginx + PHP-FPM)",
+    "PHP version": "7.0.32 (alt)",
+    "": ""
+  },
+  {
+    "Name": "gom.webonl.com",
+    "Owner": "khanhnguyen",
+    "Root directory": "/var/www/khanhnguyen/data/www/gom.webonl.com",
+    "IP addresses": "139.99.96.174",
+    "Parameters": "Off; This option allows to execute PHP scripts for this web-domain",
+    "PHP mode": "FastCGI (Nginx + PHP-FPM)",
+    "PHP version": "7.0.32 (alt)",
+    "": ""
+  },
+  {
+    "Name": "greenbay.webonl.com",
+    "Owner": "khanhnguyen",
+    "Root directory": "/var/www/khanhnguyen/data/www/greenbay.webonl.com",
+    "IP addresses": "139.99.96.174",
+    "Parameters": "Off; This option allows to execute PHP scripts for this web-domain",
+    "PHP mode": "FastCGI (Nginx + PHP-FPM)",
+    "PHP version": "7.0.32 (alt)",
+    "": ""
+  },
+  {
+    "Name": "hatdieu.webonl.com",
+    "Owner": "khanhnguyen",
+    "Root directory": "/var/www/khanhnguyen/data/www/hatdieu.webonl.com",
+    "IP addresses": "139.99.96.174",
+    "Parameters": "Off; This option allows to execute PHP scripts for this web-domain",
+    "PHP mode": "FastCGI (Nginx + PHP-FPM)",
+    "PHP version": "7.0.32 (alt)",
+    "": ""
+  },
+  {
+    "Name": "hsc.webonl.com",
+    "Owner": "khanhnguyen",
+    "Root directory": "/var/www/khanhnguyen/data/www/hsc.webonl.com",
+    "IP addresses": "139.99.96.174",
+    "Parameters": "Off; This option allows to execute PHP scripts for this web-domain",
+    "PHP mode": "FastCGI (Nginx + PHP-FPM)",
+    "PHP version": "7.0.32 (alt)",
+    "": ""
+  },
+  {
+    "Name": "hydrogen.webonl.com",
+    "Owner": "khanhnguyen",
+    "Root directory": "/var/www/khanhnguyen/data/www/hydrogen.webonl.com",
+    "IP addresses": "139.99.96.174",
+    "Parameters": "Off; This option allows to execute PHP scripts for this web-domain",
+    "PHP mode": "FastCGI (Nginx + PHP-FPM)",
+    "PHP version": "7.0.32 (alt)",
+    "": ""
+  },
+  {
+    "Name": "ifix.webonl.com",
+    "Owner": "khanhnguyen",
+    "Root directory": "/var/www/khanhnguyen/data/www/ifix.webonl.com",
+    "IP addresses": "139.99.96.174",
+    "Parameters": "Off; This option allows to execute PHP scripts for this web-domain",
+    "PHP mode": "FastCGI (Nginx + PHP-FPM)",
+    "PHP version": "7.0.32 (alt)",
+    "": ""
+  },
+  {
+    "Name": "info.webonl.com",
+    "Owner": "khanhnguyen",
+    "Root directory": "/var/www/khanhnguyen/data/www/info.webonl.com",
+    "IP addresses": "139.99.96.174",
+    "Parameters": "Off; This option allows to execute PHP scripts for this web-domain",
+    "PHP mode": "FastCGI (Nginx + PHP-FPM)",
+    "PHP version": "7.0.32 (alt)",
+    "": ""
+  },
+  {
+    "Name": "items.webonl.com",
+    "Owner": "khanhnguyen",
+    "Root directory": "/var/www/khanhnguyen/data/www/items.webonl.com",
+    "IP addresses": "139.99.96.174",
+    "Parameters": "Off; This option allows to execute PHP scripts for this web-domain",
+    "PHP mode": "FastCGI (Nginx + PHP-FPM)",
+    "PHP version": "7.0.32 (alt)",
+    "": ""
+  },
+  {
+    "Name": "khanh.webonl.com",
+    "Owner": "khanhnguyen",
+    "Root directory": "/var/www/khanhnguyen/data/www/khanh.webonl.com",
+    "IP addresses": "139.99.96.174",
+    "Parameters": "Off; This option allows to execute PHP scripts for this web-domain",
+    "PHP mode": "FastCGI (Nginx + PHP-FPM)",
+    "PHP version": "7.0.32 (alt)",
+    "": ""
+  },
+  {
+    "Name": "kingdom101.webonl.com",
+    "Owner": "khanhnguyen",
+    "Root directory": "/var/www/khanhnguyen/data/www/kingdom101.webonl.com",
+    "IP addresses": "139.99.96.174",
+    "Parameters": "Off; This option allows to execute PHP scripts for this web-domain",
+    "PHP mode": "FastCGI (Nginx + PHP-FPM)",
+    "PHP version": "7.0.32 (alt)",
+    "": ""
+  },
+  {
+    "Name": "lamboo.webonl.com",
+    "Owner": "khanhnguyen",
+    "Root directory": "/var/www/khanhnguyen/data/www/lamboo.webonl.com",
+    "IP addresses": "139.99.96.174",
+    "Parameters": "Off; This option allows to execute PHP scripts for this web-domain",
+    "PHP mode": "FastCGI (Nginx + PHP-FPM)",
+    "PHP version": "7.0.32 (alt)",
+    "": ""
+  },
+  {
+    "Name": "land1.webonl.com",
+    "Owner": "khanhnguyen",
+    "Root directory": "/var/www/khanhnguyen/data/www/land1.webonl.com",
+    "IP addresses": "139.99.96.174",
+    "Parameters": "Off; This option allows to execute PHP scripts for this web-domain",
+    "PHP mode": "FastCGI (Nginx + PHP-FPM)",
+    "PHP version": "7.0.32 (alt)",
+    "": ""
+  },
+  {
+    "Name": "manhrem.webonl.com",
+    "Owner": "khanhnguyen",
+    "Root directory": "/var/www/khanhnguyen/data/www/manhrem.webonl.com",
+    "IP addresses": "139.99.96.174",
+    "Parameters": "Off; This option allows to execute PHP scripts for this web-domain",
+    "PHP mode": "FastCGI (Nginx + PHP-FPM)",
+    "PHP version": "7.0.32 (alt)",
+    "": ""
+  },
+  {
+    "Name": "marketing.webonl.com",
+    "Owner": "khanhnguyen",
+    "Root directory": "/var/www/khanhnguyen/data/www/marketing.webonl.com",
+    "IP addresses": "139.99.96.174",
+    "Parameters": "Off; This option allows to execute PHP scripts for this web-domain",
+    "PHP mode": "FastCGI (Nginx + PHP-FPM)",
+    "PHP version": "7.0.32 (alt)",
+    "": ""
+  },
+  {
+    "Name": "mayin.webonl.com",
+    "Owner": "khanhnguyen",
+    "Root directory": "/var/www/khanhnguyen/data/www/mayin.webonl.com",
+    "IP addresses": "139.99.96.174",
+    "Parameters": "Off; This option allows to execute PHP scripts for this web-domain",
+    "PHP mode": "FastCGI (Nginx + PHP-FPM)",
+    "PHP version": "7.0.32 (alt)",
+    "": ""
+  },
+  {
+    "Name": "mayloc.webonl.com",
+    "Owner": "khanhnguyen",
+    "Root directory": "/var/www/khanhnguyen/data/www/mayloc.webonl.com",
+    "IP addresses": "139.99.96.174",
+    "Parameters": "Off; This option allows to execute PHP scripts for this web-domain",
+    "PHP mode": "FastCGI (Nginx + PHP-FPM)",
+    "PHP version": "7.0.32 (alt)",
+    "": ""
+  },
+  {
+    "Name": "maylockhi.webonl.com",
+    "Owner": "khanhnguyen",
+    "Root directory": "/var/www/khanhnguyen/data/www/maylockhi.webonl.com",
+    "IP addresses": "139.99.96.174",
+    "Parameters": "Off; This option allows to execute PHP scripts for this web-domain",
+    "PHP mode": "FastCGI (Nginx + PHP-FPM)",
+    "PHP version": "7.0.32 (alt)",
+    "": ""
+  },
+  {
+    "Name": "maylockhi2.webonl.com",
+    "Owner": "khanhnguyen",
+    "Root directory": "/var/www/khanhnguyen/data/www/maylockhi2.webonl.com",
+    "IP addresses": "139.99.96.174",
+    "Parameters": "Off; This option allows to execute PHP scripts for this web-domain",
+    "PHP mode": "FastCGI (Nginx + PHP-FPM)",
+    "PHP version": "7.0.32 (alt)",
+    "": ""
+  },
+  {
+    "Name": "mevabe.webonl.com",
+    "Owner": "khanhnguyen",
+    "Root directory": "/var/www/khanhnguyen/data/www/mevabe.webonl.com",
+    "IP addresses": "139.99.96.174",
+    "Parameters": "Off; This option allows to execute PHP scripts for this web-domain",
+    "PHP mode": "FastCGI (Nginx + PHP-FPM)",
+    "PHP version": "7.0.32 (alt)",
+    "": ""
+  },
+  {
+    "Name": "mica.webonl.com",
+    "Owner": "khanhnguyen",
+    "Root directory": "/var/www/khanhnguyen/data/www/mica.webonl.com",
+    "IP addresses": "139.99.96.174",
+    "Parameters": "Off; This option allows to execute PHP scripts for this web-domain",
+    "PHP mode": "FastCGI (Nginx + PHP-FPM)",
+    "PHP version": "7.0.32 (alt)",
+    "": ""
+  },
+  {
+    "Name": "mobile.webonl.com",
+    "Owner": "khanhnguyen",
+    "Root directory": "/var/www/khanhnguyen/data/www/mobile.webonl.com",
+    "IP addresses": "139.99.96.174",
+    "Parameters": "Off; This option allows to execute PHP scripts for this web-domain",
+    "PHP mode": "FastCGI (Nginx + PHP-FPM)",
+    "PHP version": "7.0.32 (alt)",
+    "": ""
+  },
+  {
+    "Name": "mypham1.webonl.com",
+    "Owner": "khanhnguyen",
+    "Root directory": "/var/www/khanhnguyen/data/www/mypham1.webonl.com",
+    "IP addresses": "139.99.96.174",
+    "Parameters": "Off; This option allows to execute PHP scripts for this web-domain",
+    "PHP mode": "FastCGI (Nginx + PHP-FPM)",
+    "PHP version": "7.0.32 (alt)",
+    "": ""
+  },
+  {
+    "Name": "mypham2.webonl.com",
+    "Owner": "khanhnguyen",
+    "Root directory": "/var/www/khanhnguyen/data/www/mypham2.webonl.com",
+    "IP addresses": "139.99.96.174",
+    "Parameters": "Off; This option allows to execute PHP scripts for this web-domain",
+    "PHP mode": "FastCGI (Nginx + PHP-FPM)",
+    "PHP version": "7.0.32 (alt)",
+    "": ""
+  },
+  {
+    "Name": "mypham3.webonl.com",
+    "Owner": "khanhnguyen",
+    "Root directory": "/var/www/khanhnguyen/data/www/mypham3.webonl.com",
+    "IP addresses": "139.99.96.174",
+    "Parameters": "Off; This option allows to execute PHP scripts for this web-domain",
+    "PHP mode": "FastCGI (Nginx + PHP-FPM)",
+    "PHP version": "7.0.32 (alt)",
+    "": ""
+  },
+  {
+    "Name": "nhomkinh.webonl.com",
+    "Owner": "khanhnguyen",
+    "Root directory": "/var/www/khanhnguyen/data/www/nhomkinh.webonl.com",
+    "IP addresses": "139.99.96.174",
+    "Parameters": "Off; This option allows to execute PHP scripts for this web-domain",
+    "PHP mode": "FastCGI (Nginx + PHP-FPM)",
+    "PHP version": "7.0.32 (alt)",
+    "": ""
+  },
+  {
+    "Name": "noithat.webonl.com",
+    "Owner": "khanhnguyen",
+    "Root directory": "/var/www/khanhnguyen/data/www/noithat.webonl.com",
+    "IP addresses": "139.99.96.174",
+    "Parameters": "Off; This option allows to execute PHP scripts for this web-domain",
+    "PHP mode": "FastCGI (Nginx + PHP-FPM)",
+    "PHP version": "7.0.32 (alt)",
+    "": ""
+  },
+  {
+    "Name": "noithat2.webonl.com",
+    "Owner": "khanhnguyen",
+    "Root directory": "/var/www/khanhnguyen/data/www/noithat2.webonl.com",
+    "IP addresses": "139.99.96.174",
+    "Parameters": "Off; This option allows to execute PHP scripts for this web-domain",
+    "PHP mode": "FastCGI (Nginx + PHP-FPM)",
+    "PHP version": "7.0.32 (alt)",
+    "": ""
+  },
+  {
+    "Name": "noithat3.webonl.com",
+    "Owner": "khanhnguyen",
+    "Root directory": "/var/www/khanhnguyen/data/www/noithat3.webonl.com",
+    "IP addresses": "139.99.96.174",
+    "Parameters": "Off; This option allows to execute PHP scripts for this web-domain",
+    "PHP mode": "FastCGI (Nginx + PHP-FPM)",
+    "PHP version": "7.0.32 (alt)",
+    "": ""
+  },
+  {
+    "Name": "noithat4.webonl.com",
+    "Owner": "khanhnguyen",
+    "Root directory": "/var/www/khanhnguyen/data/www/noithat4.webonl.com",
+    "IP addresses": "139.99.96.174",
+    "Parameters": "Off; This option allows to execute PHP scripts for this web-domain",
+    "PHP mode": "FastCGI (Nginx + PHP-FPM)",
+    "PHP version": "7.0.32 (alt)",
+    "": ""
+  },
+  {
+    "Name": "noithat5.webonl.com",
+    "Owner": "khanhnguyen",
+    "Root directory": "/var/www/khanhnguyen/data/www/noithat5.webonl.com",
+    "IP addresses": "139.99.96.174",
+    "Parameters": "Off; This option allows to execute PHP scripts for this web-domain",
+    "PHP mode": "FastCGI (Nginx + PHP-FPM)",
+    "PHP version": "7.0.32 (alt)",
+    "": ""
+  },
+  {
+    "Name": "pianocenter.webonl.com",
+    "Owner": "khanhnguyen",
+    "Root directory": "/var/www/khanhnguyen/data/www/pianocenter.webonl.com",
+    "IP addresses": "139.99.96.174",
+    "Parameters": "Off; This option allows to execute PHP scripts for this web-domain",
+    "PHP mode": "FastCGI (Nginx + PHP-FPM)",
+    "PHP version": "7.0.32 (alt)",
+    "": ""
+  },
+  {
+    "Name": "print.webonl.com",
+    "Owner": "khanhnguyen",
+    "Root directory": "/var/www/khanhnguyen/data/www/print.webonl.com",
+    "IP addresses": "139.99.96.174",
+    "Parameters": "Off; This option allows to execute PHP scripts for this web-domain",
+    "PHP mode": "FastCGI (Nginx + PHP-FPM)",
+    "PHP version": "7.0.32 (alt)",
+    "": ""
+  },
+  {
+    "Name": "print2.webonl.com",
+    "Owner": "khanhnguyen",
+    "Root directory": "/var/www/khanhnguyen/data/www/print2.webonl.com",
+    "IP addresses": "139.99.96.174",
+    "Parameters": "Off; This option allows to execute PHP scripts for this web-domain",
+    "PHP mode": "FastCGI (Nginx + PHP-FPM)",
+    "PHP version": "7.0.32 (alt)",
+    "": ""
+  },
+  {
+    "Name": "printshop.webonl.com",
+    "Owner": "khanhnguyen",
+    "Root directory": "/var/www/khanhnguyen/data/www/printshop.webonl.com",
+    "IP addresses": "139.99.96.174",
+    "Parameters": "Off; This option allows to execute PHP scripts for this web-domain",
+    "PHP mode": "FastCGI (Nginx + PHP-FPM)",
+    "PHP version": "7.0.32 (alt)",
+    "": ""
+  },
+  {
+    "Name": "salecar2.webonl.com",
+    "Owner": "khanhnguyen",
+    "Root directory": "/var/www/khanhnguyen/data/www/salecar2.webonl.com",
+    "IP addresses": "139.99.96.174",
+    "Parameters": "Off; This option allows to execute PHP scripts for this web-domain",
+    "PHP mode": "FastCGI (Nginx + PHP-FPM)",
+    "PHP version": "7.0.32 (alt)",
+    "": ""
+  },
+  {
+    "Name": "saoviet.webonl.com",
+    "Owner": "khanhnguyen",
+    "Root directory": "/var/www/khanhnguyen/data/www/saoviet.webonl.com",
+    "IP addresses": "139.99.96.174",
+    "Parameters": "Off; This option allows to execute PHP scripts for this web-domain",
+    "PHP mode": "FastCGI (Nginx + PHP-FPM)",
+    "PHP version": "7.0.32 (alt)",
+    "": ""
+  },
+  {
+    "Name": "shop.webonl.com",
+    "Owner": "khanhnguyen",
+    "Root directory": "/var/www/khanhnguyen/data/www/shop.webonl.com",
+    "IP addresses": "139.99.96.174",
+    "Parameters": "Off; This option allows to execute PHP scripts for this web-domain",
+    "PHP mode": "FastCGI (Nginx + PHP-FPM)",
+    "PHP version": "7.0.32 (alt)",
+    "": ""
+  },
+  {
+    "Name": "shophoa.webonl.com",
+    "Owner": "khanhnguyen",
+    "Root directory": "/var/www/khanhnguyen/data/www/shophoa.webonl.com",
+    "IP addresses": "139.99.96.174",
+    "Parameters": "Off; This option allows to execute PHP scripts for this web-domain",
+    "PHP mode": "FastCGI (Nginx + PHP-FPM)",
+    "PHP version": "7.0.32 (alt)",
+    "": ""
+  },
+  {
+    "Name": "shoptranh.webonl.com",
+    "Owner": "khanhnguyen",
+    "Root directory": "/var/www/khanhnguyen/data/www/shoptranh.webonl.com",
+    "IP addresses": "139.99.96.174",
+    "Parameters": "Off; This option allows to execute PHP scripts for this web-domain",
+    "PHP mode": "FastCGI (Nginx + PHP-FPM)",
+    "PHP version": "7.0.32 (alt)",
+    "": ""
+  },
+  {
+    "Name": "spa3.webonl.com",
+    "Owner": "khanhnguyen",
+    "Root directory": "/var/www/khanhnguyen/data/www/spa3.webonl.com",
+    "IP addresses": "139.99.96.174",
+    "Parameters": "Off; This option allows to execute PHP scripts for this web-domain",
+    "PHP mode": "FastCGI (Nginx + PHP-FPM)",
+    "PHP version": "7.0.32 (alt)",
+    "": ""
+  },
+  {
+    "Name": "tattoo.webonl.com",
+    "Owner": "khanhnguyen",
+    "Root directory": "/var/www/khanhnguyen/data/www/tattoo.webonl.com",
+    "IP addresses": "139.99.96.174",
+    "Parameters": "Off; This option allows to execute PHP scripts for this web-domain",
+    "PHP mode": "FastCGI (Nginx + PHP-FPM)",
+    "PHP version": "7.0.32 (alt)",
+    "": ""
+  },
+  {
+    "Name": "tattoo2.webonl.com",
+    "Owner": "khanhnguyen",
+    "Root directory": "/var/www/khanhnguyen/data/www/tattoo2.webonl.com",
+    "IP addresses": "139.99.96.174",
+    "Parameters": "Off; This option allows to execute PHP scripts for this web-domain",
+    "PHP mode": "FastCGI (Nginx + PHP-FPM)",
+    "PHP version": "7.0.32 (alt)",
+    "": ""
+  },
+  {
+    "Name": "tea.webonl.com",
+    "Owner": "khanhnguyen",
+    "Root directory": "/var/www/khanhnguyen/data/www/tea.webonl.com",
+    "IP addresses": "139.99.96.174",
+    "Parameters": "Off; This option allows to execute PHP scripts for this web-domain",
+    "PHP mode": "FastCGI (Nginx + PHP-FPM)",
+    "PHP version": "7.0.32 (alt)",
+    "": ""
+  },
+  {
+    "Name": "thammyvien.webonl.com",
+    "Owner": "khanhnguyen",
+    "Root directory": "/var/www/khanhnguyen/data/www/thammyvien.webonl.com",
+    "IP addresses": "139.99.96.174",
+    "Parameters": "Off; This option allows to execute PHP scripts for this web-domain",
+    "PHP mode": "FastCGI (Nginx + PHP-FPM)",
+    "PHP version": "7.0.32 (alt)",
+    "": ""
+  },
+  {
+    "Name": "thegioiiphone.webonl.com",
+    "Owner": "khanhnguyen",
+    "Root directory": "/var/www/khanhnguyen/data/www/thegioiiphone.webonl.com",
+    "IP addresses": "139.99.96.174",
+    "Parameters": "Off; This option allows to execute PHP scripts for this web-domain",
+    "PHP mode": "FastCGI (Nginx + PHP-FPM)",
+    "PHP version": "7.0.32 (alt)",
+    "": ""
+  },
+  {
+    "Name": "thetwins.webonl.com",
+    "Owner": "khanhnguyen",
+    "Root directory": "/var/www/khanhnguyen/data/www/thetwins.webonl.com",
+    "IP addresses": "139.99.96.174",
+    "Parameters": "Off; This option allows to execute PHP scripts for this web-domain",
+    "PHP mode": "FastCGI (Nginx + PHP-FPM)",
+    "PHP version": "7.0.32 (alt)",
+    "": ""
+  },
+  {
+    "Name": "thiepcuoidep.webonl.com",
+    "Owner": "khanhnguyen",
+    "Root directory": "/var/www/khanhnguyen/data/www/thiepcuoidep.webonl.com",
+    "IP addresses": "139.99.96.174",
+    "Parameters": "Off; This option allows to execute PHP scripts for this web-domain",
+    "PHP mode": "FastCGI (Nginx + PHP-FPM)",
+    "PHP version": "7.0.32 (alt)",
+    "": ""
+  },
+  {
+    "Name": "thietbiyte.webonl.com",
+    "Owner": "khanhnguyen",
+    "Root directory": "/var/www/khanhnguyen/data/www/thietbiyte.webonl.com",
+    "IP addresses": "139.99.96.174",
+    "Parameters": "Off; This option allows to execute PHP scripts for this web-domain",
+    "PHP mode": "FastCGI (Nginx + PHP-FPM)",
+    "PHP version": "7.0.32 (alt)",
+    "": ""
+  },
+  {
+    "Name": "thoitrang.webonl.com",
+    "Owner": "khanhnguyen",
+    "Root directory": "/var/www/khanhnguyen/data/www/thoitrang.webonl.com",
+    "IP addresses": "139.99.96.174",
+    "Parameters": "Off; This option allows to execute PHP scripts for this web-domain",
+    "PHP mode": "FastCGI (Nginx + PHP-FPM)",
+    "PHP version": "7.0.32 (alt)",
+    "": ""
+  },
+  {
+    "Name": "thucphamchucnang.webonl.com",
+    "Owner": "khanhnguyen",
+    "Root directory": "/var/www/khanhnguyen/data/www/thucphamchucnang.webonl.com",
+    "IP addresses": "139.99.96.174",
+    "Parameters": "Off; This option allows to execute PHP scripts for this web-domain",
+    "PHP mode": "FastCGI (Nginx + PHP-FPM)",
+    "PHP version": "7.0.32 (alt)",
+    "": ""
+  },
+  {
+    "Name": "thucphamchucnang2.webonl.com",
+    "Owner": "khanhnguyen",
+    "Root directory": "/var/www/khanhnguyen/data/www/thucphamchucnang2.webonl.com",
+    "IP addresses": "139.99.96.174",
+    "Parameters": "Off; This option allows to execute PHP scripts for this web-domain",
+    "PHP mode": "FastCGI (Nginx + PHP-FPM)",
+    "PHP version": "7.0.32 (alt)",
+    "": ""
+  },
+  {
+    "Name": "thuocladientu.webonl.com",
+    "Owner": "khanhnguyen",
+    "Root directory": "/var/www/khanhnguyen/data/www/thuocladientu.webonl.com",
+    "IP addresses": "139.99.96.174",
+    "Parameters": "Off; This option allows to execute PHP scripts for this web-domain",
+    "PHP mode": "FastCGI (Nginx + PHP-FPM)",
+    "PHP version": "7.0.32 (alt)",
+    "": ""
+  },
+  {
+    "Name": "thuonghieu.webonl.com",
+    "Owner": "khanhnguyen",
+    "Root directory": "/var/www/khanhnguyen/data/www/thuonghieu.webonl.com",
+    "IP addresses": "139.99.96.174",
+    "Parameters": "Off; This option allows to execute PHP scripts for this web-domain",
+    "PHP mode": "FastCGI (Nginx + PHP-FPM)",
+    "PHP version": "7.0.32 (alt)",
+    "": ""
+  },
+  {
+    "Name": "tietkiemdien.webonl.com",
+    "Owner": "khanhnguyen",
+    "Root directory": "/var/www/khanhnguyen/data/www/tietkiemdien.webonl.com",
+    "IP addresses": "139.99.96.174",
+    "Parameters": "Off; This option allows to execute PHP scripts for this web-domain",
+    "PHP mode": "FastCGI (Nginx + PHP-FPM)",
+    "PHP version": "7.0.32 (alt)",
+    "": ""
+  },
+  {
+    "Name": "tintuc.webonl.com",
+    "Owner": "khanhnguyen",
+    "Root directory": "/var/www/khanhnguyen/data/www/tintuc.webonl.com",
+    "IP addresses": "139.99.96.174",
+    "Parameters": "Off; This option allows to execute PHP scripts for this web-domain",
+    "PHP mode": "FastCGI (Nginx + PHP-FPM)",
+    "PHP version": "7.0.32 (alt)",
+    "": ""
+  },
+  {
+    "Name": "tintuc2.webonl.com",
+    "Owner": "khanhnguyen",
+    "Root directory": "/var/www/khanhnguyen/data/www/tintuc2.webonl.com",
+    "IP addresses": "139.99.96.174",
+    "Parameters": "Off; This option allows to execute PHP scripts for this web-domain",
+    "PHP mode": "FastCGI (Nginx + PHP-FPM)",
+    "PHP version": "7.0.32 (alt)",
+    "": ""
+  },
+  {
+    "Name": "toeic.webonl.com",
+    "Owner": "khanhnguyen",
+    "Root directory": "/var/www/khanhnguyen/data/www/toeic.webonl.com",
+    "IP addresses": "139.99.96.174",
+    "Parameters": "Off; This option allows to execute PHP scripts for this web-domain",
+    "PHP mode": "FastCGI (Nginx + PHP-FPM)",
+    "PHP version": "7.0.32 (alt)",
+    "": ""
+  },
+  {
+    "Name": "tranhgo.webonl.com",
+    "Owner": "khanhnguyen",
+    "Root directory": "/var/www/khanhnguyen/data/www/tranhgo.webonl.com",
+    "IP addresses": "139.99.96.174",
+    "Parameters": "Off; This option allows to execute PHP scripts for this web-domain",
+    "PHP mode": "FastCGI (Nginx + PHP-FPM)",
+    "PHP version": "7.0.32 (alt)",
+    "": ""
+  },
+  {
+    "Name": "tuongthachcao.webonl.com",
+    "Owner": "khanhnguyen",
+    "Root directory": "/var/www/khanhnguyen/data/www/tuongthachcao.webonl.com",
+    "IP addresses": "139.99.96.174",
+    "Parameters": "Off; This option allows to execute PHP scripts for this web-domain",
+    "PHP mode": "FastCGI (Nginx + PHP-FPM)",
+    "PHP version": "7.0.32 (alt)",
+    "": ""
+  },
+  {
+    "Name": "ukushop.webonl.com",
+    "Owner": "khanhnguyen",
+    "Root directory": "/var/www/khanhnguyen/data/www/ukushop.webonl.com",
+    "IP addresses": "139.99.96.174",
+    "Parameters": "Off; This option allows to execute PHP scripts for this web-domain",
+    "PHP mode": "FastCGI (Nginx + PHP-FPM)",
+    "PHP version": "7.0.32 (alt)",
+    "": ""
+  },
+  {
+    "Name": "vcheck.webonl.com",
+    "Owner": "khanhnguyen",
+    "Root directory": "/var/www/khanhnguyen/data/www/vcheck.webonl.com",
+    "IP addresses": "139.99.96.174",
+    "Parameters": "Off; This option allows to execute PHP scripts for this web-domain",
+    "PHP mode": "FastCGI (Nginx + PHP-FPM)",
+    "PHP version": "7.0.32 (alt)",
+    "": ""
+  },
+  {
+    "Name": "vincity.webonl.com",
+    "Owner": "khanhnguyen",
+    "Root directory": "/var/www/khanhnguyen/data/www/vincity.webonl.com",
+    "IP addresses": "139.99.96.174",
+    "Parameters": "Off; This option allows to execute PHP scripts for this web-domain",
+    "PHP mode": "FastCGI (Nginx + PHP-FPM)",
+    "PHP version": "7.0.32 (alt)",
+    "": ""
+  },
+  {
+    "Name": "vinmedia.webonl.com",
+    "Owner": "khanhnguyen",
+    "Root directory": "/var/www/khanhnguyen/data/www/vinmedia.webonl.com",
+    "IP addresses": "139.99.96.174",
+    "Parameters": "Off; This option allows to execute PHP scripts for this web-domain",
+    "PHP mode": "FastCGI (Nginx + PHP-FPM)",
+    "PHP version": "7.0.32 (alt)",
+    "": ""
+  },
+  {
+    "Name": "vipcare.webonl.com",
+    "Owner": "khanhnguyen",
+    "Root directory": "/var/www/khanhnguyen/data/www/vipcare.webonl.com",
+    "IP addresses": "139.99.96.174",
+    "Parameters": "Off; This option allows to execute PHP scripts for this web-domain",
+    "PHP mode": "FastCGI (Nginx + PHP-FPM)",
+    "PHP version": "7.0.32 (alt)",
+    "": ""
+  },
+  {
+    "Name": "vivaclinic.webonl.com",
+    "Owner": "khanhnguyen",
+    "Root directory": "/var/www/khanhnguyen/data/www/vivaclinic.webonl.com",
+    "IP addresses": "139.99.96.174",
+    "Parameters": "Off; This option allows to execute PHP scripts for this web-domain",
+    "PHP mode": "FastCGI (Nginx + PHP-FPM)",
+    "PHP version": "7.0.32 (alt)",
+    "": ""
+  },
+  {
+    "Name": "webonl.com",
+    "Owner": "khanhnguyen",
+    "Root directory": "/var/www/khanhnguyen/data/www/webonl.com",
+    "IP addresses": "139.99.96.174",
+    "Parameters": "Off; This option allows to execute PHP scripts for this web-domain",
+    "PHP mode": "FastCGI (Nginx + PHP-FPM)",
+    "PHP version": "7.0.32 (alt)",
+    "": ""
+  },
+  {
+    "Name": "xkld2.webonl.com",
+    "Owner": "khanhnguyen",
+    "Root directory": "/var/www/khanhnguyen/data/www/xkld2.webonl.com",
+    "IP addresses": "139.99.96.174",
+    "Parameters": "Off; This option allows to execute PHP scripts for this web-domain",
+    "PHP mode": "FastCGI (Nginx + PHP-FPM)",
+    "PHP version": "7.0.32 (alt)",
+    "": ""
+  }
+]

@@ -6,7 +6,7 @@ export default class Header extends React.Component {
       <header id="slider-area">
         <nav className="navbar navbar-expand-md fixed-top scrolling-navbar bg-white">
           <div className="container">
-            <a className="navbar-brand" href="index.html">
+            <a className="navbar-brand" href="/">
               <img src="/static/images/logo-rgb.png" alt="logo" />
             </a>
             <button

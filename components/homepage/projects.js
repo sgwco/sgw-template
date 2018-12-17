@@ -1,6 +1,18 @@
 import React from 'react';
+import { connect } from 'react-redux';
+import { GET_TEMPLATES } from '../../reducers/template';
 
-export default class Project extends React.Component {
+function mapDispatchToProps(dispatch) {
+  return {
+    getTemplates: () => dispatch({ type: GET_TEMPLATES }),
+  };
+}
+
+class Project extends React.Component {
+  componentDidMount() {
+    this.props.getTemplates();
+  }
+
   render() {
     return (
       <section id="portfolios" className="section">
@@ -152,3 +164,8 @@ export default class Project extends React.Component {
     );
   }
 }
+
+export default connect(
+  null,
+  mapDispatchToProps
+)(Project);
