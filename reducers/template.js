@@ -2,7 +2,7 @@ export const GET_TEMPLATES = 'template/GET_TEMPLATES';
 export const GET_TEMPLATES_SUCCESS = 'template/GET_TEMPLATES_SUCCESS';
 
 const initState = {
-  listTemplates: [],
+  listTemplates: {},
 };
 
 export function templateReducer(state = initState, action = {}) {

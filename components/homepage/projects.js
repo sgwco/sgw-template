@@ -2,6 +2,12 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { GET_TEMPLATES } from '../../reducers/template';
 
+function mapStateToProps(state) {
+  return {
+    listTemplates: state.template.listTemplates,
+  };
+}
+
 function mapDispatchToProps(dispatch) {
   return {
     getTemplates: () => dispatch({ type: GET_TEMPLATES }),
@@ -10,7 +16,8 @@ function mapDispatchToProps(dispatch) {
 
 class Project extends React.Component {
   componentDidMount() {
-    this.props.getTemplates();
+    console.log(this.props.listTemplates);
+    // this.props.getTemplates();
   }
 
   render() {
@@ -166,6 +173,6 @@ class Project extends React.Component {
 }
 
 export default connect(
-  null,
+  mapStateToProps,
   mapDispatchToProps
 )(Project);

@@ -1,10 +1,12 @@
+import React from 'react';
 import App, { Container } from 'next/app';
 import { Provider } from 'react-redux';
 import withRedux from 'next-redux-wrapper';
+import withReduxSaga from 'next-redux-saga';
 import makeStore from '../config/store';
 
 class AppComponent extends App {
-  static async getInitialProps({ Component, router, ctx }) {
+  static async getInitialProps({ Component, ctx }) {
     let pageProps = {};
 
     if (Component.getInitialProps) {
@@ -27,4 +29,4 @@ class AppComponent extends App {
   }
 }
 
-export default withRedux(makeStore)(AppComponent);
+export default withRedux(makeStore)(withReduxSaga(AppComponent));

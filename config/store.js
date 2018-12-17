@@ -4,16 +4,22 @@ import logger from 'redux-logger';
 import reducers from '../reducers';
 import sagas from '../sagas';
 
+const sagaMiddleware = createSagaMiddleware();
+
 export default (initialState, options) => {
-  const initSaga = createSagaMiddleware();
   let store = null;
 
   if (process.env.NODE_ENV === 'development') {
-    store = createStore(reducers, initialState, applyMiddleware(initSaga, logger));
+    store = createStore(reducers, initialState, applyMiddleware(sagaMiddleware, logger));
   } else {
-    store = createStore(reducers, initialState, applyMiddleware(initSaga));
+    store = createStore(reducers, initialState, applyMiddleware(sagaMiddleware));
   }
 
-  initSaga.run(sagas);
+  store.runSagaTask = () => {
+    store.sagaTask = sagaMiddleware.run(sagas);
+  };
+
+  store.runSagaTask();
+
   return store;
 };
