@@ -20,10 +20,8 @@ export default function(sequelize, Sequelize) {
         type: Sequelize.INTEGER,
         allowNull: false,
         validate: {
-          validate: {
-            isPositive(value) {
-              if (value <= 0) throw new Error('Giá template không hợp lệ.');
-            },
+          isPositive(value) {
+            if (value <= 0) throw new Error('Giá template không hợp lệ.');
           },
         },
       },
@@ -33,6 +31,15 @@ export default function(sequelize, Sequelize) {
         validate: {
           notEmpty: {
             msg: 'Phải cung cấp địa chỉ URL cho template.',
+          },
+        },
+      },
+      category: {
+        type: Sequelize.STRING,
+        allowNull: false,
+        validate: {
+          notEmpty: {
+            msg: 'Phải cung cấp danh mục cho template.',
           },
         },
       },
@@ -58,13 +65,20 @@ export default function(sequelize, Sequelize) {
           if (!template.name) template.name = '';
           if (!template.url) template.url = '';
           if (!template.thumbnail) template.thumbnail = '';
+          if (!template.category) template.category = '';
           if (!template.price) template.price = 0;
         },
       },
     }
   );
 
-  templates.associate = function(models) {};
+  templates.associate = function(models) {
+    models.templates.hasMany(models.billDetails, {
+      foreignKey: 'templateFk',
+      sourceKey: 'id',
+      onDelete: 'CASCADE',
+    });
+  };
 
   return templates;
 }

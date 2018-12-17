@@ -8,7 +8,7 @@ const sequelize = new Sequelize(process.env.DB_NAME, process.env.DB_USER, proces
   port: 3306,
   logging: false,
   dialectOptions: { decimalNumbers: true },
-  logging: process.env.NODE_ENV === 'development',
+  logging: false,
 });
 
 const db = {};
@@ -28,5 +28,7 @@ Object.keys(db).forEach(modelName => {
 
 db.sequelize = sequelize;
 db.Sequelize = Sequelize;
+
+sequelize.sync();
 
 export default db;

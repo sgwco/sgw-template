@@ -1,6 +1,7 @@
 import express from 'express';
 import next from 'next';
-import models from './models';
+import files from './files.json';
+import { WEB_CATEGORY } from './commons/enum';
 
 const dev = process.env.NODE_ENV !== 'production';
 const app = next({ dev });
@@ -8,12 +9,29 @@ const handle = app.getRequestHandler();
 
 app
   .prepare()
-  .then(() => {
+  .then(async () => {
+    const { default: models } = require('./models');
+
     const server = express();
 
     server.get('/bang-gia', (req, res) => {
       const actualPage = '/price';
       app.render(req, res, actualPage);
+    });
+
+    server.get('/import', async (req, res) => {
+      for (let i = 0; i < files.length; ++i) {
+        await models.templates.create({
+          name: files[i].Name,
+          price: 1000,
+          url: files[i].Name,
+          category: WEB_CATEGORY.KHAC,
+          thumbnail:
+            'http://thietkewebchuyennghiep.edu.vn/wp-content/uploads/2018/05/giao-dien-web-ban-luoi-che-nang1-300x386.jpg',
+        });
+      }
+
+      res.json(true);
     });
 
     server.get('*', (req, res) => {

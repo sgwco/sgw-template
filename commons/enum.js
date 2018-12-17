@@ -11,3 +11,8 @@ export const WEB_CATEGORY = {
   DU_LICH: 'Du lịch',
   KHAC: 'Khác',
 };
+
+export const PAYMENT_TYPE = {
+  TRANSFER: 0,
+  PAYPAL: 1,
+};
