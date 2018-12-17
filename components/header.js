@@ -1,18 +1,16 @@
 import React from 'react';
-import Slider from './slider';
 
 export default class Header extends React.Component {
   render() {
     return (
       <header id="slider-area">
-        <nav class="navbar navbar-expand-md fixed-top scrolling-navbar bg-white">
-          <div class="container">
-            <a class="navbar-brand" href="index.html">
-              <span class="lni-bulb" />
-              ESSENCE
+        <nav className="navbar navbar-expand-md fixed-top scrolling-navbar bg-white">
+          <div className="container">
+            <a className="navbar-brand" href="index.html">
+              <img src="/static/images/logo-rgb.png" alt="logo" />
             </a>
             <button
-              class="navbar-toggler"
+              className="navbar-toggler"
               type="button"
               data-toggle="collapse"
               data-target="#navbarCollapse"
@@ -20,52 +18,52 @@ export default class Header extends React.Component {
               aria-expanded="false"
               aria-label="Toggle navigation"
             >
-              <i class="lni-menu" />
+              <i className="lni-menu" />
             </button>
-            <div class="collapse navbar-collapse" id="navbarCollapse">
-              <ul class="navbar-nav mr-auto w-100 justify-content-end">
-                <li class="nav-item">
-                  <a class="nav-link page-scroll" href="#slider-area">
+            <div className="collapse navbar-collapse" id="navbarCollapse">
+              <ul className="navbar-nav mr-auto w-100 justify-content-end">
+                <li className="nav-item">
+                  <a className="nav-link page-scroll" href="#slider-area">
                     Home
                   </a>
                 </li>
-                <li class="nav-item">
-                  <a class="nav-link page-scroll" href="#services">
+                <li className="nav-item">
+                  <a className="nav-link page-scroll" href="#services">
                     Services
                   </a>
                 </li>
-                <li class="nav-item">
-                  <a class="nav-link page-scroll" href="#features">
+                <li className="nav-item">
+                  <a className="nav-link page-scroll" href="#features">
                     Features
                   </a>
                 </li>
-                <li class="nav-item">
-                  <a class="nav-link page-scroll" href="#portfolios">
+                <li className="nav-item">
+                  <a className="nav-link page-scroll" href="#portfolios">
                     Works
                   </a>
                 </li>
-                <li class="nav-item">
-                  <a class="nav-link page-scroll" href="#pricing">
+                <li className="nav-item">
+                  <a className="nav-link page-scroll" href="#pricing">
                     Pricing
                   </a>
                 </li>
-                <li class="nav-item">
-                  <a class="nav-link page-scroll" href="#team">
+                <li className="nav-item">
+                  <a className="nav-link page-scroll" href="#team">
                     Team
                   </a>
                 </li>
-                <li class="nav-item">
-                  <a class="nav-link page-scroll" href="#subscribe">
+                <li className="nav-item">
+                  <a className="nav-link page-scroll" href="#subscribe">
                     Subscribe
                   </a>
                 </li>
-                <li class="nav-item">
-                  <a class="nav-link page-scroll" href="#blog">
+                <li className="nav-item">
+                  <a className="nav-link page-scroll" href="#blog">
                     Blog
                   </a>
                 </li>
-                <li class="nav-item">
-                  <a class="nav-link page-scroll" href="#contact">
+                <li className="nav-item">
+                  <a className="nav-link page-scroll" href="#contact">
                     Contact
                   </a>
                 </li>
@@ -73,7 +71,6 @@ export default class Header extends React.Component {
             </div>
           </div>
         </nav>
-        <Slider />
       </header>
     );
   }
