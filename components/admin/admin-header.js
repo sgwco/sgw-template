@@ -60,7 +60,7 @@ class AdminHeader extends React.Component {
               <DropdownItem>
                 <FontAwesomeIcon icon="wrench" /> Settings
               </DropdownItem>
-              <DropdownItem>
+              <DropdownItem href="/admin/logout">
                 <FontAwesomeIcon icon="lock" /> Logout
               </DropdownItem>
             </DropdownMenu>

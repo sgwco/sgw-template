@@ -1,12 +1,12 @@
-import Router from 'koa-router';
+import { Router } from 'express';
 import { keyBy } from 'lodash';
-import models from '../models';
-import { TEMPLATE_PER_PAGE } from '../commons/const';
+import models from '../../models';
+import { TEMPLATE_PER_PAGE } from '../../commons/const';
 
-const router = new Router({ prefix: '/template' });
+const router = Router();
 
-router.get('/', async ctx => {
-  const { page } = ctx.query;
+router.get('/', async (req, res) => {
+  const { page } = req.query;
   let templates = null;
   if (page) {
     templates = await models.templates.findAll({
@@ -17,7 +17,7 @@ router.get('/', async ctx => {
     templates = await models.templates.findAll();
   }
   const templateConvertedToObject = keyBy(templates, 'id');
-  ctx.body = templateConvertedToObject;
+  res.json(templateConvertedToObject);
 });
 
 export default router;

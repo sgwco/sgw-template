@@ -19,7 +19,7 @@ export default function(sequelize, Sequelize) {
         },
       },
       password: {
-        type: Sequelize.INTEGER,
+        type: Sequelize.STRING,
         allowNull: false,
         validate: {
           notEmpty: {

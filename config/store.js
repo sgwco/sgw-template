@@ -10,7 +10,7 @@ export default initialState => {
   let store = null;
 
   if (process.env.NODE_ENV === 'development') {
-    store = createStore(reducers, initialState, applyMiddleware(sagaMiddleware, logger));
+    store = createStore(reducers, initialState, applyMiddleware(sagaMiddleware));
   } else {
     store = createStore(reducers, initialState, applyMiddleware(sagaMiddleware));
   }

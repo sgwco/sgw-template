@@ -1,51 +1,56 @@
 import next from 'next';
-import Koa from 'koa';
-import Router from 'koa-router';
-import bodyParser from 'koa-bodyparser';
+import express from 'express';
+import bodyParser from 'body-parser';
+import session from 'express-session';
+import passport from './config/passport';
 import models from './models';
-import routes from './api';
-import files from './files.json';
-import { WEB_CATEGORY } from './commons/enum';
+import apiRoutes from './routes/api';
+import adminRoutes from './routes/web/admin';
 
 const dev = process.env.NODE_ENV !== 'production';
 const app = next({ dev, quiet: true });
 const handle = app.getRequestHandler();
-const koaWebApp = new Koa();
-const koaWebRouter = new Router();
-koaWebApp.use(bodyParser());
+
+const server = express();
+server.use(bodyParser.json());
+server.use(bodyParser.urlencoded({ extended: false }));
+server.use(
+  session({
+    secret: 'sgw-web-template-sonvh',
+    saveUninitialized: true,
+    resave: true,
+  })
+);
 
 app.prepare().then(async () => {
   await models.sequelize.sync();
 
-  koaWebRouter.get('/bang-gia', async ctx => {
-    const actualPage = '/price';
-    await app.render(ctx.req, ctx.res, actualPage);
-    ctx.respond = false;
+  server.use(passport.initialize());
+  server.use(passport.session());
+
+  // koaApi.get('/import', async ctx => {
+  //   for (let i = 0; i < files.length; ++i) {
+  //     await models.templates.create({
+  //       name: files[i].Name,
+  //       price: 1000,
+  //       url: files[i].Name,
+  //       category: WEB_CATEGORY.KHAC,
+  //       thumbnail:
+  //         'http://thietkewebchuyennghiep.edu.vn/wp-content/uploads/2018/05/giao-dien-web-ban-luoi-che-nang1-300x386.jpg',
+  //     });
+  //   }
+  //   ctx.body = true;
+  // });
+
+  server.use('/api', apiRoutes);
+  adminRoutes(server, app);
+
+  server.get('*', (req, res) => {
+    return handle(req, res);
   });
 
-  koaWebRouter.get('/import', async ctx => {
-    for (let i = 0; i < files.length; ++i) {
-      await models.templates.create({
-        name: files[i].Name,
-        price: 1000,
-        url: files[i].Name,
-        category: WEB_CATEGORY.KHAC,
-        thumbnail:
-          'http://thietkewebchuyennghiep.edu.vn/wp-content/uploads/2018/05/giao-dien-web-ban-luoi-che-nang1-300x386.jpg',
-      });
-    }
-
-    ctx.body = true;
+  server.listen(3000, err => {
+    if (err) throw err;
+    console.log('> Ready on http://localhost:3000');
   });
-
-  koaWebRouter.use(routes.routes());
-
-  koaWebRouter.get('*', async ctx => {
-    await handle(ctx.req, ctx.res);
-    ctx.respond = false;
-  });
-
-  koaWebApp.use(koaWebRouter.routes());
-  koaWebApp.listen(3000);
-  console.log('> Ready on http://localhost:3000');
 });
