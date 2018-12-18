@@ -1,6 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
-import Layout from '../components/layout';
+import Layout from '../components/layouts/main.layout';
 import MainSearch from '../components/homepage/main-search';
 import ServiceMainPage from '../components/homepage/services';
 import WebTemplates from '../components/homepage/web-templates/web-templates';
