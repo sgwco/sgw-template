@@ -1,13 +1,19 @@
 import React from 'react';
 import Head from 'next/head';
 import { library } from '@fortawesome/fontawesome-svg-core';
-import { faWrench, faLock, faTachometerAlt, faBoxOpen } from '@fortawesome/free-solid-svg-icons';
+import {
+  faWrench,
+  faLock,
+  faTachometerAlt,
+  faBoxOpen,
+  faFileInvoice,
+} from '@fortawesome/free-solid-svg-icons';
 import { connect } from 'react-redux';
 import AdminHeader from '../admin/admin-header';
 import AdminBreadcrumb from '../admin/admin-breadcrumb';
 import AdminSidebar from '../admin/admin-sidebar';
 
-library.add(faWrench, faLock, faTachometerAlt, faBoxOpen);
+library.add(faWrench, faLock, faTachometerAlt, faBoxOpen, faFileInvoice);
 
 function mapStateToProps(state) {
   return {

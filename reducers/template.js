@@ -19,6 +19,7 @@ export function templateReducer(state = initState, action = {}) {
 
     case SELECT_TEMPLATE_CATEGORY:
       newState.selectedTemplateCategory = action.category;
+      newState.selectedPage = 0;
       break;
 
     case SELECT_TEMPLATE_PAGE:

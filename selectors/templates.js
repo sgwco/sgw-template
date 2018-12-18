@@ -6,6 +6,8 @@ const getTemplates = state => state.template.listTemplates;
 const getTemplatesPage = state => state.template.selectedPage;
 const getTemplatesCategory = state => state.template.selectedTemplateCategory;
 
+const getAdminTemplatePage = state => state.admin.templateSelectedPage;
+
 export const getFilteredTemplatesSelector = createSelector(
   [getTemplates, getTemplatesPage, getTemplatesCategory],
   (templates, page, category) => {
@@ -15,6 +17,20 @@ export const getFilteredTemplatesSelector = createSelector(
         item => templates[item].category === WEB_CATEGORY[category]
       );
     }
+    if (page !== null) {
+      filteredTemplates = filteredTemplates.slice(
+        page * TEMPLATE_PER_PAGE,
+        page * TEMPLATE_PER_PAGE + TEMPLATE_PER_PAGE
+      );
+    }
+    return filteredTemplates.reduce((result, key) => ({ ...result, [key]: templates[key] }), {});
+  }
+);
+
+export const getAdminTemplatesSelector = createSelector(
+  [getTemplates, getAdminTemplatePage],
+  (templates, page) => {
+    let filteredTemplates = Object.keys(templates);
     if (page !== null) {
       filteredTemplates = filteredTemplates.slice(
         page * TEMPLATE_PER_PAGE,
