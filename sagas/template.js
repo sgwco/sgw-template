@@ -6,9 +6,9 @@ async function getApi(url) {
   return await axios.get(url);
 }
 
-export function* getTemplates({ page = 0 }) {
+export function* getTemplates() {
   try {
-    const templates = yield call(getApi, `http://localhost:3000/api/template?page=${page}`);
+    const templates = yield call(getApi, 'http://localhost:3000/api/template');
     yield put({ type: GET_TEMPLATES_SUCCESS, listTemplates: templates.data });
   } catch (error) {
     // Code

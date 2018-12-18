@@ -1,3 +1,4 @@
+import React from 'react';
 import Document, { Head, Main, NextScript } from 'next/document';
 
 export default class DocumentPage extends Document {
@@ -11,20 +12,12 @@ export default class DocumentPage extends Document {
           <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
           <meta name="author" content="Vo Hoai Son" />
 
-          <link
-            rel="stylesheet"
-            href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
-            integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
-            crossOrigin="anonymous"
-          />
+          <link rel="stylesheet" href="static/css/bootstrap.min.css" />
           <link rel="stylesheet" href="static/css/swiper.min.css" />
           <link rel="stylesheet" href="static/css/line-icons.css" />
-          <link rel="stylesheet" href="static/css/magnific-popup.css" />
           <link rel="stylesheet" href="static/css/animate.css" />
           <link rel="stylesheet" href="static/css/color-switcher.css" />
-          <link rel="stylesheet" href="static/css/menu_sideslide.css" />
           <link rel="stylesheet" href="static/css/main.css" />
-          <link rel="stylesheet" href="static/css/responsive.css" />
         </Head>
         <body>
           <Main />
@@ -39,7 +32,6 @@ export default class DocumentPage extends Document {
             integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
             crossOrigin="anonymous"
           />
-          <script src="static/js/mixitup.min.js" />
         </body>
       </html>
     );
