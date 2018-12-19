@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from 'next/link';
 import css from 'styled-jsx/css';
 
 export default class TemplateItem extends React.Component {
@@ -15,9 +16,12 @@ export default class TemplateItem extends React.Component {
             <div className="single-content">
               <div className="fancy-table">
                 <div className="table-cell">
-                  <a href={`https://${template.url}`}>
-                    <button className="btn btn-primary">Xem demo</button>
-                  </a>
+                  <Link href={`/preview?url=${template.url}`} as={`/preview/${template.url}`}>
+                    <a>
+                      <button className="btn btn-primary">Xem demo</button>
+                    </a>
+                  </Link>
+
                   <button className="btn btn-success">Chọn mẫu này</button>
                 </div>
               </div>

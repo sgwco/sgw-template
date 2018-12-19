@@ -53,8 +53,8 @@ class WebTemplates extends React.Component {
     );
   };
 
-  renderTemplateItem = template => {
-    return <TemplateItem key={template.url} template={this.props.listTemplates[template]} />;
+  renderTemplateItem = (template, index) => {
+    return <TemplateItem key={index} template={this.props.listTemplates[template]} />;
   };
 
   renderPaginationItem = page => {

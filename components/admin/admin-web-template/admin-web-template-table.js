@@ -18,6 +18,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { getAdminTemplatesSelector, getTotalPageSelector } from '../../../selectors/templates';
 import { GET_TEMPLATES } from '../../../reducers/template';
 import { ADMIN_SELECT_TEMPLATE_PAGE } from '../../../reducers/admin';
+import AdminWebTemplateForm from './admin-web-template-form';
 
 function mapStateToProps(state) {
   return {
@@ -37,6 +38,7 @@ function mapDispatchToProps(dispatch) {
 class AdminWebTemplateTable extends React.Component {
   state = {
     popoverIsShown: null,
+    createFormIsShown: false,
   };
 
   componentDidMount() {
@@ -47,6 +49,8 @@ class AdminWebTemplateTable extends React.Component {
   }
 
   togglePopover = (id = null) => this.setState({ popoverIsShown: id });
+
+  toggleCreateForm = () => this.setState({ createFormIsShown: !this.state.createFormIsShown });
 
   renderPaginationItem = page => {
     const { selectPage, templateSelectedPage } = this.props;
@@ -113,8 +117,12 @@ class AdminWebTemplateTable extends React.Component {
               <div className="card">
                 <div className="card-header">
                   <FontAwesomeIcon icon="box-open" /> Danh sách mẫu website
+                  <Button color="success" className="ml-3" onClick={this.toggleCreateForm}>
+                    Tạo mới
+                  </Button>
                 </div>
                 <div className="card-body">
+                  {this.state.createFormIsShown && <AdminWebTemplateForm />}
                   <Table bordered striped>
                     <thead>
                       <tr>

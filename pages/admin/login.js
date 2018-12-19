@@ -30,7 +30,12 @@ export default class AdminLogin extends React.Component {
                             <FontAwesomeIcon icon="user" />
                           </InputGroupText>
                         </InputGroupAddon>
-                        <Input type="email" name="email" placeholder="Email" />
+                        <Input
+                          type="email"
+                          name="email"
+                          placeholder="Email"
+                          value="sonvh.it6@gmail.com"
+                        />
                       </InputGroup>
                       <InputGroup className="mb-4">
                         <InputGroupAddon addonType="prepend">
@@ -38,7 +43,12 @@ export default class AdminLogin extends React.Component {
                             <FontAwesomeIcon icon="lock" />
                           </InputGroupText>
                         </InputGroupAddon>
-                        <Input type="password" name="password" placeholder="Mật khẩu" />
+                        <Input
+                          type="password"
+                          name="password"
+                          placeholder="Mật khẩu"
+                          value="123456"
+                        />
                       </InputGroup>
                       <Row>
                         <div className="col-6">
