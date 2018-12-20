@@ -1,9 +1,9 @@
 {
   "scripts": {
-    "dev": "nodemon --exec babel-node server.js",
-    "clean": "rm -rf build",
+    "dev": "nodemon --ignore build --exec babel-node server.js",
+    "clean": "rm -rf .next",
     "build": "npm run clean && npm run build:next && npm run build:express",
-    "build:express": "babel -d ./build . --ignore node_modules,.next,build",
+    "build:express": "babel -d ./.next . --ignore node_modules,.next,pages",
     "build:next": "next build",
     "start": "node ./build/server.js"
   },
@@ -23,12 +23,10 @@
     "moment": "^2.23.0",
     "mysql2": "^1.6.4",
     "next": "^7.0.2",
-    "next-redux-saga": "^3.0.0",
     "next-redux-wrapper": "^2.1.0",
     "passport": "^0.4.0",
     "passport-local": "^1.0.0",
     "path": "^0.12.7",
-    "puppeteer": "^1.11.0",
     "react": "^16.6.3",
     "react-dom": "^16.6.3",
     "react-flip-toolkit": "^6.3.1",

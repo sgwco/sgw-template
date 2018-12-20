@@ -2,6 +2,7 @@ import React from 'react';
 import Head from 'next/head';
 import Header from '../header';
 import Footer from '../footer';
+import Loader from '../../commons/loader';
 
 export default class Layout extends React.Component {
   componentDidMount() {
@@ -32,6 +33,7 @@ export default class Layout extends React.Component {
         <Header />
         {this.props.children}
         <Footer />
+        <Loader />
         <script
           src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
           integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"

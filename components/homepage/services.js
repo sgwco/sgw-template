@@ -3,7 +3,7 @@ import React from 'react';
 export default class ServiceMainPage extends React.Component {
   render() {
     return (
-      <section id="services" className="section">
+      <section id="dich-vu" className="section">
         <div className="container">
           <div className="section-header">
             <h2 className="section-title">Tiêu chí của chúng tôi</h2>

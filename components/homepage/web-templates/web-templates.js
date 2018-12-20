@@ -82,7 +82,7 @@ class WebTemplates extends React.Component {
     const templateCategories = Object.keys(WEB_CATEGORY);
     const templateIds = Object.keys(listTemplates);
     return (
-      <section id="portfolios" className="section">
+      <section id="kho-giao-dien" className="section">
         <Container>
           <div className="section-header">
             <h2 className="section-title">Kho giao diện</h2>

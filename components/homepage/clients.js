@@ -16,7 +16,7 @@ export default class ClientsMainPage extends React.Component {
 
   render() {
     return (
-      <section className="section">
+      <section className="section" id="doi-tac">
         <div className="container">
           <div className="section-header">
             <h2 className="section-title">Đối tác</h2>

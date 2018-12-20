@@ -1,10 +1,8 @@
 import { Router } from 'express';
 import { keyBy } from 'lodash';
-import fs from 'fs';
-import path from 'path';
 import models from '../../models';
 import { TEMPLATE_PER_PAGE } from '../../commons/const';
-import { takeScreenshot } from '../../config/puppeteer';
+import { takeScreenshot } from '../../commons/utils-server';
 
 const router = Router();
 
@@ -54,11 +52,6 @@ router.patch('/', async (req, res, next) => {
       const key = keys[i];
       switch (key) {
         case 'url': {
-          const filePath = path.resolve('static', 'uploads', rest[key] + '.webp');
-          if (fs.existsSync(filePath)) {
-            fs.unlinkSync(path.resolve('static', 'uploads', rest[key] + '.webp'));
-          }
-
           rest[key] = rest[key].replace(/(https|http|:|\/)/g, '');
           rest.thumbnail = await takeScreenshot(rest[key], rest[key] + '.webp');
           break;
