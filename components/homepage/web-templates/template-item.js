@@ -3,16 +3,12 @@ import Link from 'next/link';
 
 export default class TemplateItem extends React.Component {
   state = {
-    thumbnail: null,
+    isSafari: null,
   };
 
   componentDidMount() {
     const isSafari = /Safari/.test(navigator.userAgent) && /Apple Computer/.test(navigator.vendor);
-    if (isSafari) {
-      this.setState({ thumbnail: `/static/images/uploads/${this.props.template.url}.jpg` });
-    } else {
-      this.setState({ thumbnail: `/static/images/uploads/${this.props.template.url}.webp` });
-    }
+    this.setState({ isSafari });
   }
 
   render() {
@@ -30,7 +26,6 @@ export default class TemplateItem extends React.Component {
                       <button className="btn btn-primary">Xem demo</button>
                     </a>
                   </Link>
-
                   <button className="btn btn-success">Chọn mẫu này</button>
                 </div>
               </div>
@@ -47,7 +42,7 @@ export default class TemplateItem extends React.Component {
           .shot-preview {
             width: 100%;
             height: 300px;
-            background: url(${this.state.thumbnail});
+            background: url(/static/images/uploads/${this.props.template.url}.${this.props.isSafari ? 'jpg' : 'webp'});
             background-size: cover;
             background-position: top;
             border: 1px solid rgba(0, 0, 0, 0.4);

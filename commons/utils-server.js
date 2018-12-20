@@ -18,7 +18,7 @@ export async function takeScreenshot(url) {
   }
 
   const response = await axios.get(
-    `https://image.thum.io/get/width/300/fullpage/jpg/https://${url}`,
+    `https://image.thum.io/get/width/300/fullpage/allowJPG/wait/2/https://${url}`,
     { responseType: 'arraybuffer' }
   );
   const buffer = new Buffer(response.data, 'binary');

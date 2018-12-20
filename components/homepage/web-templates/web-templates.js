@@ -2,6 +2,7 @@ import React from 'react';
 import { Container, Row, Pagination, PaginationItem, PaginationLink } from 'reactstrap';
 import { isEmpty } from 'lodash';
 import { connect } from 'react-redux';
+import { Flipper, Flipped } from 'react-flip-toolkit';
 import css from 'styled-jsx/css';
 import {
   GET_TEMPLATES,
@@ -53,8 +54,12 @@ class WebTemplates extends React.Component {
     );
   };
 
-  renderTemplateItem = (template, index) => {
-    return <TemplateItem key={index} template={this.props.listTemplates[template]} />;
+  renderTemplateItem = template => {
+    return (
+      <Flipped key={template.id} flipId={template.id}>
+        <TemplateItem template={this.props.listTemplates[template]} />
+      </Flipped>
+    );
   };
 
   renderPaginationItem = page => {
@@ -106,7 +111,9 @@ class WebTemplates extends React.Component {
               </div>
             </div>
           </Row>
-          <Row>{templateIds.map(this.renderTemplateItem)}</Row>
+          <Flipper flipKey={templateIds.map(item => item.id).join('')}>
+            <Row>{templateIds.map(this.renderTemplateItem)}</Row>
+          </Flipper>
           <div className="item-center">
             <Pagination aria-label="page navigation web template">
               {selectedPage !== 0 && (
