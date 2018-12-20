@@ -1,11 +1,14 @@
 {
   "scripts": {
     "dev": "nodemon --exec babel-node server.js",
-    "build": "next build",
-    "start": "next start",
-    "analyze": "ANALYZE=1 next build"
+    "clean": "rm -rf build",
+    "build": "npm run clean && npm run build:next && npm run build:express",
+    "build:express": "babel -d ./build . --ignore node_modules,.next,build",
+    "build:next": "next build",
+    "start": "node ./build/server.js"
   },
   "dependencies": {
+    "@babel/cli": "^7.2.3",
     "@fortawesome/fontawesome-svg-core": "^1.2.10",
     "@fortawesome/free-solid-svg-icons": "^5.6.1",
     "@fortawesome/react-fontawesome": "^0.1.3",

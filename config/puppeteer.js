@@ -13,7 +13,7 @@ export async function takeScreenshot(url, filename) {
   browser.close();
   await sharp(buffer)
     .resize(300)
-    .toFile(path.resolve(__dirname, '..', 'static', 'images', 'uploads', filename));
+    .toFile(path.resolve('static', 'images', 'uploads', filename));
 
   return `/static/images/uploads/${filename}`;
 }
