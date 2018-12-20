@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from 'next/link';
 import { Navbar, Nav, NavbarBrand, Button, NavItem, NavLink } from 'reactstrap';
 import Head from 'next/head';
 import { library } from '@fortawesome/fontawesome-svg-core';
@@ -33,15 +34,17 @@ export default class Preview extends React.Component {
         </Head>
         <div className="navbar-preview">
           <Navbar dark>
-            <NavbarBrand href="/">
-              <img
-                className="navbar-brand-full"
-                src="/static/images/logo-rgb.png"
-                width="89"
-                height="25"
-                alt="sai gon web logo"
-              />
-            </NavbarBrand>
+            <Link href="/">
+              <NavbarBrand href="/">
+                <img
+                  className="navbar-brand-full"
+                  src="/static/images/logo-rgb.png"
+                  width="89"
+                  height="25"
+                  alt="sai gon web logo"
+                />
+              </NavbarBrand>
+            </Link>
             <Nav className="ml-auto">
               <NavItem>
                 <Button color="success">Mua theme</Button>

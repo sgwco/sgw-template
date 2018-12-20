@@ -1,5 +1,6 @@
 import React from 'react';
 import Head from 'next/head';
+import { ToastContainer } from 'react-toastify';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import {
   faWrench,
@@ -37,6 +38,7 @@ class AdminLayout extends React.Component {
           <meta name="author" content="Vo Hoai Son" />
 
           <link rel="stylesheet" href="/static/css/bootstrap.min.css" />
+          <link rel="stylesheet" href="/static/css/ReactToastify.min.css" />
           <link rel="stylesheet" href="/static/css/admin-css.css" />
           <title>SGW Admin</title>
         </Head>
@@ -48,6 +50,7 @@ class AdminLayout extends React.Component {
             {this.props.children}
           </main>
         </div>
+        <ToastContainer />
       </div>
     );
   }

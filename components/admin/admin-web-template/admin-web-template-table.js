@@ -16,15 +16,19 @@ import moment from 'moment';
 import { isEmpty } from 'lodash';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { getAdminTemplatesSelector, getAdminTotalPageSelector } from '../../../selectors/templates';
-import { GET_TEMPLATES } from '../../../reducers/template';
+import { GET_TEMPLATES, EDIT_TEMPLATE, DELETE_TEMPLATE } from '../../../reducers/template';
 import { ADMIN_SELECT_TEMPLATE_PAGE } from '../../../reducers/admin';
 import AdminWebTemplateForm from './admin-web-template-form';
+import EditableCell from '../../../commons/editable-cell';
+import { WEB_CATEGORY } from '../../../commons/enum';
+import { formatNumber } from '../../../commons/utils';
 
 function mapStateToProps(state) {
   return {
     templateSelectedPage: state.admin.templateSelectedPage,
     listTemplates: getAdminTemplatesSelector(state),
     totalPage: getAdminTotalPageSelector(state),
+    adminEditInProgress: state.template.adminEditInProgress,
   };
 }
 
@@ -32,6 +36,8 @@ function mapDispatchToProps(dispatch) {
   return {
     getTemplates: () => dispatch({ type: GET_TEMPLATES }),
     selectPage: page => dispatch({ type: ADMIN_SELECT_TEMPLATE_PAGE, page }),
+    editTemplate: data => dispatch({ type: EDIT_TEMPLATE, data }),
+    deleteTemplate: id => dispatch({ type: DELETE_TEMPLATE, id }),
   };
 }
 
@@ -52,6 +58,13 @@ class AdminWebTemplateTable extends React.Component {
 
   toggleCreateForm = () => this.setState({ createFormIsShown: !this.state.createFormIsShown });
 
+  onDelete = id => {
+    const result = confirm('Bạn có chắc chắn muốn xóa?');
+    if (result) {
+      this.props.deleteTemplate(id);
+    }
+  };
+
   renderPaginationItem = page => {
     const { selectPage, templateSelectedPage } = this.props;
     return (
@@ -65,25 +78,59 @@ class AdminWebTemplateTable extends React.Component {
     );
   };
 
+  renderTemplateCategoryItem = category => {
+    return (
+      <Badge key={category} className="mr-2" color="success">
+        {category}
+      </Badge>
+    );
+  };
+
   renderTemplateItem = id => {
     const template = this.props.listTemplates[id];
+    const categories = Object.keys(WEB_CATEGORY).map(item => WEB_CATEGORY[item]);
     return (
-      <tr key={id}>
+      <tr key={id} className={this.props.adminEditInProgress == id && 'in-progress'}>
         <td>{id}</td>
-        <td>
+        <EditableCell
+          type="text"
+          value={template.name}
+          onSave={name => this.props.editTemplate({ id, name })}
+        >
           <strong>{template.name}</strong>
-        </td>
-        <td>{template.price} VND</td>
-        <td>
-          <a href={`https://${template.url}`}>{template.url}</a>
-        </td>
-        <td>
-          <Badge color="success">{template.category}</Badge>
-        </td>
+        </EditableCell>
+        <EditableCell
+          type="text"
+          value={template.price}
+          onSave={price => this.props.editTemplate({ id, price })}
+        >
+          {formatNumber(template.price)} VND
+        </EditableCell>
+        <EditableCell
+          type="text"
+          value={template.url}
+          onSave={url => this.props.editTemplate({ id, url })}
+        >
+          <a href={`https://${template.url}`} target="_blank" rel="noopener noreferrer">
+            {template.url}
+          </a>
+        </EditableCell>
+        <EditableCell
+          type="select"
+          data={categories}
+          multiple={true}
+          value={template.category.split(',')}
+          onSave={category => this.props.editTemplate({ id, category })}
+        >
+          {template.category.split(',').map(this.renderTemplateCategoryItem)}
+        </EditableCell>
         <td>{moment(template.createdAt).format('DD/MM/YYYY')}</td>
-        <td>
+        <td className="flex-button">
           <Button color="primary" id={`popover-${id}`} onClick={() => this.togglePopover(id)}>
             Xem mẫu
+          </Button>
+          <Button color="danger" onClick={() => this.onDelete(id)}>
+            Xóa
           </Button>
           <Popover
             placement="left"
@@ -99,6 +146,15 @@ class AdminWebTemplateTable extends React.Component {
         <style jsx>{`
           .thumbnail {
             width: 100%;
+          }
+          .flex-button {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+          }
+          .in-progress {
+            opacity: 0.2;
+            pointer-events: none;
           }
         `}</style>
       </tr>
@@ -122,7 +178,9 @@ class AdminWebTemplateTable extends React.Component {
                   </Button>
                 </div>
                 <div className="card-body">
-                  {this.state.createFormIsShown && <AdminWebTemplateForm />}
+                  {this.state.createFormIsShown && (
+                    <AdminWebTemplateForm onToggle={this.toggleCreateForm} />
+                  )}
                   <Table bordered striped>
                     <thead>
                       <tr>
@@ -132,7 +190,7 @@ class AdminWebTemplateTable extends React.Component {
                         <th>Đường dẫn</th>
                         <th>Danh mục</th>
                         <th>Ngày tạo</th>
-                        <th>Xem mẫu</th>
+                        <th />
                       </tr>
                     </thead>
                     <tbody>{listTemplatesById.map(this.renderTemplateItem)}</tbody>

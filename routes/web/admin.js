@@ -3,12 +3,15 @@ import passport from '../../config/passport';
 
 const router = Router();
 const isAuthenticated = (req, res, next) => {
-  // if (req.isAuthenticated()) {
-  //   next();
-  // } else {
-  //   res.redirect('/admin/login');
-  // }
-  next();
+  if (process.env.NODE_ENV === 'development') {
+    return next();
+  }
+
+  if (req.isAuthenticated()) {
+    next();
+  } else {
+    res.redirect('/admin/login');
+  }
 };
 
 export default (server, app) => {

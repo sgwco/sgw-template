@@ -13,7 +13,11 @@ export default class ServiceMainPage extends React.Component {
           </div>
           <div className="row">
             <div className="col-lg-4 col-md-6 col-xs-12">
-              <div className="item-boxes services-item wow fadeInDown" data-wow-delay="0.2s">
+              <div
+                className="item-boxes services-item wow fadeInDown"
+                data-wow-delay="0.2s"
+                data-wow-duration="0.5s"
+              >
                 <div className="icon color-1">
                   <i className="lni-cog" />
                 </div>
@@ -25,7 +29,11 @@ export default class ServiceMainPage extends React.Component {
               </div>
             </div>
             <div className="col-lg-4 col-md-6 col-xs-12">
-              <div className="item-boxes services-item wow fadeInDown" data-wow-delay="0.4s">
+              <div
+                className="item-boxes services-item wow fadeInDown"
+                data-wow-delay="0.4s"
+                data-wow-duration="0.5s"
+              >
                 <div className="icon color-2">
                   <i className="lni-mobile" />
                 </div>
@@ -37,7 +45,11 @@ export default class ServiceMainPage extends React.Component {
               </div>
             </div>
             <div className="col-lg-4 col-md-6 col-xs-12">
-              <div className="item-boxes services-item wow fadeInDown" data-wow-delay="0.6s">
+              <div
+                className="item-boxes services-item wow fadeInDown"
+                data-wow-delay="0.6s"
+                data-wow-duration="0.5s"
+              >
                 <div className="icon color-6">
                   <i className="lni-stats-up" />
                 </div>
@@ -49,7 +61,11 @@ export default class ServiceMainPage extends React.Component {
               </div>
             </div>
             <div className="col-lg-4 col-md-6 col-xs-12">
-              <div className="item-boxes services-item wow fadeInDown" data-wow-delay="0.8s">
+              <div
+                className="item-boxes services-item wow fadeInDown"
+                data-wow-delay="0.8s"
+                data-wow-duration="0.5s"
+              >
                 <div className="icon color-4">
                   <i className="lni-layout" />
                 </div>
@@ -61,7 +77,11 @@ export default class ServiceMainPage extends React.Component {
               </div>
             </div>
             <div className="col-lg-4 col-md-6 col-xs-12">
-              <div className="item-boxes services-item wow fadeInDown" data-wow-delay="1s">
+              <div
+                className="item-boxes services-item wow fadeInDown"
+                data-wow-delay="1s"
+                data-wow-duration="0.5s"
+              >
                 <div className="icon color-5">
                   <i className="lni-emoji-smile" />
                 </div>
@@ -73,7 +93,11 @@ export default class ServiceMainPage extends React.Component {
               </div>
             </div>
             <div className="col-lg-4 col-md-6 col-xs-12">
-              <div className="item-boxes services-item wow fadeInDown" data-wow-delay="1.2s">
+              <div
+                className="item-boxes services-item wow fadeInDown"
+                data-wow-delay="1.2s"
+                data-wow-duration="0.5s"
+              >
                 <div className="icon color-2">
                   <i className="lni-shield" />
                 </div>

@@ -6,7 +6,7 @@ import { ADD_TEMPLATE } from '../../../reducers/template';
 
 function mapDispatchToProps(dispatch) {
   return {
-    addTemplate: data => dispatch({ type: ADD_TEMPLATE, data }),
+    addTemplate: (data, cb) => dispatch({ type: ADD_TEMPLATE, data, cb }),
   };
 }
 
@@ -20,7 +20,7 @@ class AdminWebTemplateForm extends React.Component {
       category: formData.getAll('category'),
       url: formData.get('url'),
     };
-    this.props.addTemplate(data);
+    this.props.addTemplate(data, this.props.onToggle);
   };
 
   renderCategoryItem = cat => {
@@ -75,7 +75,7 @@ class AdminWebTemplateForm extends React.Component {
               <Button color="success" type="submit" size="sm" className="mr-3">
                 Lưu
               </Button>
-              <Button color="secondary" size="sm">
+              <Button color="secondary" size="sm" onClick={this.props.onToggle}>
                 Hủy
               </Button>
             </div>

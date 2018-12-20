@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from 'next/link';
 import {
   Navbar,
   NavbarToggler,
@@ -30,22 +31,24 @@ class AdminHeader extends React.Component {
     const { userDropdownToggle } = this.state;
     return (
       <Navbar className="app-header" light>
-        <NavbarBrand href="/">
-          <img
-            className="navbar-brand-full"
-            src="/static/images/logo-rgb.png"
-            width="89"
-            height="25"
-            alt="sai gon web logo"
-          />
-          <img
-            className="navbar-brand-minimized"
-            src="/static/images/logo-rgb.png"
-            width="30"
-            height="30"
-            alt="sai gon web logo"
-          />
-        </NavbarBrand>
+        <Link href="/">
+          <NavbarBrand href="/">
+            <img
+              className="navbar-brand-full"
+              src="/static/images/logo-rgb.png"
+              width="89"
+              height="25"
+              alt="sai gon web logo"
+            />
+            <img
+              className="navbar-brand-minimized"
+              src="/static/images/logo-rgb.png"
+              width="30"
+              height="30"
+              alt="sai gon web logo"
+            />
+          </NavbarBrand>
+        </Link>
         <NavbarToggler className="sidebar-toggler" onClick={this.props.toggleSidebar} />
         <Nav navbar className="ml-auto">
           <Dropdown nav isOpen={userDropdownToggle} toggle={this.onUserDropdown}>

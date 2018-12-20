@@ -1,5 +1,7 @@
 import { Router } from 'express';
 import { keyBy } from 'lodash';
+import fs from 'fs';
+import path from 'path';
 import models from '../../models';
 import { TEMPLATE_PER_PAGE } from '../../commons/const';
 import { takeScreenshot } from '../../config/puppeteer';
@@ -38,6 +40,49 @@ router.post('/', async (req, res, next) => {
     res.json(template);
   } catch (error) {
     next({ status: 401, error: error.message });
+  }
+});
+
+router.patch('/', async (req, res, next) => {
+  try {
+    const { id, ...rest } = req.body;
+    let template = await models.templates.findOne({ where: { id } });
+    if (!template) throw { status: 404, error: 'Không thể tìm thấy template.' };
+
+    const keys = Object.keys(rest);
+    for (let i = 0; i < keys.length; ++i) {
+      const key = keys[i];
+      switch (key) {
+        case 'url': {
+          const filePath = path.resolve('static', 'uploads', rest[key] + '.webp');
+          if (fs.existsSync(filePath)) {
+            fs.unlinkSync(path.resolve('static', 'uploads', rest[key] + '.webp'));
+          }
+
+          rest[key] = rest[key].replace(/(https|http|:|\/)/g, '');
+          rest.thumbnail = await takeScreenshot(rest[key], rest[key] + '.webp');
+          break;
+        }
+        case 'category':
+          rest[key] = rest[key].join(',');
+          break;
+      }
+    }
+
+    await template.update({ ...rest });
+    res.json(template);
+  } catch (error) {
+    next({ status: error.status || 401, error: error.message });
+  }
+});
+
+router.delete('/', async (req, res, next) => {
+  try {
+    const { id } = req.body;
+    await models.templates.destroy({ where: { id } });
+    res.json(id);
+  } catch (error) {
+    next({ status: error.status || 401, error: error.message });
   }
 });
 
