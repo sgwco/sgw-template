@@ -26,14 +26,13 @@ router.post('/', async (req, res, next) => {
     let { name, url, category, price } = req.body;
     url = url.replace(/(https|http|:|\/)/g, '');
     const categoryJoined = category.join(',');
-    const path = await takeScreenshot(url, url + '.webp');
+    await takeScreenshot(url);
 
     const template = await models.templates.create({
       name,
       url,
       category: categoryJoined,
       price,
-      thumbnail: path,
     });
     res.json(template);
   } catch (error) {
@@ -53,7 +52,7 @@ router.patch('/', async (req, res, next) => {
       switch (key) {
         case 'url': {
           rest[key] = rest[key].replace(/(https|http|:|\/)/g, '');
-          rest.thumbnail = await takeScreenshot(rest[key], rest[key] + '.webp');
+          await takeScreenshot(rest[key]);
           break;
         }
         case 'category':

@@ -139,7 +139,11 @@ class AdminWebTemplateTable extends React.Component {
             toggle={this.togglePopover}
           >
             <PopoverBody>
-              <img src={template.thumbnail} className="thumbnail" alt="preview" />
+              <img
+                src={`/static/images/uploads/${template.url}.jpg`}
+                className="thumbnail"
+                alt="preview"
+              />
             </PopoverBody>
           </Popover>
         </td>
