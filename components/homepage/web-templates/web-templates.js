@@ -115,7 +115,7 @@ class WebTemplates extends React.Component {
                 </PaginationItem>
               )}
               {Array.from(Array(totalPage).keys()).map(this.renderPaginationItem)}
-              {selectedPage !== totalPage.length - 1 && (
+              {selectedPage !== totalPage - 1 && (
                 <PaginationItem onClick={() => selectPageAction(selectedPage + 1)}>
                   <PaginationLink next />
                 </PaginationItem>

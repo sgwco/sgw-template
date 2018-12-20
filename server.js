@@ -24,25 +24,10 @@ app.prepare().then(async () => {
       secret: 'sgw-web-template-sonvh',
       saveUninitialized: true,
       resave: true,
-      cookie: { maxAge: 8 * 60 * 60 * 1000 },
     })
   );
   server.use(passport.initialize());
   server.use(passport.session());
-
-  // koaApi.get('/import', async ctx => {
-  //   for (let i = 0; i < files.length; ++i) {
-  //     await models.templates.create({
-  //       name: files[i].Name,
-  //       price: 1000,
-  //       url: files[i].Name,
-  //       category: WEB_CATEGORY.KHAC,
-  //       thumbnail:
-  //         'http://thietkewebchuyennghiep.edu.vn/wp-content/uploads/2018/05/giao-dien-web-ban-luoi-che-nang1-300x386.jpg',
-  //     });
-  //   }
-  //   ctx.body = true;
-  // });
 
   server.use('/api', apiRoutes);
   homeRoutes(server, app);
@@ -50,6 +35,11 @@ app.prepare().then(async () => {
 
   server.get('*', (req, res) => {
     return handle(req, res);
+  });
+
+  server.use((err, req, res, next) => {
+    res.status(err.status || 500);
+    res.json({ code: err.status || 500, message: err.message });
   });
 
   server.listen(3000, err => {

@@ -15,7 +15,7 @@ import { connect } from 'react-redux';
 import moment from 'moment';
 import { isEmpty } from 'lodash';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { getAdminTemplatesSelector, getTotalPageSelector } from '../../../selectors/templates';
+import { getAdminTemplatesSelector, getAdminTotalPageSelector } from '../../../selectors/templates';
 import { GET_TEMPLATES } from '../../../reducers/template';
 import { ADMIN_SELECT_TEMPLATE_PAGE } from '../../../reducers/admin';
 import AdminWebTemplateForm from './admin-web-template-form';
@@ -24,7 +24,7 @@ function mapStateToProps(state) {
   return {
     templateSelectedPage: state.admin.templateSelectedPage,
     listTemplates: getAdminTemplatesSelector(state),
-    totalPage: getTotalPageSelector(state),
+    totalPage: getAdminTotalPageSelector(state),
   };
 }
 

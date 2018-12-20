@@ -25,6 +25,7 @@
     "passport": "^0.4.0",
     "passport-local": "^1.0.0",
     "path": "^0.12.7",
+    "puppeteer": "^1.11.0",
     "react": "^16.6.3",
     "react-dom": "^16.6.3",
     "react-flip-toolkit": "^6.3.1",
@@ -35,6 +36,7 @@
     "redux-saga": "^0.16.2",
     "reselect": "^4.0.0",
     "sequelize": "^4.42.0",
+    "sharp": "^0.21.1",
     "styled-jsx": "^3.1.2",
     "swiper": "^4.4.5",
     "wow.js": "^1.2.2"

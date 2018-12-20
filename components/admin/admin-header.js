@@ -30,7 +30,7 @@ class AdminHeader extends React.Component {
     const { userDropdownToggle } = this.state;
     return (
       <Navbar className="app-header" light>
-        <NavbarBrand>
+        <NavbarBrand href="/">
           <img
             className="navbar-brand-full"
             src="/static/images/logo-rgb.png"

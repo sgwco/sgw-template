@@ -14,7 +14,7 @@ export const getFilteredTemplatesSelector = createSelector(
     let filteredTemplates = Object.keys(templates);
     if (category) {
       filteredTemplates = filteredTemplates.filter(
-        item => templates[item].category === WEB_CATEGORY[category]
+        item => templates[item].category.split(',').indexOf(WEB_CATEGORY[category]) !== -1
       );
     }
     if (page !== null) {
@@ -42,6 +42,24 @@ export const getAdminTemplatesSelector = createSelector(
 );
 
 export const getTotalPageSelector = createSelector(
+  [getTemplates, getTemplatesCategory],
+  (templates, category) => {
+    let filteredTemplates = Object.keys(templates);
+    if (category) {
+      filteredTemplates = filteredTemplates.filter(
+        item => templates[item].category.split(',').indexOf(WEB_CATEGORY[category]) !== -1
+      );
+    }
+    const numberOfTemplates = Object.keys(filteredTemplates).length;
+    let totalPage = parseInt(numberOfTemplates / TEMPLATE_PER_PAGE);
+    if (numberOfTemplates % TEMPLATE_PER_PAGE !== 0) {
+      totalPage++;
+    }
+    return totalPage;
+  }
+);
+
+export const getAdminTotalPageSelector = createSelector(
   getTemplates,
   templates => {
     const numberOfTemplates = Object.keys(templates).length;
