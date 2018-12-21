@@ -26,17 +26,16 @@ router.post('/', async (req, res, next) => {
     let { name, url, category, price } = req.body;
     url = url.replace(/(https|http|:|\/)/g, '');
     const categoryJoined = category.join(',');
-    await takeScreenshot(url);
-
     const template = await models.templates.create({
       name,
       url,
       category: categoryJoined,
       price,
     });
+    await takeScreenshot(url);
     res.json(template);
   } catch (error) {
-    next({ status: 401, error: error.message });
+    next({ status: 401, error });
   }
 });
 
@@ -70,7 +69,7 @@ router.patch('/', async (req, res, next) => {
 
 router.delete('/', async (req, res, next) => {
   try {
-    const { id } = req.body;
+    const { id } = req.query;
     await models.templates.destroy({ where: { id } });
     res.json(id);
   } catch (error) {

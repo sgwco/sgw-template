@@ -1,7 +1,9 @@
 import path from 'path';
+import { BrowserApi } from 'phantomjscloud';
 import sharp from 'sharp';
-import axios from 'axios';
 import fs from 'fs';
+
+const browser = new BrowserApi('ak-c8w6b-j1cej-n586y-w3167-q9gy5');
 
 export async function takeScreenshot(url) {
   const fileWebp = url + '.webp';
@@ -17,11 +19,18 @@ export async function takeScreenshot(url) {
     fs.unlinkSync(filePathPng);
   }
 
-  const response = await axios.get(
-    `https://image.thum.io/get/width/300/fullpage/allowJPG/wait/2/https://${url}`,
-    { responseType: 'arraybuffer' }
-  );
-  const buffer = new Buffer(response.data, 'binary');
+  const photo = await browser.requestSingle({
+    url: `https://${url}`,
+    renderType: 'jpeg',
+    outputAsJson: false,
+    renderSettings: {
+      viewport: {
+        width: 1280,
+      },
+    },
+  });
+
+  const buffer = new Buffer(photo.content.data, 'base64');
   const sharpFile = await sharp(buffer).resize(300);
   await Promise.all([sharpFile.toFile(filePathWebp), sharpFile.toFile(filePathPng)]);
 }

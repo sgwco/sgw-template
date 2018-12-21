@@ -17,7 +17,7 @@ export function* getTemplates() {
     const templates = yield call(axios.get, '/api/template');
     yield put({ type: GET_TEMPLATES_SUCCESS, listTemplates: templates.data });
   } catch (error) {
-    toast.danger(error.message);
+    toast.error(error.response.data.message);
   }
 }
 
@@ -30,7 +30,7 @@ export function* addTemplate({ data, cb }) {
     }
     toast.success('Tạo mới thành công!');
   } catch (error) {
-    toast.danger(error.message);
+    toast.error(error.response.data.message);
   }
 }
 
@@ -40,17 +40,17 @@ export function* editTemplate({ data }) {
     yield put({ type: EDIT_TEMPLATE_SUCCESS, template: template.data });
     toast.success('Chỉnh sửa thành công!');
   } catch (error) {
-    toast.danger(error.message);
+    toast.error(error.response.data.message);
   }
 }
 
 export function* deleteTemplate({ id }) {
   try {
-    yield call(axios.delete, '/api/template', { id });
+    yield call(axios.delete, `/api/template?id=${id || ''}`);
     yield put({ type: DELETE_TEMPLATE_SUCCESS, id });
     toast.success('Xóa thành công!');
   } catch (error) {
-    toast.danger(error.message);
+    toast.error(error.response.data.message);
   }
 }
 

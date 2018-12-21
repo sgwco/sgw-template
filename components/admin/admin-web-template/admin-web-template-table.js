@@ -90,7 +90,7 @@ class AdminWebTemplateTable extends React.Component {
     const template = this.props.listTemplates[id];
     const categories = Object.keys(WEB_CATEGORY).map(item => WEB_CATEGORY[item]);
     return (
-      <tr key={id} className={this.props.adminEditInProgress == id && 'in-progress'}>
+      <tr key={id} className={this.props.adminEditInProgress.indexOf(id) > -1 && 'in-progress'}>
         <td>{id}</td>
         <EditableCell
           type="text"

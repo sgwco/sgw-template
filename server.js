@@ -38,6 +38,15 @@ app.prepare().then(async () => {
   });
 
   server.use((err, req, res, next) => {
+    if (typeof err.error.errors === 'object') {
+      next({ status: err.status, message: err.error.errors[0].message });
+    } else {
+      res.status(err.status || 500);
+      res.json({ code: err.status || 500, message: err.message });
+    }
+  });
+
+  server.use((err, req, res, next) => {
     res.status(err.status || 500);
     res.json({ code: err.status || 500, message: err.message });
   });

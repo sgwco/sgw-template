@@ -28,6 +28,10 @@ export default function(sequelize, Sequelize) {
       url: {
         type: Sequelize.STRING,
         allowNull: false,
+        unique: {
+          args: true,
+          msg: 'Tên URL đã có sẵn. Vui lòng chọn URL khác.',
+        },
         validate: {
           notEmpty: {
             msg: 'Phải cung cấp địa chỉ URL cho template.',
@@ -43,15 +47,6 @@ export default function(sequelize, Sequelize) {
           },
         },
       },
-      thumbnail: {
-        type: Sequelize.STRING,
-        allowNull: false,
-        validate: {
-          notEmpty: {
-            msg: 'Phải cung cấp ảnh thumbnail cho template.',
-          },
-        },
-      },
       createdAt: {
         type: Sequelize.DATE,
         field: 'created_at',
@@ -64,7 +59,6 @@ export default function(sequelize, Sequelize) {
         beforeValidate(template) {
           if (!template.name) template.name = '';
           if (!template.url) template.url = '';
-          if (!template.thumbnail) template.thumbnail = '';
           if (!template.category) template.category = '';
           if (!template.price) template.price = 0;
         },
