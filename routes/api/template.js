@@ -63,7 +63,7 @@ router.patch('/', async (req, res, next) => {
     await template.update({ ...rest });
     res.json(template);
   } catch (error) {
-    next({ status: error.status || 401, error: error.message });
+    next({ status: 401, error });
   }
 });
 
@@ -73,7 +73,7 @@ router.delete('/', async (req, res, next) => {
     await models.templates.destroy({ where: { id } });
     res.json(id);
   } catch (error) {
-    next({ status: error.status || 401, error: error.message });
+    next({ status: 401, error });
   }
 });
 

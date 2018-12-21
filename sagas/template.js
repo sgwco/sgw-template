@@ -10,6 +10,8 @@ import {
   EDIT_TEMPLATE_SUCCESS,
   DELETE_TEMPLATE,
   DELETE_TEMPLATE_SUCCESS,
+  ADD_TEMPLATE_FAIL,
+  EDIT_TEMPLATE_FAIL,
 } from '../reducers/template';
 
 export function* getTemplates() {
@@ -30,6 +32,7 @@ export function* addTemplate({ data, cb }) {
     }
     toast.success('Tạo mới thành công!');
   } catch (error) {
+    yield put({ type: ADD_TEMPLATE_FAIL });
     toast.error(error.response.data.message);
   }
 }
@@ -40,6 +43,7 @@ export function* editTemplate({ data }) {
     yield put({ type: EDIT_TEMPLATE_SUCCESS, template: template.data });
     toast.success('Chỉnh sửa thành công!');
   } catch (error) {
+    yield put({ type: EDIT_TEMPLATE_FAIL, id: data.id });
     toast.error(error.response.data.message);
   }
 }
