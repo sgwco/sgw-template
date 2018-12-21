@@ -3,6 +3,13 @@ import { connect } from 'react-redux';
 import { Row, FormGroup, Label, Input, Button } from 'reactstrap';
 import { WEB_CATEGORY } from '../../../commons/enum';
 import { ADD_TEMPLATE } from '../../../reducers/template';
+import { LoaderInline } from '../../../commons/loader';
+
+function mapStateToProps(state) {
+  return {
+    adminIsCreating: state.template.adminIsCreating,
+  };
+}
 
 function mapDispatchToProps(dispatch) {
   return {
@@ -32,6 +39,7 @@ class AdminWebTemplateForm extends React.Component {
   };
 
   render() {
+    const { adminIsCreating } = this.props;
     const categories = Object.keys(WEB_CATEGORY);
     return (
       <form onSubmit={this.handleSubmit}>
@@ -71,11 +79,17 @@ class AdminWebTemplateForm extends React.Component {
                 <Input type="text" id="url" name="url" placeholder="Đường dẫn URL" />
               </div>
             </FormGroup>
-            <div className="mb-5 text-right">
-              <Button color="success" type="submit" size="sm" className="mr-3">
+            <div className="mb-5 d-flex flex-row justify-content-end">
+              <LoaderInline loaderIsShown={adminIsCreating} />
+              <Button
+                color="success"
+                type="submit"
+                className="mr-3 ml-3"
+                disabled={adminIsCreating}
+              >
                 Lưu
               </Button>
-              <Button color="secondary" size="sm" onClick={this.props.onToggle}>
+              <Button color="secondary" onClick={this.props.onToggle} disabled={adminIsCreating}>
                 Hủy
               </Button>
             </div>
@@ -87,6 +101,6 @@ class AdminWebTemplateForm extends React.Component {
 }
 
 export default connect(
-  null,
+  mapStateToProps,
   mapDispatchToProps
 )(AdminWebTemplateForm);

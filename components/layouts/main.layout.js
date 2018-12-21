@@ -2,7 +2,7 @@ import React from 'react';
 import Head from 'next/head';
 import Header from '../header';
 import Footer from '../footer';
-import Loader from '../../commons/loader';
+import { Loader } from '../../commons/loader';
 
 export default class Layout extends React.Component {
   componentDidMount() {
