@@ -42,15 +42,15 @@ export const SearchSecondaryTextStyled = styled.h4`
 `;
 
 export const SearchBoxGroupStyled = styled.div`
-  width: 60%;
+  width: 60% !important;
   margin: 0 auto;
   @media (max-width: 768px) {
-    width: 100%;
+    width: 100% !important;
   }
 `;
 
 export const SearchBoxStyled = styled.input`
-  padding: 23px 30px;
+  padding: 23px 30px !important;
 `;
 
 export const SearchBoxBtnStyled = styled.a`

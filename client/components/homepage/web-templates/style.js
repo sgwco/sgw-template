@@ -1,32 +1,11 @@
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 
 export const PortfolioItemStyled = styled.div`
   padding: 10px 0;
 `;
 
-export const TemplateShotPreviewStyled = styled.div`
+export const TemplateShotPreviewStyled = styled.img`
   width: 100%;
-  height: 300px;
-  background: url(${props => props.url});
-  background-size: cover;
-  background-position: top;
-  border: 1px solid rgba(0, 0, 0, 0.4);
-  -webkit-transition-duration: 4000ms;
-  -o-transition-duration: 4000ms;
-  transition-duration: 4000ms;
-`;
-
-export const TemplateShotItemStyled = styled.div`
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-  position: relative;
-  &:hover ${TemplateShotPreviewStyled} {
-    background-position: bottom;
-  }
-  &:hover ${TemplateSingleContentStyled} {
-    opacity: 1;
-  }
 `;
 
 export const TemplateSingleContentStyled = styled.div`
@@ -41,6 +20,27 @@ export const TemplateSingleContentStyled = styled.div`
   -o-transition-duration: 500ms;
   transition-duration: 500ms;
   width: 100%;
+`;
+
+const hoverImageScroll = keyframes`
+  100% {
+    transform: translateY(calc(-100% + 300px));
+  }
+`;
+
+export const TemplateShotItemStyled = styled.div`
+  width: 100%;
+  height: 300px;
+  overflow: hidden;
+  border: 1px solid rgba(0, 0, 0, 0.4);
+  position: relative;
+  &:hover ${TemplateShotPreviewStyled} {
+    animation: ${hoverImageScroll} 2s ease-in-out;
+    animation-fill-mode: forwards;
+  }
+  &:hover ${TemplateSingleContentStyled} {
+    opacity: 1;
+  }
 `;
 
 export const TemplateFancyTableStyled = styled.div`

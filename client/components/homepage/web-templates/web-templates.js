@@ -2,14 +2,16 @@ import React from 'react';
 import { Container, Row, Pagination, PaginationItem, PaginationLink } from 'reactstrap';
 import { isEmpty } from 'lodash';
 import { connect } from 'react-redux';
-import { Flipper, Flipped } from 'react-flip-toolkit';
 import TemplateItem from './template-item';
 import { WEB_CATEGORY } from '../../../../commons/enum';
 import { getFilteredTemplatesSelector, getTotalPageSelector } from '../../../selectors/templates';
-import { getTemplate } from '../../../actions/template';
+import { getTemplate, selectTemplateCategory, selectTemplatePage } from '../../../actions/template';
+import { SectionStyled, SectionHeaderStyled, SectionTitleStyled } from '../../style';
 
 function mapStateToProps(state) {
   return {
+    selectedTemplateCategory: state.template.selectedTemplateCategory,
+    selectedPage: state.template.selectedPage,
     listTemplates: getFilteredTemplatesSelector(state),
     totalPage: getTotalPageSelector(state),
   };
@@ -18,18 +20,12 @@ function mapStateToProps(state) {
 function mapDispatchToProps(dispatch) {
   return {
     getTemplates: () => dispatch(getTemplate()),
-    // selectTemplateCategoryAction: cat =>
-    //   dispatch({ type: SELECT_TEMPLATE_CATEGORY, category: cat }),
-    // selectPageAction: page => dispatch({ type: SELECT_TEMPLATE_PAGE, page }),
+    selectTemplateCategoryAction: cat => dispatch(selectTemplateCategory(cat)),
+    selectPageAction: page => dispatch(selectTemplatePage(page)),
   };
 }
 
 class WebTemplates extends React.Component {
-  state = {
-    selectedTemplateCategory: '',
-    selectedPage: 0,
-  };
-
   componentDidMount() {
     const { listTemplates, getTemplates } = this.props;
     if (isEmpty(listTemplates)) {
@@ -38,8 +34,7 @@ class WebTemplates extends React.Component {
   }
 
   renderCategoryItem = item => {
-    const { selectTemplateCategoryAction } = this.props;
-    const { selectedTemplateCategory } = this.state;
+    const { selectTemplateCategoryAction, selectedTemplateCategory } = this.props;
     return (
       <a
         key={item}
@@ -53,20 +48,16 @@ class WebTemplates extends React.Component {
     );
   };
 
-  renderTemplateItem = template => {
-    return (
-      <Flipped key={template.id} flipId={template.id}>
-        <TemplateItem template={this.props.listTemplates[template]} />
-      </Flipped>
-    );
+  renderTemplateItem = (template, index) => {
+    return <TemplateItem key={index} template={this.props.listTemplates[template]} />;
   };
 
   renderPaginationItem = page => {
-    const { selectPageAction } = this.props;
+    const { selectPageAction, selectedPage } = this.props;
     return (
       <PaginationItem
         key={page}
-        active={page === this.state.selectedPage}
+        active={page === selectedPage}
         onClick={() => selectPageAction(page)}
       >
         <PaginationLink>{page + 1}</PaginationLink>
@@ -75,20 +66,26 @@ class WebTemplates extends React.Component {
   };
 
   render() {
-    const { selectTemplateCategoryAction, listTemplates, totalPage, selectPageAction } = this.props;
-    const { selectedTemplateCategory, selectedPage } = this.state;
+    const {
+      selectTemplateCategoryAction,
+      listTemplates,
+      totalPage,
+      selectPageAction,
+      selectedTemplateCategory,
+      selectedPage,
+    } = this.props;
     const templateCategories = Object.keys(WEB_CATEGORY);
     const templateIds = Object.keys(listTemplates);
     return (
-      <section id="kho-giao-dien" className="section">
+      <SectionStyled id="kho-giao-dien">
         <Container>
-          <div className="section-header">
-            <h2 className="section-title">Kho giao diện</h2>
-            <p className="section-subtitle">
+          <SectionHeaderStyled>
+            <SectionTitleStyled>Kho giao diện</SectionTitleStyled>
+            <p>
               Kho giao diện khổng lồ được cập nhật thường xuyên với hơn 200+ mẫu website thích hợp
               cho doanh nghiệp của bạn
             </p>
-          </div>
+          </SectionHeaderStyled>
           <Row>
             <div className="col-md-12">
               <div className="controls text-center">
@@ -104,10 +101,8 @@ class WebTemplates extends React.Component {
               </div>
             </div>
           </Row>
-          <Flipper flipKey={templateIds.map(item => item.id).join('')}>
-            <Row>{templateIds.map(this.renderTemplateItem)}</Row>
-          </Flipper>
-          <div className="item-center">
+          <Row>{templateIds.map(this.renderTemplateItem)}</Row>
+          <div className="d-flex justify-content-center mt-3">
             <Pagination aria-label="page navigation web template">
               {selectedPage !== 0 && (
                 <PaginationItem onClick={() => selectPageAction(selectedPage - 1)}>
@@ -123,7 +118,7 @@ class WebTemplates extends React.Component {
             </Pagination>
           </div>
         </Container>
-      </section>
+      </SectionStyled>
     );
   }
 }

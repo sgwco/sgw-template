@@ -1,4 +1,5 @@
 import React from 'react';
+import logo from '../assets/images/logo-rgb.png';
 
 export default class Header extends React.Component {
   render() {
@@ -7,7 +8,7 @@ export default class Header extends React.Component {
         <nav className="navbar navbar-expand-md fixed-top scrolling-navbar bg-white">
           <div className="container">
             <a className="navbar-brand" href="/">
-              <img src="/static/images/logo-rgb.png" alt="logo" />
+              <img src={logo} alt="logo" />
             </a>
             <button
               className="navbar-toggler"

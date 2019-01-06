@@ -10,12 +10,14 @@ import {
   EDIT_TEMPLATE_SUCCESS,
   EDIT_TEMPLATE_FAIL,
   DELETE_TEMPLATE_SUCCESS,
+  GET_TEMPLATE_BY_URL_SUCCESS,
 } from '../actions/template';
 
 const initState = {
   selectedTemplateCategory: '',
   selectedPage: 0,
   listTemplates: {},
+  previewTemplate: {},
   adminEditInProgress: [],
   adminIsCreating: false,
 };
@@ -25,6 +27,10 @@ export function templateReducer(state = initState, action = {}) {
   switch (action.type) {
     case GET_TEMPLATES_SUCCESS:
       newState.listTemplates = action.listTemplates;
+      break;
+
+    case GET_TEMPLATE_BY_URL_SUCCESS:
+      newState.previewTemplate = action.template;
       break;
 
     case SELECT_TEMPLATE_CATEGORY:

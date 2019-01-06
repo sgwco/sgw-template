@@ -11,7 +11,6 @@ module.exports = {
   output: {
     path: path.join(__dirname, outputDirectory),
     filename: 'bundle.js',
-    publicPath: '/',
   },
   module: {
     rules: [
@@ -25,8 +24,8 @@ module.exports = {
         use: ['style-loader', 'css-loader'],
       },
       {
-        test: /\.(png|jpg|gif)$/,
-        use: ['file-loader'],
+        test: /\.(png|jpg|gif|svg|eot|ttf|woff|woff2)$/,
+        loader: 'file-loader',
       },
     ],
   },
@@ -34,7 +33,7 @@ module.exports = {
     port: 3000,
     open: true,
     historyApiFallback: true,
-    disableHostCheck: true,
+    publicPath: '/',
     proxy: {
       '/api': {
         target: 'http://localhost:55554',

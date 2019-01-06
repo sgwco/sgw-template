@@ -1,0 +1,4 @@
+{
+  "ignore": ["client/**/*.js"],
+  "watch": ["commons/**/*.js", "server/**/*.js"]
+}

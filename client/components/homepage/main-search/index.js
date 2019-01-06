@@ -1,4 +1,6 @@
 import React from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import background from '../../../assets/images/bg-3.jpg';
 import {
   SearchWrapperStyled,
   SearchTextWrapperStyled,
@@ -13,7 +15,7 @@ export default class MainSearch extends React.Component {
   render() {
     return (
       <SearchWrapperStyled>
-        <img src="static/images/bg-3.jpg" alt="" />
+        <img src={background} alt="" />
         <SearchTextWrapperStyled className="text-center">
           <SearchMainTextStyled className="wow fadeInDown" data-wow-delay="0.6s">
             Tìm giao diện website cho doanh nghiệp của bạn
@@ -32,7 +34,7 @@ export default class MainSearch extends React.Component {
             />
             <div className="input-group-append">
               <SearchBoxBtnStyled href="#" className="btn btn-common btn-effect">
-                <i className="lni-search" />
+                <FontAwesomeIcon icon="search" />
               </SearchBoxBtnStyled>
             </div>
           </SearchBoxGroupStyled>

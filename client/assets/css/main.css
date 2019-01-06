@@ -605,13 +605,13 @@ button:focus {
 /* ==========================================================================
    Hero Area
    ========================================================================== */
-.hero-area {
+/* .hero-area {
   background: url(../img/hero-area.jpg) no-repeat;
   background-size: cover;
   color: #fff;
   overflow: hidden;
   position: relative;
-}
+} */
 
 .hero-area .overlay {
   position: absolute;
@@ -683,13 +683,13 @@ button:focus {
 /* ==========================================================================
  Hero Production version
  ========================================================================== */
-.hero-area-2 {
+/* .hero-area-2 {
   background: url(../img/bg/hero-area-2.jpg) fixed no-repeat;
   background-size: cover;
   color: #fff;
   overflow: hidden;
   position: relative;
-}
+} */
 
 .hero-area-2 .overlay {
   position: absolute;
@@ -937,10 +937,10 @@ button:focus {
 /* ==========================================================================
     call to action
    ========================================================================== */
-#cta {
+/* #cta {
   background: url(../img/bg/bg-cta.jpg) fixed;
   background-size: cover;
-}
+} */
 
 #cta h5 {
   color: #fff;
@@ -971,10 +971,10 @@ button:focus {
 /* ==========================================================================
  Video promo Style
  ========================================================================== */
-.video-promo {
+/* .video-promo {
   background: url(../img/bg/video.jpg);
   position: relative;
-}
+} */
 
 .video-promo .video-promo-content {
   color: #fff;
@@ -1976,10 +1976,10 @@ textarea {
 /* ==========================================================================
   19. Subscribe Style
   ========================================================================== */
-#subscribe {
+/* #subscribe {
   background: url(../img/bg/bg-subs.jpg);
   position: relative;
-}
+} */
 
 .subscribe-form .sub-title {
   margin-bottom: 30px;
@@ -2220,10 +2220,10 @@ footer .menu li a:hover {
 /* ==========================================================================
  Counter Section Style
  ========================================================================== */
-.counters {
+/* .counters {
   background: url(../img/bg/bg-counter.jpg) fixed;
   position: relative;
-}
+} */
 
 .counters .facts-item {
   text-align: center;

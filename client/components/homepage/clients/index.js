@@ -1,6 +1,8 @@
 import React from 'react';
 import Swiper from 'swiper';
+import { Container } from 'reactstrap';
 import { ClientSlideStyled, ClientSlideImgStyled } from './style';
+import { SectionStyled, SectionHeaderStyled, SectionTitleStyled } from '../../style';
 
 export default class ClientsMainPage extends React.Component {
   componentDidMount() {
@@ -17,11 +19,11 @@ export default class ClientsMainPage extends React.Component {
 
   render() {
     return (
-      <section className="section" id="doi-tac">
-        <div className="container">
-          <div className="section-header">
-            <h2 className="section-title">Đối tác</h2>
-          </div>
+      <SectionStyled id="doi-tac">
+        <Container>
+          <SectionHeaderStyled>
+            <SectionTitleStyled>Đối tác</SectionTitleStyled>
+          </SectionHeaderStyled>
           <div id="clients-scroller" className="swiper-container">
             <div className="swiper-wrapper">
               <ClientSlideStyled>
@@ -44,8 +46,8 @@ export default class ClientsMainPage extends React.Component {
               </ClientSlideStyled>
             </div>
           </div>
-        </div>
-      </section>
+        </Container>
+      </SectionStyled>
     );
   }
 }

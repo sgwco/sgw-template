@@ -1,4 +1,6 @@
 import React from 'react';
+import logo from '../../assets/images/logo-rgb.png';
+import bct from '../../assets/images/dathongbao.png';
 import { FooterVerifyImgStyled } from './style';
 
 export default class Footer extends React.Component {
@@ -9,11 +11,8 @@ export default class Footer extends React.Component {
           <div className="container">
             <div className="row">
               <div className="col-lg-3 col-md-6 col-sm-6 col-xs-6 col-mb-12">
-                <img src="/static/images/logo-rgb.png" alt="logo" />
-                <FooterVerifyImgStyled
-                  src="/static/images/dathongbao.png"
-                  alt="da thong bao bo cong thuong"
-                />
+                <img src={logo} alt="logo" />
+                <FooterVerifyImgStyled src={bct} alt="da thong bao bo cong thuong" />
                 <ul className="footer-social">
                   <li>
                     <a className="facebook" href="#">

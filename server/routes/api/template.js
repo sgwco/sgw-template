@@ -6,19 +6,34 @@ import { takeScreenshot } from '../../../commons/utils-server';
 
 const router = Router();
 
-router.get('/', async (req, res) => {
-  const { page } = req.query;
-  let templates = null;
-  if (page) {
-    templates = await models.templates.findAll({
-      offset: page * TEMPLATE_PER_PAGE,
-      limit: TEMPLATE_PER_PAGE,
-    });
-  } else {
-    templates = await models.templates.findAll();
+router.get('/', async (req, res, next) => {
+  try {
+    const { page } = req.query;
+    let templates = null;
+    if (page) {
+      templates = await models.templates.findAll({
+        offset: page * TEMPLATE_PER_PAGE,
+        limit: TEMPLATE_PER_PAGE,
+      });
+    } else {
+      templates = await models.templates.findAll();
+    }
+    const templateConvertedToObject = keyBy(templates, 'id');
+    res.json(templateConvertedToObject);
+  } catch (error) {
+    next(error);
   }
-  const templateConvertedToObject = keyBy(templates, 'id');
-  res.json(templateConvertedToObject);
+});
+
+router.get('/:url', async (req, res, next) => {
+  try {
+    let url = req.param('url');
+    url = url.replace(/-/g, '.');
+    const template = await models.templates.findOne({ where: { url }, raw: true });
+    res.json(template);
+  } catch (error) {
+    next(error);
+  }
 });
 
 router.post('/', async (req, res, next) => {
