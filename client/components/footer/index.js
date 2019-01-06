@@ -1,4 +1,5 @@
 import React from 'react';
+import { FooterVerifyImgStyled } from './style';
 
 export default class Footer extends React.Component {
   render() {
@@ -9,8 +10,7 @@ export default class Footer extends React.Component {
             <div className="row">
               <div className="col-lg-3 col-md-6 col-sm-6 col-xs-6 col-mb-12">
                 <img src="/static/images/logo-rgb.png" alt="logo" />
-                <img
-                  className="verify-bct"
+                <FooterVerifyImgStyled
                   src="/static/images/dathongbao.png"
                   alt="da thong bao bo cong thuong"
                 />
@@ -149,12 +149,6 @@ export default class Footer extends React.Component {
             </div>
           </div>
         </div>
-        <style jsx>{`
-          .verify-bct {
-            width: 50%;
-            margin: 15px 0;
-          }
-        `}</style>
       </footer>
     );
   }

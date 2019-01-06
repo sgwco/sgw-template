@@ -3,20 +3,13 @@ import { Container, Row, Pagination, PaginationItem, PaginationLink } from 'reac
 import { isEmpty } from 'lodash';
 import { connect } from 'react-redux';
 import { Flipper, Flipped } from 'react-flip-toolkit';
-import css from 'styled-jsx/css';
-import {
-  GET_TEMPLATES,
-  SELECT_TEMPLATE_CATEGORY,
-  SELECT_TEMPLATE_PAGE,
-} from '../../../reducers/template';
-import { WEB_CATEGORY } from '../../../commons/enum';
 import TemplateItem from './template-item';
+import { WEB_CATEGORY } from '../../../../commons/enum';
 import { getFilteredTemplatesSelector, getTotalPageSelector } from '../../../selectors/templates';
+import { getTemplate } from '../../../actions/template';
 
 function mapStateToProps(state) {
   return {
-    selectedTemplateCategory: state.template.selectedTemplateCategory,
-    selectedPage: state.template.selectedPage,
     listTemplates: getFilteredTemplatesSelector(state),
     totalPage: getTotalPageSelector(state),
   };
@@ -24,14 +17,19 @@ function mapStateToProps(state) {
 
 function mapDispatchToProps(dispatch) {
   return {
-    getTemplates: () => dispatch({ type: GET_TEMPLATES }),
-    selectTemplateCategoryAction: cat =>
-      dispatch({ type: SELECT_TEMPLATE_CATEGORY, category: cat }),
-    selectPageAction: page => dispatch({ type: SELECT_TEMPLATE_PAGE, page }),
+    getTemplates: () => dispatch(getTemplate()),
+    // selectTemplateCategoryAction: cat =>
+    //   dispatch({ type: SELECT_TEMPLATE_CATEGORY, category: cat }),
+    // selectPageAction: page => dispatch({ type: SELECT_TEMPLATE_PAGE, page }),
   };
 }
 
 class WebTemplates extends React.Component {
+  state = {
+    selectedTemplateCategory: '',
+    selectedPage: 0,
+  };
+
   componentDidMount() {
     const { listTemplates, getTemplates } = this.props;
     if (isEmpty(listTemplates)) {
@@ -40,7 +38,8 @@ class WebTemplates extends React.Component {
   }
 
   renderCategoryItem = item => {
-    const { selectedTemplateCategory, selectTemplateCategoryAction } = this.props;
+    const { selectTemplateCategoryAction } = this.props;
+    const { selectedTemplateCategory } = this.state;
     return (
       <a
         key={item}
@@ -67,7 +66,7 @@ class WebTemplates extends React.Component {
     return (
       <PaginationItem
         key={page}
-        active={page === this.props.selectedPage}
+        active={page === this.state.selectedPage}
         onClick={() => selectPageAction(page)}
       >
         <PaginationLink>{page + 1}</PaginationLink>
@@ -76,14 +75,8 @@ class WebTemplates extends React.Component {
   };
 
   render() {
-    const {
-      selectedTemplateCategory,
-      selectTemplateCategoryAction,
-      listTemplates,
-      totalPage,
-      selectedPage,
-      selectPageAction,
-    } = this.props;
+    const { selectTemplateCategoryAction, listTemplates, totalPage, selectPageAction } = this.props;
+    const { selectedTemplateCategory, selectedPage } = this.state;
     const templateCategories = Object.keys(WEB_CATEGORY);
     const templateIds = Object.keys(listTemplates);
     return (
@@ -130,20 +123,10 @@ class WebTemplates extends React.Component {
             </Pagination>
           </div>
         </Container>
-        <style jsx>{styles}</style>
       </section>
     );
   }
 }
-
-const styles = css`
-  .item-center {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    margin-top: 10px;
-  }
-`;
 
 export default connect(
   mapStateToProps,

@@ -1,5 +1,3 @@
-import { PAYMENT_TYPE } from '../commons/enum';
-
 export default function(sequelize, Sequelize) {
   const billDetails = sequelize.define(
     'billDetails',

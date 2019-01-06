@@ -3,7 +3,7 @@ import Head from 'next/head';
 import App, { Container } from 'next/app';
 import { Provider } from 'react-redux';
 import withRedux from 'next-redux-wrapper';
-import makeStore from '../config/store';
+import store from '../config/store';
 
 class AppComponent extends App {
   static async getInitialProps({ Component, ctx }) {
@@ -17,7 +17,7 @@ class AppComponent extends App {
   }
 
   render() {
-    const { Component, pageProps, store } = this.props;
+    const { Component, pageProps } = this.props;
 
     return (
       <Container>
@@ -32,4 +32,4 @@ class AppComponent extends App {
   }
 }
 
-export default withRedux(makeStore)(AppComponent);
+export default AppComponent;
