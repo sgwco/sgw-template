@@ -31,14 +31,14 @@ export default class HomePage extends React.Component {
 
   render() {
     return (
-      <React.Fragment>
+      <>
         <Header />
         <MainSearch />
         <ServiceMainPage />
         <WebTemplates />
         <ClientsMainPage />
         <Footer />
-      </React.Fragment>
+      </>
     );
   }
 }

@@ -3,7 +3,7 @@ import express from 'express';
 import jwt from 'express-jwt';
 import bodyParser from 'body-parser';
 import cors from 'cors';
-import models from '../models';
+import models from './models';
 
 import apiRoutes from './routes/api';
 
@@ -17,7 +17,13 @@ models.sequelize.sync().then(() => {
   const secured = jwt({
     secret: process.env.JWT_SECRET,
   });
-  server.use('/static', express.static(path.join(__dirname, '../static')));
+
+  if (process.env.NODE_ENV === 'production') {
+    server.use('/static', express.static(path.join(__dirname, '../../static')));
+    server.use('/', express.static(path.join(__dirname, '../client')));
+  } else {
+    server.use('/static', express.static(path.join(__dirname, '../static')));
+  }
   server.use(bodyParser.json());
   server.use(bodyParser.urlencoded({ extended: false }));
   server.use('/api', apiRoutes);
@@ -35,6 +41,12 @@ models.sequelize.sync().then(() => {
     res.status(err.status || 500);
     res.json({ code: err.status || 500, message: err.message });
   });
+
+  if (process.env.NODE_ENV === 'production') {
+    server.get('*', (req, res) => {
+      res.sendFile(path.join(__dirname, '../client/index.html'));
+    });
+  }
 
   server.listen(55554, err => {
     if (err) throw err;
