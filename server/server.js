@@ -1,5 +1,6 @@
 import path from 'path';
 import express from 'express';
+import jwt from 'express-jwt';
 import bodyParser from 'body-parser';
 import cors from 'cors';
 import models from '../models';
@@ -13,6 +14,9 @@ models.sequelize.sync().then(() => {
     server.use(morgan('dev'));
   }
   server.use(cors());
+  const secured = jwt({
+    secret: process.env.JWT_SECRET,
+  });
   server.use('/static', express.static(path.join(__dirname, '../static')));
   server.use(bodyParser.json());
   server.use(bodyParser.urlencoded({ extended: false }));

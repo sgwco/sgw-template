@@ -1,5 +1,4 @@
 import React from 'react';
-import { connect } from 'react-redux';
 import {
   LoaderStyled,
   LoaderSpinnerStyled,
@@ -7,32 +6,18 @@ import {
   LoaderDoubleBouncer2,
 } from './style';
 
-function mapStateToProps(state) {
-  return {
-    loaderIsShown: state.common.loaderIsShown,
-  };
-}
-
-class LoaderComponent extends React.Component {
+export class Loader extends React.Component {
   render() {
-    if (this.props.loaderIsShown) {
-      return (
-        <LoaderStyled>
-          <LoaderSpinnerStyled>
-            <LoaderDoubleBouncer />
-            <LoaderDoubleBouncer2 />
-          </LoaderSpinnerStyled>
-        </LoaderStyled>
-      );
-    }
-    return null;
+    return (
+      <LoaderStyled>
+        <LoaderSpinnerStyled>
+          <LoaderDoubleBouncer />
+          <LoaderDoubleBouncer2 />
+        </LoaderSpinnerStyled>
+      </LoaderStyled>
+    );
   }
 }
-
-export const Loader = connect(
-  mapStateToProps,
-  null
-)(LoaderComponent);
 
 export class LoaderInline extends React.Component {
   render() {

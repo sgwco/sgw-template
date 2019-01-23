@@ -6,7 +6,6 @@ import ServiceMainPage from './services';
 import WebTemplates from './web-templates/web-templates';
 import ClientsMainPage from './clients';
 import { hideLoader } from '../../actions/common';
-import { Loader } from '../loader';
 import Header from '../header';
 import Footer from '../footer';
 import { library } from '@fortawesome/fontawesome-svg-core';
@@ -25,7 +24,6 @@ library.add(faSearch, faCog, faMobile, faChartLine, faLayerGroup, faSmile, faLoc
 import '../../assets/css/bootstrap.min.css';
 import '../../assets/css/swiper.min.css';
 import '../../assets/css/animate.css';
-import '../../assets/css/color-switcher.css';
 import '../../assets/css/main.css';
 
 function mapDispatchToProps(dispatch) {
@@ -36,7 +34,6 @@ function mapDispatchToProps(dispatch) {
 
 class HomePage extends React.Component {
   componentDidMount() {
-    this.props.hideLoader();
     new WOW().init();
   }
 
@@ -48,7 +45,6 @@ class HomePage extends React.Component {
         <ServiceMainPage />
         <WebTemplates />
         <ClientsMainPage />
-        <Loader />
         <Footer />
       </React.Fragment>
     );
