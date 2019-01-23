@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import { isEmpty } from 'lodash';
 import { connect } from 'react-redux';
 import { Navbar, Nav, NavbarBrand, Button, NavItem, NavLink } from 'reactstrap';
@@ -9,6 +8,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { PreviewNavbarStyled } from './style';
 import logo from '../../assets/images/logo-rgb.png';
 import { getTemplateByUrl } from '../../actions/template';
+import '../../assets/css/bootstrap.min.css';
+import '../../assets/css/main.css';
 
 library.add(faTimes);
 
@@ -39,17 +40,15 @@ class Preview extends React.Component {
       <div>
         <PreviewNavbarStyled>
           <Navbar dark>
-            <Link to="/">
-              <NavbarBrand href="/">
-                <img
-                  className="navbar-brand-full"
-                  src={logo}
-                  width="89"
-                  height="25"
-                  alt="sai gon web logo"
-                />
-              </NavbarBrand>
-            </Link>
+            <NavbarBrand href="/">
+              <img
+                className="navbar-brand-full"
+                src={logo}
+                width="89"
+                height="25"
+                alt="sai gon web logo"
+              />
+            </NavbarBrand>
             <Nav className="ml-auto">
               <NavItem>
                 <Button color="success">Mua theme</Button>

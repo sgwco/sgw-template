@@ -23,7 +23,7 @@ models.sequelize.sync().then(() => {
   server.use('/api', apiRoutes);
 
   server.use((err, req, res, next) => {
-    if (typeof err.error.errors === 'object') {
+    if (err.error && typeof err.error.errors === 'object') {
       next({ status: err.status, message: err.error.errors[0].message });
     } else {
       res.status(err.status || 500);

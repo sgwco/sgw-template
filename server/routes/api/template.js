@@ -30,6 +30,9 @@ router.get('/:url', async (req, res, next) => {
     let url = req.param('url');
     url = url.replace(/-/g, '.');
     const template = await models.templates.findOne({ where: { url }, raw: true });
+    if (!template) {
+      throw { status: 404, message: 'Không thể tìm thấy template.' };
+    }
     res.json(template);
   } catch (error) {
     next(error);
@@ -58,7 +61,7 @@ router.patch('/', async (req, res, next) => {
   try {
     const { id, ...rest } = req.body;
     let template = await models.templates.findOne({ where: { id } });
-    if (!template) throw { status: 404, error: 'Không thể tìm thấy template.' };
+    if (!template) throw { status: 404, message: 'Không thể tìm thấy template.' };
 
     const keys = Object.keys(rest);
     for (let i = 0; i < keys.length; ++i) {
