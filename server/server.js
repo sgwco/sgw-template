@@ -18,10 +18,10 @@ models.sequelize.sync().then(() => {
   });
 
   if (process.env.NODE_ENV === 'production') {
-    server.use('/static', express.static(path.join(__dirname, '../../static')));
+    server.use('/', express.static(path.join(__dirname, '../../static')));
     server.use('/', express.static(path.join(__dirname, '../client')));
   } else {
-    server.use('/static', express.static(path.join(__dirname, '../static')));
+    server.use('/', express.static(path.join(__dirname, '../static')));
   }
   server.use(bodyParser.json());
   server.use(bodyParser.urlencoded({ extended: false }));

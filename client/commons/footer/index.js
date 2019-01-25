@@ -13,47 +13,35 @@ export default class Footer extends React.Component {
               <div className="col-lg-3 col-md-6 col-sm-6 col-xs-6 col-mb-12">
                 <img src={logo} alt="logo" />
                 <FooterVerifyImgStyled src={bct} alt="da thong bao bo cong thuong" />
-                <ul className="footer-social">
-                  <li>
-                    <a className="facebook" href="#">
-                      <i className="lni-facebook-filled" />
-                    </a>
-                  </li>
-                  <li>
-                    <a className="twitter" href="#">
-                      <i className="lni-twitter-filled" />
-                    </a>
-                  </li>
-                  <li>
-                    <a className="linkedin" href="#">
-                      <i className="lni-linkedin-fill" />
-                    </a>
-                  </li>
-                  <li>
-                    <a className="google-plus" href="#">
-                      <i className="lni-google-plus" />
-                    </a>
-                  </li>
-                </ul>
               </div>
               <div className="col-lg-3 col-md-6 col-sm-6 col-xs-6 col-mb-12">
                 <div className="widget">
                   <h3 className="block-title">Dịch vụ</h3>
                   <ul className="menu">
                     <li>
-                      <a href="#">Thiết kế website</a>
+                      <a href="#" aria-label="Thiết kế website">
+                        Thiết kế website
+                      </a>
                     </li>
                     <li>
-                      <a href="#">Hosting</a>
+                      <a href="#" aria-label="Hosting">
+                        Hosting
+                      </a>
                     </li>
                     <li>
-                      <a href="#">VPS</a>
+                      <a href="#" aria-label="VPS">
+                        VPS
+                      </a>
                     </li>
                     <li>
-                      <a href="#">Email Domain</a>
+                      <a href="#" aria-label="Email Domain">
+                        Email Domain
+                      </a>
                     </li>
                     <li>
-                      <a href="#">Mobile App</a>
+                      <a href="#" aria-label="Mobile App">
+                        Mobile App
+                      </a>
                     </li>
                   </ul>
                 </div>

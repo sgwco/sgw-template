@@ -8,6 +8,7 @@ import {
   TemplateFancyTableStyled,
   TemplateFancyTableItemStyled,
 } from './style';
+import { PrimaryButton, SuccessButton } from '../../style';
 
 export default class TemplateItem extends React.Component {
   render() {
@@ -17,15 +18,16 @@ export default class TemplateItem extends React.Component {
         <PortfolioItemStyled className="portfolio-item">
           <TemplateShotItemStyled>
             <TemplateShotPreviewStyled
-              src={`/static/images/uploads/${this.props.template.url}.jpg`}
+              src={`/images/uploads/${this.props.template.url}.jpg`}
+              alt={template.name}
             />
             <TemplateSingleContentStyled>
               <TemplateFancyTableStyled>
                 <TemplateFancyTableItemStyled>
                   <Link to={`/preview/${template.url.replace(/\./g, '-')}`}>
-                    <button className="btn btn-primary mb-3">Xem demo</button>
+                    <PrimaryButton className="mb-3">Xem demo</PrimaryButton>
                   </Link>
-                  <button className="btn btn-success">Chọn mẫu này</button>
+                  <SuccessButton>Chọn mẫu này</SuccessButton>
                 </TemplateFancyTableItemStyled>
               </TemplateFancyTableStyled>
             </TemplateSingleContentStyled>

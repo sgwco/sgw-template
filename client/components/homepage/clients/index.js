@@ -27,22 +27,22 @@ export default class ClientsMainPage extends React.Component {
           <div id="clients-scroller" className="swiper-container">
             <div className="swiper-wrapper">
               <ClientSlideStyled>
-                <ClientSlideImgStyled src="static/images/clients/white-palace.png" alt="" />
+                <ClientSlideImgStyled src="/images/clients/white-palace.png" alt="" />
               </ClientSlideStyled>
               <ClientSlideStyled>
-                <ClientSlideImgStyled src="static/images/clients/atoz-travel.png" alt="" />
+                <ClientSlideImgStyled src="/images/clients/atoz-travel.png" alt="" />
               </ClientSlideStyled>
               <ClientSlideStyled>
-                <ClientSlideImgStyled src="static/images/clients/tba.png" alt="" />
+                <ClientSlideImgStyled src="/images/clients/tba.png" alt="" />
               </ClientSlideStyled>
               <ClientSlideStyled>
-                <ClientSlideImgStyled src="static/images/clients/thiekebzc.png" alt="" />
+                <ClientSlideImgStyled src="/images/clients/thiekebzc.png" alt="" />
               </ClientSlideStyled>
               <ClientSlideStyled>
-                <ClientSlideImgStyled src="static/images/clients/saigonlaps.png" alt="" />
+                <ClientSlideImgStyled src="/images/clients/saigonlaps.png" alt="" />
               </ClientSlideStyled>
               <ClientSlideStyled>
-                <ClientSlideImgStyled src="static/images/clients/keo-ab.png" alt="" />
+                <ClientSlideImgStyled src="/images/clients/keo-ab.png" alt="" />
               </ClientSlideStyled>
             </div>
           </div>

@@ -1,4 +1,41 @@
 import styled from 'styled-components';
+import { Button, PaginationLink } from 'reactstrap';
+
+// LABELS
+
+export const SeoLabel = styled.label`
+  position: absolute;
+  right: -99999px;
+`;
+
+// BUTTONS
+
+export const PrimaryButton = styled(Button)`
+  background-color: #0051ad !important;
+  border: none !important;
+  &:hover {
+    background-color: #003c80 !important;
+  }
+`;
+
+export const SuccessButton = styled(Button)`
+  background-color: #176324 !important;
+  border: none !important;
+  &:hover {
+    background-color: #114b1b !important;
+  }
+`;
+
+export const PaginationLinkBtn = styled(PaginationLink)`
+  ${props =>
+    props.active
+      ? `
+    background-color: #1258a5 !important;
+    border-color: #1258a5 !important;
+    color: white !important;
+  `
+      : 'color: #1258a5 !important;'};
+`;
 
 // SECTIONS
 
@@ -17,7 +54,7 @@ export const SectionTitleStyled = styled.h2`
   font-size: 36px;
   margin-bottom: 20px;
   text-transform: uppercase;
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Montserrat', Arial, Helvetica, sans-serif;
   font-weight: 700;
   color: #263238;
   position: relative;
@@ -29,7 +66,7 @@ export const SectionTitleStyled = styled.h2`
     height: 2px;
     margin: 0 auto;
     left: calc(50% - 40px);
-    background: #f97794;
+    background: #ad1a1a;
     -webkit-transition: 0.3s;
     -moz-transition: 0.3s;
     transition: 0.3s;

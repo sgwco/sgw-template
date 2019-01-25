@@ -1,12 +1,17 @@
 import React from 'react';
-import { Container, Row, Pagination, PaginationItem, PaginationLink } from 'reactstrap';
+import { Container, Row, Pagination, PaginationItem } from 'reactstrap';
 import { isEmpty } from 'lodash';
 import { connect } from 'react-redux';
 import TemplateItem from './template-item';
 import { WEB_CATEGORY } from '../../../../constants/enum';
 import { getFilteredTemplatesSelector, getTotalPageSelector } from '../../../selectors/templates';
 import { getTemplate, selectTemplateCategory, selectTemplatePage } from '../../../actions/template';
-import { SectionStyled, SectionHeaderStyled, SectionTitleStyled } from '../../style';
+import {
+  SectionStyled,
+  SectionHeaderStyled,
+  SectionTitleStyled,
+  PaginationLinkBtn,
+} from '../../style';
 
 function mapStateToProps(state) {
   return {
@@ -60,7 +65,7 @@ class WebTemplates extends React.Component {
         active={page === selectedPage}
         onClick={() => selectPageAction(page)}
       >
-        <PaginationLink>{page + 1}</PaginationLink>
+        <PaginationLinkBtn active={page === selectedPage}>{page + 1}</PaginationLinkBtn>
       </PaginationItem>
     );
   };
@@ -106,13 +111,13 @@ class WebTemplates extends React.Component {
             <Pagination aria-label="page navigation web template">
               {selectedPage !== 0 && (
                 <PaginationItem onClick={() => selectPageAction(selectedPage - 1)}>
-                  <PaginationLink previous />
+                  <PaginationLinkBtn previous />
                 </PaginationItem>
               )}
               {Array.from(Array(totalPage).keys()).map(this.renderPaginationItem)}
               {selectedPage !== totalPage - 1 && (
                 <PaginationItem onClick={() => selectPageAction(selectedPage + 1)}>
-                  <PaginationLink next />
+                  <PaginationLinkBtn next />
                 </PaginationItem>
               )}
             </Pagination>

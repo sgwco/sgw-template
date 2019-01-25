@@ -33,7 +33,7 @@ export const LoaderDoubleBouncer = styled.div`
   width: ${props => (props.inline ? '40px' : '100%')};
   height: ${props => (props.inline ? '40px' : '100%')};
   border-radius: 50%;
-  background-color: #f97794;
+  background-color: #ad1a1a;
   opacity: 0.6;
   position: absolute;
   top: 0;

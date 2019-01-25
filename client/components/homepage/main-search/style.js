@@ -4,6 +4,10 @@ export const SearchWrapperStyled = styled.div`
   position: relative;
 `;
 
+export const SearchWrapperBackground = styled.img`
+  height: 70vh;
+`;
+
 export const SearchTextWrapperStyled = styled.div`
   position: absolute;
   top: 280px;
@@ -53,7 +57,7 @@ export const SearchBoxStyled = styled.input`
   padding: 23px 30px !important;
 `;
 
-export const SearchBoxBtnStyled = styled.a`
+export const SearchBoxBtnStyled = styled.button`
   padding-top: 0;
   padding-bottom: 0;
   display: flex;

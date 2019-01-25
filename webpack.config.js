@@ -33,6 +33,10 @@ module.exports = {
     historyApiFallback: true,
     publicPath: '/',
     proxy: {
+      '/': {
+        target: 'http://localhost:55554',
+        secure: false,
+      },
       '/api': {
         target: 'http://localhost:55554',
         secure: false,

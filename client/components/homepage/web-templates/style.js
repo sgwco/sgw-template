@@ -9,8 +9,7 @@ export const TemplateShotPreviewStyled = styled.img`
 `;
 
 export const TemplateSingleContentStyled = styled.div`
-  background-color: rgba(22, 26, 39, 0.7);
-  opacity: 0.9;
+  background-color: rgba(255, 255, 255, 0.4);
   height: 100%;
   left: 0;
   opacity: 0;
