@@ -141,7 +141,10 @@ class AdminWebTemplate extends React.Component {
             toggle={this.togglePopover}
           >
             <PopoverBody>
-              <AdminTemplateThumbnail src={`/images/uploads/${template.url}.jpg`} alt="preview" />
+              <AdminTemplateThumbnail
+                src={`/static/images/uploads/${template.url}.jpg`}
+                alt="preview"
+              />
             </PopoverBody>
           </Popover>
         </td>

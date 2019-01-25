@@ -37,6 +37,30 @@ export const PaginationLinkBtn = styled(PaginationLink)`
       : 'color: #1258a5 !important;'};
 `;
 
+export const EffectBtn = styled.button`
+  overflow: hidden;
+  border: none !important;
+  &:after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 100%;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    background: rgba(0, 0, 0, 0.1);
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+  }
+
+  &:hover {
+    &:after {
+      width: 100%;
+    }
+  }
+`;
+
 // SECTIONS
 
 export const SectionStyled = styled.section`

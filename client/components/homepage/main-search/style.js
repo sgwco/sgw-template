@@ -55,6 +55,9 @@ export const SearchBoxGroupStyled = styled.div`
 
 export const SearchBoxStyled = styled.input`
   padding: 23px 30px !important;
+  border-radius: 30px !important;
+  border-top-right-radius: 0 !important;
+  border-bottom-right-radius: 0 !important;
 `;
 
 export const SearchBoxBtnStyled = styled.button`

@@ -21,7 +21,9 @@ export default class TemplateItem extends React.Component {
         <PortfolioItemStyled className="portfolio-item">
           <TemplateShotItemStyled>
             <TemplateShotPreviewStyled
-              src={`/images/uploads/${this.props.template.url}.${this.isSafari ? 'jpg' : 'webp'}`}
+              src={`/static/images/uploads/${this.props.template.url}.${
+                this.isSafari ? 'jpg' : 'webp'
+              }`}
               alt={template.name}
             />
             <TemplateSingleContentStyled>

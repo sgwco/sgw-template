@@ -12,6 +12,7 @@ import {
   SectionTitleStyled,
   PaginationLinkBtn,
 } from '../../style';
+import { TemplateBtnFilter } from './style';
 
 function mapStateToProps(state) {
   return {
@@ -41,15 +42,15 @@ class WebTemplates extends React.Component {
   renderCategoryItem = item => {
     const { selectTemplateCategoryAction, selectedTemplateCategory } = this.props;
     return (
-      <a
+      <TemplateBtnFilter
         key={item}
-        className={`filter btn btn-common btn-effect ${selectedTemplateCategory === item &&
-          'active'}`}
+        selected={selectedTemplateCategory === item}
+        className="btn btn-common"
         data-filter={`.${item.toLowerCase()}`}
         onClick={() => selectTemplateCategoryAction(item)}
       >
         {WEB_CATEGORY[item]}
-      </a>
+      </TemplateBtnFilter>
     );
   };
 
@@ -94,14 +95,14 @@ class WebTemplates extends React.Component {
           <Row>
             <div className="col-md-12">
               <div className="controls text-center">
-                <a
-                  className={`btn btn-common btn-effect ${selectedTemplateCategory === '' &&
-                    'active'}`}
+                <TemplateBtnFilter
+                  className="btn btn-common"
+                  selected={selectedTemplateCategory === ''}
                   data-filter="all"
                   onClick={() => selectTemplateCategoryAction('')}
                 >
                   Tất cả
-                </a>
+                </TemplateBtnFilter>
                 {templateCategories.map(this.renderCategoryItem)}
               </div>
             </div>

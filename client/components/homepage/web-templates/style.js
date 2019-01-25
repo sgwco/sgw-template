@@ -1,4 +1,5 @@
 import styled, { keyframes } from 'styled-components';
+import { EffectBtn } from '../../style';
 
 export const PortfolioItemStyled = styled.div`
   padding: 10px 0;
@@ -56,4 +57,15 @@ export const TemplateFancyTableItemStyled = styled.div`
   display: table-cell;
   vertical-align: middle;
   text-align: center;
+`;
+
+export const TemplateBtnFilter = styled(EffectBtn)`
+  border: 2px solid #ad1a1a !important;
+  ${props =>
+    props.selected &&
+    `
+    color: #AD1A1A !important;
+    background-color: white !important;
+  `};
+  margin: 5px;
 `;
