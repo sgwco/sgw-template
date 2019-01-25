@@ -43,6 +43,7 @@ module.exports = {
     new CleanWebpackPlugin([outputDirectory]),
     new HtmlWebpackPlugin({
       template: './client/index.html',
+      favicon: './client/assets/images/favicon.png',
     }),
   ],
 };

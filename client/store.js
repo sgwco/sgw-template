@@ -13,7 +13,11 @@ const persistConfig = {
 };
 const persistedReducer = persistReducer(persistConfig, reducers);
 const sagaMiddleware = createSagaMiddleware();
-const store = createStore(persistedReducer, applyMiddleware(sagaMiddleware, logger));
+const middlewares = [sagaMiddleware];
+if (process.env.NODE_ENV === 'development') {
+  middlewares.push(logger);
+}
+const store = createStore(persistedReducer, applyMiddleware(...middlewares));
 const persistor = persistStore(store);
 sagaMiddleware.run(sagas);
 

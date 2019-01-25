@@ -5,7 +5,7 @@
     "server": "nodemon --exec \"babel-node server/server.js\"",
     "client": "webpack-dev-server --mode development --devtool inline-source-map --hot --inline",
     "build": "npm run build:server && npm run build:client",
-    "build:server": "rm -rf dist && babel -d dist/server server/ --require babel-polyfill && babel -d dist/commons commons/",
+    "build:server": "rm -rf dist && babel -d dist/server server/ --require babel-polyfill && babel -d dist/constants constants/",
     "build:client": "webpack --mode production && cp -r ./client/assets/images  ./dist/client"
   },
   "dependencies": {
