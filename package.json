@@ -6,7 +6,7 @@
     "client": "webpack-dev-server --mode development --devtool inline-source-map --hot --inline",
     "build": "npm run build:server && npm run build:client",
     "build:server": "rm -rf dist && babel -d dist/server server/ --require babel-polyfill && babel -d dist/constants constants/",
-    "build:client": "webpack --mode production && cp -r ./client/assets/images  ./dist/client"
+    "build:client": "webpack --optimize-minimize --optimize-dedupe -p && cp -r ./client/assets/images  ./dist/client"
   },
   "dependencies": {
     "@babel/cli": "^7.2.3",

@@ -1,5 +1,5 @@
 import React from 'react';
-import is from 'is_js';
+import { safari } from 'is_js';
 import { Link } from 'react-router-dom';
 import {
   PortfolioItemStyled,
@@ -12,7 +12,7 @@ import {
 import { PrimaryButton, SuccessButton } from '../../style';
 
 export default class TemplateItem extends React.Component {
-  isSafari = is.safari();
+  isSafari = safari();
 
   render() {
     const { template } = this.props;

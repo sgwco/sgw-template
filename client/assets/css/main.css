@@ -1,6 +1,23 @@
 /* ==========================================================================
    2. GENERAL
    ========================================================================== */
+
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/Open_Sans/OpenSans-Regular.ttf');
+  font-display: fallback;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/Montserrat/Montserrat-Regular.ttf');
+  font-display: fallback;
+}
+
 body {
   font-family: 'Open Sans', Arial, Helvetica, sans-serif;
   color: #546E7A;

@@ -4,7 +4,6 @@ import { PersistGate } from 'redux-persist/integration/react';
 import { Switch, Route, Router, Redirect } from 'react-router-dom';
 import { get } from 'lodash';
 import history from './history';
-import { Loader } from './commons/loader';
 import { store, persistor } from './store';
 
 const HomePage = React.lazy(() => import('./components/homepage'));
@@ -32,9 +31,9 @@ export default class App extends React.Component {
   render() {
     return (
       <Provider store={store}>
-        <PersistGate loading={<Loader />} persistor={persistor}>
+        <PersistGate persistor={persistor}>
           <Router history={history}>
-            <React.Suspense fallback={<Loader />}>
+            <React.Suspense fallback={null}>
               <Switch>
                 <Route path="/" exact render={props => <HomePage {...props} />} />
                 <Route path="/preview/:url" exact render={props => <Preview {...props} />} />
