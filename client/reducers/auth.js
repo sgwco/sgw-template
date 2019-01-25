@@ -1,4 +1,5 @@
 import { LOGIN_SUCCESS } from '../actions/auth';
+import { REHYDRATE } from 'redux-persist';
 
 const initState = {
   accessToken: '',
@@ -6,8 +7,11 @@ const initState = {
 };
 
 export function authReducer(state = initState, action = {}) {
-  const newState = Object.assign({}, state);
+  let newState = Object.assign({}, state);
   switch (action.type) {
+    case REHYDRATE:
+      newState = action.payload.auth;
+      break;
     case LOGIN_SUCCESS:
       newState.accessToken = action.accessToken;
       newState.refreshToken = action.refreshToken;

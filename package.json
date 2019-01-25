@@ -39,6 +39,7 @@
     "reactstrap": "^6.5.0",
     "redux": "^4.0.1",
     "redux-logger": "^3.0.6",
+    "redux-persist": "^5.10.0",
     "redux-saga": "^1.0.0",
     "reselect": "^4.0.0",
     "sequelize": "^4.42.0",
