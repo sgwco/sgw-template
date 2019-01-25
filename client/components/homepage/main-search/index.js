@@ -19,15 +19,15 @@ export default class MainSearch extends React.Component {
       <SearchWrapperStyled>
         <SearchWrapperBackground src={background} alt="main background" />
         <SearchTextWrapperStyled className="text-center">
-          <SearchMainTextStyled className="wow fadeInDown" data-wow-delay="0.6s">
+          <SearchMainTextStyled>
             Tìm giao diện website cho doanh nghiệp của bạn
           </SearchMainTextStyled>
-          <SearchSecondaryTextStyled className="wow bounceIn" data-wow-delay="0.9s">
+          <SearchSecondaryTextStyled>
             Lựa chọn giao diện website nhanh chóng từ kho website đa lĩnh vực phù hợp nhất với doanh
             nghiệp của bạn, tiết kiệm chi phí và thời gian nhất có thể.
           </SearchSecondaryTextStyled>
           <SeoLabel htmlFor="search">Search</SeoLabel>
-          <SearchBoxGroupStyled className="input-group wow fadeInUp" data-wow-delay="1.2s">
+          <SearchBoxGroupStyled className="input-group">
             <SearchBoxStyled
               id="search"
               type="text"

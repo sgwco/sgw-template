@@ -5,7 +5,7 @@ export const SearchWrapperStyled = styled.div`
 `;
 
 export const SearchWrapperBackground = styled.img`
-  height: 70vh;
+  height: 650px;
 `;
 
 export const SearchTextWrapperStyled = styled.div`

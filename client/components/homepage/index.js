@@ -1,5 +1,4 @@
 import React from 'react';
-import WOW from 'wow.js';
 import MainSearch from './main-search';
 import ServiceMainPage from './services';
 import WebTemplates from './web-templates/web-templates';
@@ -25,10 +24,6 @@ import '../../assets/css/animate.css';
 import '../../assets/css/main.css';
 
 export default class HomePage extends React.Component {
-  componentDidMount() {
-    new WOW().init();
-  }
-
   render() {
     return (
       <>

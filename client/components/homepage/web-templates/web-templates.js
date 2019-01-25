@@ -65,7 +65,7 @@ class WebTemplates extends React.Component {
         active={page === selectedPage}
         onClick={() => selectPageAction(page)}
       >
-        <PaginationLinkBtn active={page === selectedPage}>{page + 1}</PaginationLinkBtn>
+        <PaginationLinkBtn selected={page === selectedPage}>{page + 1}</PaginationLinkBtn>
       </PaginationItem>
     );
   };

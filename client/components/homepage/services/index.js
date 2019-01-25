@@ -59,11 +59,7 @@ export default class ServiceMainPage extends React.Component {
   renderServiceItem = (service, index) => {
     return (
       <div className="col-lg-4 col-md-6 col-xs-12" key={index}>
-        <ServiceItemStyled
-          className="wow fadeInDown"
-          data-wow-delay="0.2s"
-          data-wow-duration="0.5s"
-        >
+        <ServiceItemStyled>
           <ServiceItemIconStyled color={service.colorSet}>
             <ServiceItemIconSVGStyled color={service.colorSet} icon={service.icon} />
           </ServiceItemIconStyled>

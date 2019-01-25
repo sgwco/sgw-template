@@ -28,7 +28,7 @@ export const SuccessButton = styled(Button)`
 
 export const PaginationLinkBtn = styled(PaginationLink)`
   ${props =>
-    props.active
+    props.selected
       ? `
     background-color: #1258a5 !important;
     border-color: #1258a5 !important;
