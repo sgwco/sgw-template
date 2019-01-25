@@ -1,8 +1,8 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { Row, FormGroup, Label, Input, Button } from 'reactstrap';
-import { WEB_CATEGORY } from '../../../commons/enum';
-import { ADD_TEMPLATE } from '../../../reducers/template';
+import { WEB_CATEGORY } from '../../../../constants/enum';
+import { ADD_TEMPLATE } from '../../../actions/template';
 import { LoaderInline } from '../../../commons/loader';
 
 function mapStateToProps(state) {

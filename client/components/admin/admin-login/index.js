@@ -16,7 +16,6 @@ import { faUser, faLock } from '@fortawesome/free-solid-svg-icons';
 import '../../../assets/css/admin-css.css';
 import { AdminLoginWrapperStyled } from './style';
 import { login } from '../../../actions/auth';
-
 import 'react-toastify/dist/ReactToastify.css';
 
 library.add(faUser, faLock);

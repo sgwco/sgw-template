@@ -1,5 +1,4 @@
 import React from 'react';
-import Link from 'next/link';
 import {
   Navbar,
   NavbarToggler,
@@ -12,7 +11,8 @@ import {
 } from 'reactstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { connect } from 'react-redux';
-import { TOGGLE_SIDEBAR } from '../../reducers/admin';
+import { TOGGLE_SIDEBAR } from '../reducers/admin';
+import logo from '../assets/images/logo-rgb.png';
 
 function mapDispatchToProps(dispatch) {
   return {
@@ -31,24 +31,22 @@ class AdminHeader extends React.Component {
     const { userDropdownToggle } = this.state;
     return (
       <Navbar className="app-header" light>
-        <Link href="/">
-          <NavbarBrand href="/">
-            <img
-              className="navbar-brand-full"
-              src="/static/images/logo-rgb.png"
-              width="89"
-              height="25"
-              alt="sai gon web logo"
-            />
-            <img
-              className="navbar-brand-minimized"
-              src="/static/images/logo-rgb.png"
-              width="30"
-              height="30"
-              alt="sai gon web logo"
-            />
-          </NavbarBrand>
-        </Link>
+        <NavbarBrand href="/">
+          <img
+            className="navbar-brand-full"
+            src={logo}
+            width="89"
+            height="25"
+            alt="sai gon web logo"
+          />
+          <img
+            className="navbar-brand-minimized"
+            src={logo}
+            width="30"
+            height="30"
+            alt="sai gon web logo"
+          />
+        </NavbarBrand>
         <NavbarToggler className="sidebar-toggler" onClick={this.props.toggleSidebar} />
         <Nav navbar className="ml-auto">
           <Dropdown nav isOpen={userDropdownToggle} toggle={this.onUserDropdown}>

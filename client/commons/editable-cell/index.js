@@ -1,5 +1,6 @@
 import React from 'react';
 import { Input, Button } from 'reactstrap';
+import { NoSelectTableStyled } from './style';
 
 export default class EditableCell extends React.Component {
   state = {
@@ -76,19 +77,9 @@ export default class EditableCell extends React.Component {
 
   render() {
     return (
-      <td className="noselect" onDoubleClick={this.onDoubleClick}>
+      <NoSelectTableStyled onDoubleClick={this.onDoubleClick}>
         {this.renderChildren()}
-        <style jsx>{`
-          .noselect {
-            -webkit-touch-callout: none;
-            -webkit-user-select: none;
-            -khtml-user-select: none;
-            -moz-user-select: none;
-            -ms-user-select: none;
-            user-select: none;
-          }
-        `}</style>
-      </td>
+      </NoSelectTableStyled>
     );
   }
 }

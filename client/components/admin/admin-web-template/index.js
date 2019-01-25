@@ -16,12 +16,14 @@ import moment from 'moment';
 import { isEmpty } from 'lodash';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { getAdminTemplatesSelector, getAdminTotalPageSelector } from '../../../selectors/templates';
-import { GET_TEMPLATES, EDIT_TEMPLATE, DELETE_TEMPLATE } from '../../../reducers/template';
 import { ADMIN_SELECT_TEMPLATE_PAGE } from '../../../reducers/admin';
 import AdminWebTemplateForm from './admin-web-template-form';
 import EditableCell from '../../../commons/editable-cell';
-import { WEB_CATEGORY } from '../../../commons/enum';
+import { WEB_CATEGORY } from '../../../../constants/enum';
 import { formatNumber } from '../../../commons/utils';
+import AdminLayout from '../admin.layout';
+import { GET_TEMPLATES, EDIT_TEMPLATE, DELETE_TEMPLATE } from '../../../actions/template';
+import { AdminTemplateThumbnail, AdminRowInProgress } from '../admin.style';
 
 function mapStateToProps(state) {
   return {
@@ -41,7 +43,7 @@ function mapDispatchToProps(dispatch) {
   };
 }
 
-class AdminWebTemplateTable extends React.Component {
+class AdminWebTemplate extends React.Component {
   state = {
     popoverIsShown: null,
     createFormIsShown: false,
@@ -90,7 +92,7 @@ class AdminWebTemplateTable extends React.Component {
     const template = this.props.listTemplates[id];
     const categories = Object.keys(WEB_CATEGORY).map(item => WEB_CATEGORY[item]);
     return (
-      <tr key={id} className={this.props.adminEditInProgress.indexOf(id) > -1 && 'in-progress'}>
+      <AdminRowInProgress loading={this.props.adminEditInProgress.indexOf(id) > -1} key={id}>
         <td>{id}</td>
         <EditableCell
           type="text"
@@ -125,7 +127,7 @@ class AdminWebTemplateTable extends React.Component {
           {template.category.split(',').map(this.renderTemplateCategoryItem)}
         </EditableCell>
         <td>{moment(template.createdAt).format('DD/MM/YYYY')}</td>
-        <td className="flex-button">
+        <td className="d-flex flex-row justify-content-around">
           <Button color="primary" id={`popover-${id}`} onClick={() => this.togglePopover(id)}>
             Xem mẫu
           </Button>
@@ -139,29 +141,14 @@ class AdminWebTemplateTable extends React.Component {
             toggle={this.togglePopover}
           >
             <PopoverBody>
-              <img
+              <AdminTemplateThumbnail
                 src={`/static/images/uploads/${template.url}.jpg`}
-                className="thumbnail"
                 alt="preview"
               />
             </PopoverBody>
           </Popover>
         </td>
-        <style jsx>{`
-          .thumbnail {
-            width: 100%;
-          }
-          .flex-button {
-            display: flex;
-            flex-direction: row;
-            justify-content: space-around;
-          }
-          .in-progress {
-            opacity: 0.2;
-            pointer-events: none;
-          }
-        `}</style>
-      </tr>
+      </AdminRowInProgress>
     );
   };
 
@@ -170,54 +157,56 @@ class AdminWebTemplateTable extends React.Component {
     const listTemplatesById = Object.keys(listTemplates);
 
     return (
-      <Container fluid={true}>
-        <div className="animated fadeIn">
-          <Row>
-            <div className="col-lg-12">
-              <div className="card">
-                <div className="card-header">
-                  <FontAwesomeIcon icon="box-open" /> Danh sách mẫu website
-                  <Button color="success" className="ml-3" onClick={this.toggleCreateForm}>
-                    Tạo mới
-                  </Button>
-                </div>
-                <div className="card-body">
-                  {this.state.createFormIsShown && (
-                    <AdminWebTemplateForm onToggle={this.toggleCreateForm} />
-                  )}
-                  <Table bordered striped>
-                    <thead>
-                      <tr>
-                        <th>#</th>
-                        <th>Tên theme</th>
-                        <th>Giá</th>
-                        <th>Đường dẫn</th>
-                        <th>Danh mục</th>
-                        <th>Ngày tạo</th>
-                        <th />
-                      </tr>
-                    </thead>
-                    <tbody>{listTemplatesById.map(this.renderTemplateItem)}</tbody>
-                  </Table>
-                  <Pagination aria-label="page navigation web template">
-                    {templateSelectedPage !== 0 && (
-                      <PaginationItem onClick={() => selectPage(templateSelectedPage - 1)}>
-                        <PaginationLink previous />
-                      </PaginationItem>
+      <AdminLayout>
+        <Container fluid={true}>
+          <div className="animated fadeIn">
+            <Row>
+              <div className="col-lg-12">
+                <div className="card">
+                  <div className="card-header">
+                    <FontAwesomeIcon icon="box-open" /> Danh sách mẫu website
+                    <Button color="success" className="ml-3" onClick={this.toggleCreateForm}>
+                      Tạo mới
+                    </Button>
+                  </div>
+                  <div className="card-body">
+                    {this.state.createFormIsShown && (
+                      <AdminWebTemplateForm onToggle={this.toggleCreateForm} />
                     )}
-                    {Array.from(Array(totalPage).keys()).map(this.renderPaginationItem)}
-                    {templateSelectedPage !== totalPage - 1 && (
-                      <PaginationItem onClick={() => selectPage(templateSelectedPage + 1)}>
-                        <PaginationLink next />
-                      </PaginationItem>
-                    )}
-                  </Pagination>
+                    <Table bordered striped>
+                      <thead>
+                        <tr>
+                          <th>#</th>
+                          <th>Tên theme</th>
+                          <th>Giá</th>
+                          <th>Đường dẫn</th>
+                          <th>Danh mục</th>
+                          <th>Ngày tạo</th>
+                          <th />
+                        </tr>
+                      </thead>
+                      <tbody>{listTemplatesById.map(this.renderTemplateItem)}</tbody>
+                    </Table>
+                    <Pagination aria-label="page navigation web template">
+                      {templateSelectedPage !== 0 && (
+                        <PaginationItem onClick={() => selectPage(templateSelectedPage - 1)}>
+                          <PaginationLink previous />
+                        </PaginationItem>
+                      )}
+                      {Array.from(Array(totalPage).keys()).map(this.renderPaginationItem)}
+                      {templateSelectedPage !== totalPage - 1 && (
+                        <PaginationItem onClick={() => selectPage(templateSelectedPage + 1)}>
+                          <PaginationLink next />
+                        </PaginationItem>
+                      )}
+                    </Pagination>
+                  </div>
                 </div>
               </div>
-            </div>
-          </Row>
-        </div>
-      </Container>
+            </Row>
+          </div>
+        </Container>
+      </AdminLayout>
     );
   }
 }
@@ -225,4 +214,4 @@ class AdminWebTemplateTable extends React.Component {
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(AdminWebTemplateTable);
+)(AdminWebTemplate);

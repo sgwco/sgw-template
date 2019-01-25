@@ -11,6 +11,7 @@ const HomePage = React.lazy(() => import('./components/homepage'));
 const Preview = React.lazy(() => import('./components/preview'));
 const AdminLogin = React.lazy(() => import('./components/admin/admin-login'));
 const AdminHomepage = React.lazy(() => import('./components/admin/admin-homepage'));
+const AdminWebTemplate = React.lazy(() => import('./components/admin/admin-web-template'));
 
 const ProtectedRoute = ({ component: Component, ...rest }) => (
   <Route
@@ -39,6 +40,11 @@ export default class App extends React.Component {
                 <Route path="/preview/:url" exact render={props => <Preview {...props} />} />
                 <ProtectedRoute path="/admin" exact component={AdminHomepage} />
                 <Route path="/admin/login" exact render={props => <AdminLogin {...props} />} />
+                <Route
+                  path="/admin/web-template"
+                  exact
+                  render={props => <AdminWebTemplate {...props} />}
+                />
               </Switch>
             </React.Suspense>
           </Router>

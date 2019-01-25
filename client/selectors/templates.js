@@ -1,6 +1,6 @@
 import { createSelector } from 'reselect';
-import { TEMPLATE_PER_PAGE } from '../../commons/const';
-import { WEB_CATEGORY } from '../../commons/enum';
+import { TEMPLATE_PER_PAGE } from '../../constants/const';
+import { WEB_CATEGORY } from '../../constants/enum';
 
 const getTemplates = state => state.template.listTemplates;
 const getTemplatesPage = state => state.template.selectedPage;

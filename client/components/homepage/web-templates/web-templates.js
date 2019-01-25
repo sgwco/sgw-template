@@ -3,7 +3,7 @@ import { Container, Row, Pagination, PaginationItem, PaginationLink } from 'reac
 import { isEmpty } from 'lodash';
 import { connect } from 'react-redux';
 import TemplateItem from './template-item';
-import { WEB_CATEGORY } from '../../../../commons/enum';
+import { WEB_CATEGORY } from '../../../../constants/enum';
 import { getFilteredTemplatesSelector, getTotalPageSelector } from '../../../selectors/templates';
 import { getTemplate, selectTemplateCategory, selectTemplatePage } from '../../../actions/template';
 import { SectionStyled, SectionHeaderStyled, SectionTitleStyled } from '../../style';
