@@ -8,15 +8,32 @@ import {
   InputGroupText,
   Input,
 } from 'reactstrap';
+import { ToastContainer } from 'react-toastify';
+import { connect } from 'react-redux';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { faUser, faLock } from '@fortawesome/free-solid-svg-icons';
 import '../../../assets/css/admin-css.css';
 import { AdminLoginWrapperStyled } from './style';
+import { login } from '../../../actions/auth';
+
+import 'react-toastify/dist/ReactToastify.css';
 
 library.add(faUser, faLock);
 
-export default class AdminLogin extends React.Component {
+function mapDispatchToProps(dispatch) {
+  return {
+    login: (email, password) => dispatch(login(email, password)),
+  };
+}
+
+class AdminLogin extends React.Component {
+  handleSubmit = event => {
+    event.preventDefault();
+    const data = new FormData(event.target);
+    this.props.login(data.get('email'), data.get('password'));
+  };
+
   render() {
     return (
       <AdminLoginWrapperStyled>
@@ -26,7 +43,7 @@ export default class AdminLogin extends React.Component {
               <div className="card-group">
                 <div className="card p-4">
                   <div className="card-body">
-                    <form method="post" action="/admin/login">
+                    <form onSubmit={this.handleSubmit}>
                       <h1>Đăng nhập</h1>
                       <p className="text-muted">Vui lòng đăng nhập</p>
                       <InputGroup className="mb-3">
@@ -59,7 +76,13 @@ export default class AdminLogin extends React.Component {
             </div>
           </Row>
         </Container>
+        <ToastContainer />
       </AdminLoginWrapperStyled>
     );
   }
 }
+
+export default connect(
+  null,
+  mapDispatchToProps
+)(AdminLogin);

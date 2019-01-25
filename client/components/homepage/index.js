@@ -4,8 +4,8 @@ import MainSearch from './main-search';
 import ServiceMainPage from './services';
 import WebTemplates from './web-templates/web-templates';
 import ClientsMainPage from './clients';
-import Header from '../header';
-import Footer from '../footer';
+import Header from '../../commons/header';
+import Footer from '../../commons/footer';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import {
   faSearch,

@@ -8,7 +8,7 @@ module.exports = {
   entry: ['@babel/polyfill', './client/index.js'],
   output: {
     path: path.join(__dirname, outputDirectory),
-    filename: 'bundle.js',
+    filename: '[name].bundle.js',
   },
   module: {
     rules: [

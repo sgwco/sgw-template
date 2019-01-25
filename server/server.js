@@ -4,8 +4,7 @@ import jwt from 'express-jwt';
 import bodyParser from 'body-parser';
 import cors from 'cors';
 import models from './models';
-
-import apiRoutes from './routes/api';
+import apis from './api';
 
 models.sequelize.sync().then(() => {
   const server = express();
@@ -26,7 +25,7 @@ models.sequelize.sync().then(() => {
   }
   server.use(bodyParser.json());
   server.use(bodyParser.urlencoded({ extended: false }));
-  server.use('/api', apiRoutes);
+  server.use('/api', apis);
 
   server.use((err, req, res, next) => {
     if (err.error && typeof err.error.errors === 'object') {

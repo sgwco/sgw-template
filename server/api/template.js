@@ -1,8 +1,8 @@
 import { Router } from 'express';
 import { keyBy } from 'lodash';
-import models from '../../models';
-import { TEMPLATE_PER_PAGE } from '../../../commons/const';
-import { takeScreenshot } from '../../../commons/utils-server';
+import models from '../models';
+import { TEMPLATE_PER_PAGE } from '../../commons/const';
+import { takeScreenshot } from '../../commons/utils-server';
 
 const router = Router();
 
