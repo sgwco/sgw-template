@@ -27,7 +27,7 @@ models.sequelize.sync().then(() => {
   server.use(bodyParser.urlencoded({ extended: false }));
   server.get('/robots.txt', (req, res) => {
     res.type('text/plain');
-    res.send('User-agent: *\nDisallow: /');
+    res.send('User-agent: *\nAllow: /');
   });
   server.use('/api', apis);
 

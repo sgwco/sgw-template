@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import LazyLoad from 'react-lazyload';
 import {
   PortfolioItemStyled,
   TemplateShotPreviewStyled,
@@ -17,19 +18,25 @@ export default class TemplateItem extends React.Component {
       <div className="col-lg-3 col-md-6 col-xs-12">
         <PortfolioItemStyled className="portfolio-item">
           <TemplateShotItemStyled>
-            <TemplateShotPreviewStyled
-              path={`/static/images/uploads/${this.props.template.url}`}
-              extension="jpg"
-              webp
-              alt={template.name}
-            />
+            <LazyLoad height={300}>
+              <TemplateShotPreviewStyled
+                path={`/static/images/uploads/${this.props.template.url}`}
+                extension="jpg"
+                webp
+                alt={template.name}
+              />
+            </LazyLoad>
             <TemplateSingleContentStyled>
               <TemplateFancyTableStyled>
                 <TemplateFancyTableItemStyled>
-                  <Link to={`/preview/${template.url.replace(/\./g, '-')}`}>
-                    <PrimaryButton className="mb-3">Xem demo</PrimaryButton>
-                  </Link>
-                  <SuccessButton>Chọn mẫu này</SuccessButton>
+                  <div>
+                    <Link to={`/preview/${template.url.replace(/\./g, '-')}`}>
+                      <PrimaryButton className="mb-3">Xem demo</PrimaryButton>
+                    </Link>
+                  </div>
+                  <div>
+                    <SuccessButton>Chọn mẫu này</SuccessButton>
+                  </div>
                 </TemplateFancyTableItemStyled>
               </TemplateFancyTableStyled>
             </TemplateSingleContentStyled>

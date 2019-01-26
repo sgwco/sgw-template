@@ -43,17 +43,11 @@ exports.sw = new SWPrecacheWebpackPlugin({
       // This message occurs for every build and is a bit too noisy.
       return;
     }
-    console.log(message);
   },
   minify: true, // minify and uglify the script
   navigateFallback: '/index.html',
   staticFileGlobsIgnorePatterns: [/\.map$/, /asset-manifest\.json$/],
-  runtimeCaching: [
-    {
-      urlPattern: /robots.txt/,
-      handler: 'networkOnly',
-    },
-  ],
+  navigateFallbackWhitelist: [/^(?!\/robots.txt).*/ + '|' + /^(?!\/api).*/],
 });
 
 exports.copy = new CopyWebpackPlugin([
