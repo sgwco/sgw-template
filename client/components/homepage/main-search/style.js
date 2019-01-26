@@ -1,11 +1,14 @@
 import styled from 'styled-components';
+import { Image } from '../../../commons/images';
 
 export const SearchWrapperStyled = styled.div`
   position: relative;
 `;
 
-export const SearchWrapperBackground = styled.img`
+export const SearchWrapperBackground = styled(Image)`
   height: 650px;
+  width: 100%;
+  object-fit: cover;
 `;
 
 export const SearchTextWrapperStyled = styled.div`

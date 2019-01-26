@@ -20,6 +20,7 @@ export default class TemplateItem extends React.Component {
             <TemplateShotPreviewStyled
               path={`/static/images/uploads/${this.props.template.url}`}
               extension="jpg"
+              webp
               alt={template.name}
             />
             <TemplateSingleContentStyled>

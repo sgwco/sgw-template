@@ -29,7 +29,7 @@ export default class HomePage extends React.Component {
         <Header />
         <MainSearch />
         <ServiceMainPage />
-        <WebTemplates />
+        {/* <WebTemplates /> */}
         <ClientsMainPage />
         <Footer />
       </>

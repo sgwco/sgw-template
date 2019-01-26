@@ -1,6 +1,6 @@
 import path from 'path';
 import express from 'express';
-import jwt from 'express-jwt';
+// import jwt from 'express-jwt';
 import bodyParser from 'body-parser';
 import cors from 'cors';
 import models from './models';
@@ -13,9 +13,9 @@ models.sequelize.sync().then(() => {
     server.use(morgan('dev'));
   }
   server.use(cors());
-  const secured = jwt({
-    secret: process.env.JWT_SECRET,
-  });
+  // const secured = jwt({
+  //   secret: process.env.JWT_SECRET,
+  // });
 
   if (process.env.NODE_ENV === 'production') {
     server.use('/static', express.static(path.join(__dirname, '../../static')));
@@ -36,7 +36,7 @@ models.sequelize.sync().then(() => {
     }
   });
 
-  server.use((err, req, res, next) => {
+  /* eslint-disable-line */ server.use((err, req, res, next) => {
     res.status(err.status || 500);
     res.json({ code: err.status || 500, message: err.message });
   });
@@ -49,6 +49,6 @@ models.sequelize.sync().then(() => {
 
   server.listen(55554, err => {
     if (err) throw err;
-    console.log('> Ready on http://localhost:55554');
+    console.log('> Ready on http://localhost:55554'); // eslint-disable-line
   });
 });
