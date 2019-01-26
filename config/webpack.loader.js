@@ -10,6 +10,6 @@ exports.babel = {
 };
 
 exports.file = {
-  test: /\.(png|jpg|gif|svg|eot|ttf|woff|woff2)$/,
+  test: /\.(png|jpg|gif|webp|svg|eot|ttf|woff|woff2)$/,
   loader: 'file-loader',
 };

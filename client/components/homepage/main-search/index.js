@@ -1,6 +1,7 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import background from '../../../assets/images/bg-3.jpg';
+import webpBackground from '../../../assets/images/bg-3.webp';
 import mobileBg from '../../../assets/images/bg-3-mobile.jpg';
 import {
   SearchWrapperStyled,
@@ -18,7 +19,12 @@ export default class MainSearch extends React.Component {
   render() {
     return (
       <SearchWrapperStyled>
-        <SearchWrapperBackground path={background} mobilePath={mobileBg} alt="main background" />
+        <SearchWrapperBackground
+          path={background}
+          webpPath={webpBackground}
+          mobilePath={mobileBg}
+          alt="main background"
+        />
         <SearchTextWrapperStyled className="text-center">
           <SearchMainTextStyled>
             Tìm giao diện website cho doanh nghiệp của bạn

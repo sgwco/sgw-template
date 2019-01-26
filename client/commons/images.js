@@ -1,4 +1,5 @@
 import React from 'react';
+import LazyLoad from 'react-lazyload';
 
 export class Image extends React.Component {
   userAgent = ((navigator && navigator.userAgent) || '').toLowerCase();
@@ -32,12 +33,21 @@ export class Image extends React.Component {
   };
 
   render() {
-    const { path, mobilePath, extension, webp, ...props } = this.props;
+    const { path, webpPath, mobilePath, lazyloadHeight, ...props } = this.props;
     var match = this.userAgent.match(/version\/(\d+).+?safari/);
-    let resultPath = this.mobile() && mobilePath ? mobilePath : path;
-    if (extension) {
-      const resultExtension = match === null && webp && !this.mobile() ? 'webp' : extension;
-      resultPath += '.' + resultExtension;
+    let resultPath = path;
+    if (match === null && webpPath && !this.mobile()) {
+      resultPath = webpPath;
+    } else {
+      resultPath = this.mobile() && mobilePath ? mobilePath : path;
+    }
+
+    if (lazyloadHeight) {
+      return (
+        <LazyLoad height={lazyloadHeight}>
+          <img {...props} src={resultPath} />
+        </LazyLoad>
+      );
     }
 
     return <img {...props} src={resultPath} />;

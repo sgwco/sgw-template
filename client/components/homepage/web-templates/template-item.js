@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import LazyLoad from 'react-lazyload';
 import {
   PortfolioItemStyled,
   TemplateShotPreviewStyled,
@@ -18,14 +17,12 @@ export default class TemplateItem extends React.Component {
       <div className="col-lg-3 col-md-6 col-xs-12">
         <PortfolioItemStyled className="portfolio-item">
           <TemplateShotItemStyled>
-            <LazyLoad height={300}>
-              <TemplateShotPreviewStyled
-                path={`/static/images/uploads/${this.props.template.url}`}
-                extension="jpg"
-                webp
-                alt={template.name}
-              />
-            </LazyLoad>
+            <TemplateShotPreviewStyled
+              path={`/static/images/uploads/${this.props.template.url}.jpg`}
+              webpPath={`/static/images/uploads/${this.props.template.url}.webp`}
+              alt={template.name}
+              lazyloadHeight={300}
+            />
             <TemplateSingleContentStyled>
               <TemplateFancyTableStyled>
                 <TemplateFancyTableItemStyled>
