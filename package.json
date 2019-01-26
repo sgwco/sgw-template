@@ -5,7 +5,7 @@
     "server": "nodemon --exec \"babel-node server/server.js\"",
     "client": "webpack-dev-server --mode development --devtool inline-source-map --hot --inline",
     "build": "npm run build:server && npm run build:client",
-    "build:server": "rm -rf dist && babel -d dist/server server/ --require babel-polyfill && babel -d dist/constants constants/",
+    "build:server": "rm -rf dist && babel -d dist/server server/ && babel -d dist/constants constants/",
     "build:client": "webpack --optimize-minimize --optimize-dedupe -p && cp -r ./client/assets/images  ./dist/client"
   },
   "dependencies": {
@@ -43,8 +43,7 @@
     "sequelize": "^4.42.0",
     "sharp": "^0.21.1",
     "styled-components": "^4.1.3",
-    "styled-jsx": "^3.1.2",
-    "swiper": "^4.4.5"
+    "styled-jsx": "^3.1.2"
   },
   "devDependencies": {
     "@babel/core": "^7.2.2",

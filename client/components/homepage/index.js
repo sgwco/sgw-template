@@ -19,7 +19,6 @@ import {
 library.add(faSearch, faCog, faMobile, faChartLine, faLayerGroup, faSmile, faLock);
 
 import '../../assets/css/bootstrap.min.css';
-import '../../assets/css/swiper.min.css';
 import '../../assets/css/main.css';
 
 export default class HomePage extends React.Component {
@@ -29,7 +28,7 @@ export default class HomePage extends React.Component {
         <Header />
         <MainSearch />
         <ServiceMainPage />
-        {/* <WebTemplates /> */}
+        <WebTemplates />
         <ClientsMainPage />
         <Footer />
       </>

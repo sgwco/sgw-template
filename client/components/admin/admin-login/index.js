@@ -13,10 +13,10 @@ import { connect } from 'react-redux';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { faUser, faLock } from '@fortawesome/free-solid-svg-icons';
-import '../../../assets/css/admin-css.css';
 import { AdminLoginWrapperStyled } from './style';
 import { login } from '../../../actions/auth';
 import 'react-toastify/dist/ReactToastify.css';
+import '../../../assets/css/admin-css.css';
 
 library.add(faUser, faLock);
 

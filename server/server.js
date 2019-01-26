@@ -25,6 +25,10 @@ models.sequelize.sync().then(() => {
   }
   server.use(bodyParser.json());
   server.use(bodyParser.urlencoded({ extended: false }));
+  server.get('/robots.txt', (req, res) => {
+    res.type('text/plain');
+    res.send('User-agent: *\nDisallow: /');
+  });
   server.use('/api', apis);
 
   server.use((err, req, res, next) => {
