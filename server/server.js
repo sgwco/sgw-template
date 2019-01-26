@@ -1,5 +1,6 @@
 import path from 'path';
 import express from 'express';
+import compression from 'compression';
 // import jwt from 'express-jwt';
 import bodyParser from 'body-parser';
 import cors from 'cors';
@@ -13,6 +14,7 @@ models.sequelize.sync().then(() => {
     server.use(morgan('dev'));
   }
   server.use(cors());
+  server.use(compression());
   // const secured = jwt({
   //   secret: process.env.JWT_SECRET,
   // });
@@ -29,6 +31,7 @@ models.sequelize.sync().then(() => {
     res.type('text/plain');
     res.send('User-agent: *\nAllow: /');
   });
+
   server.use('/api', apis);
 
   server.use((err, req, res, next) => {
@@ -46,6 +49,12 @@ models.sequelize.sync().then(() => {
   });
 
   if (process.env.NODE_ENV === 'production') {
+    server.get('*.js', (req, res, next) => {
+      req.url = req.url + '.gz';
+      res.set('Content-Encoding', 'gzip');
+      res.set('Content-Type', 'text/javascript');
+      next();
+    });
     server.get('*', (req, res) => {
       res.sendFile(path.join(__dirname, '../client/index.html'));
     });

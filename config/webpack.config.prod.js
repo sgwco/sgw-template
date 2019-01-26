@@ -14,5 +14,13 @@ module.exports = {
   optimization: {
     minimizer: [plugins.uglifyJs],
   },
-  plugins: [plugins.clean, plugins.html, plugins.manifest, plugins.sw, plugins.copy],
+  plugins: [
+    plugins.clean,
+    plugins.html,
+    plugins.manifest,
+    plugins.sw,
+    plugins.compress,
+    plugins.fontmin,
+    plugins.copy,
+  ],
 };

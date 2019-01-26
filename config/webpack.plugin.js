@@ -4,6 +4,8 @@ const SWPrecacheWebpackPlugin = require('sw-precache-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
+const CompressionPlugin = require('compression-webpack-plugin');
+const FontminPlugin = require('fontmin-webpack');
 const PATHS = require('./webpack.path');
 
 exports.clean = new CleanWebpackPlugin([PATHS.public]);
@@ -53,3 +55,17 @@ exports.sw = new SWPrecacheWebpackPlugin({
 exports.copy = new CopyWebpackPlugin([
   { from: PATHS.pwa }, // define the path of the files to be copied
 ]);
+
+exports.compress = new CompressionPlugin({
+  filename: '[path].gz[query]',
+  algorithm: 'gzip',
+  // test: /\.js$|\.css$|\.html$|\.eot?.+$|\.ttf?.+$|\.woff?.+$|\.svg?.+$/,
+  test: /\.js$|\.css$|\.html$/,
+  threshold: 10240,
+  minRatio: 0.8,
+});
+
+exports.fontmin = new FontminPlugin({
+  autodetect: true, // automatically pull unicode characters from CSS
+  glyphs: ['\uf0c8' /* extra glyphs to include */],
+});
