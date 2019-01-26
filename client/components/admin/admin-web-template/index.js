@@ -12,15 +12,13 @@ import {
   PaginationLink,
 } from 'reactstrap';
 import { connect } from 'react-redux';
-import moment from 'moment';
-import { isEmpty } from 'lodash';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { getAdminTemplatesSelector, getAdminTotalPageSelector } from '../../../selectors/templates';
 import { ADMIN_SELECT_TEMPLATE_PAGE } from '../../../reducers/admin';
 import AdminWebTemplateForm from './admin-web-template-form';
 import EditableCell from '../../../commons/editable-cell';
 import { WEB_CATEGORY } from '../../../../constants/enum';
-import { formatNumber } from '../../../commons/utils';
+import { formatNumber, isEmpty, formatDate } from '../../../../constants/utils';
 import AdminLayout from '../admin.layout';
 import { GET_TEMPLATES, EDIT_TEMPLATE, DELETE_TEMPLATE } from '../../../actions/template';
 import { AdminTemplateThumbnail, AdminRowInProgress } from '../admin.style';
@@ -126,7 +124,7 @@ class AdminWebTemplate extends React.Component {
         >
           {template.category.split(',').map(this.renderTemplateCategoryItem)}
         </EditableCell>
-        <td>{moment(template.createdAt).format('DD/MM/YYYY')}</td>
+        <td>{formatDate(new Date(template.createdAt))}</td>
         <td className="d-flex flex-row justify-content-around">
           <Button color="primary" id={`popover-${id}`} onClick={() => this.togglePopover(id)}>
             Xem mẫu

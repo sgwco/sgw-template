@@ -1,5 +1,5 @@
 import React from 'react';
-import { isEmpty } from 'lodash';
+import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { Navbar, Nav, NavbarBrand, Button, NavItem, NavLink } from 'reactstrap';
 import { library } from '@fortawesome/fontawesome-svg-core';
@@ -10,6 +10,7 @@ import logo from '../../assets/images/logo-rgb.png';
 import { getTemplateByUrl } from '../../actions/template';
 import '../../assets/css/bootstrap.min.css';
 import '../../assets/css/main.css';
+import { isEmpty } from '../../../constants/utils';
 
 library.add(faTimes);
 
@@ -40,7 +41,7 @@ class Preview extends React.Component {
       <div>
         <PreviewNavbarStyled>
           <Navbar dark>
-            <NavbarBrand href="/">
+            <NavbarBrand tag={props => <Link to="/" {...props} />}>
               <img
                 className="navbar-brand-full"
                 src={logo}

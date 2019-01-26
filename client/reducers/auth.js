@@ -1,6 +1,6 @@
 import { LOGIN_SUCCESS } from '../actions/auth';
-import { get } from 'lodash';
 import { REHYDRATE } from 'redux-persist';
+import { get } from '../../constants/utils';
 
 const initState = {
   accessToken: '',

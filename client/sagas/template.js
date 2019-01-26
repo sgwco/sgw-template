@@ -1,6 +1,5 @@
 import { takeEvery, call, put } from 'redux-saga/effects';
 import axios from 'axios';
-import { get } from 'lodash';
 import { toast } from 'react-toastify';
 import history from '../history';
 import {
@@ -17,6 +16,7 @@ import {
   EDIT_TEMPLATE,
   DELETE_TEMPLATE,
 } from '../actions/template';
+import { get } from '../../constants/utils';
 
 export function* getTemplates() {
   const results = yield call(axios.get, '/api/template');

@@ -1,4 +1,3 @@
-import { get, clone } from 'lodash';
 import {
   GET_TEMPLATES_SUCCESS,
   SELECT_TEMPLATE_CATEGORY,
@@ -12,6 +11,7 @@ import {
   DELETE_TEMPLATE_SUCCESS,
   GET_TEMPLATE_BY_URL_SUCCESS,
 } from '../actions/template';
+import { get, clone } from '../../constants/utils';
 
 const initState = {
   selectedTemplateCategory: '',

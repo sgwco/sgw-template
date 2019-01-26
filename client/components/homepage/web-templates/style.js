@@ -1,11 +1,12 @@
 import styled, { keyframes } from 'styled-components';
 import { EffectBtn } from '../../style';
+import { Image } from '../../../commons/images';
 
 export const PortfolioItemStyled = styled.div`
   padding: 10px 0;
 `;
 
-export const TemplateShotPreviewStyled = styled.img`
+export const TemplateShotPreviewStyled = styled(Image)`
   width: 100%;
 `;
 

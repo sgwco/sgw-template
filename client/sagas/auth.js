@@ -1,9 +1,9 @@
 import { takeEvery, call, put } from 'redux-saga/effects';
-import { get } from 'lodash';
 import { toast } from 'react-toastify';
 import axios from 'axios';
 import history from '../history';
 import { LOGIN, LOGIN_SUCCESS } from '../actions/auth';
+import { get } from '../../constants/utils';
 
 export function* login({ email, password }) {
   try {

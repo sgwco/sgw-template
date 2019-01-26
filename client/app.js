@@ -2,9 +2,9 @@ import React from 'react';
 import { Provider } from 'react-redux';
 import { PersistGate } from 'redux-persist/integration/react';
 import { Switch, Route, Router, Redirect } from 'react-router-dom';
-import { get } from 'lodash';
 import history from './history';
 import { store, persistor } from './store';
+import { get } from '../constants/utils';
 
 const HomePage = React.lazy(() => import('./components/homepage'));
 const Preview = React.lazy(() => import('./components/preview'));
@@ -39,11 +39,7 @@ export default class App extends React.Component {
                 <Route path="/preview/:url" exact render={props => <Preview {...props} />} />
                 <ProtectedRoute path="/admin" exact component={AdminHomepage} />
                 <Route path="/admin/login" exact render={props => <AdminLogin {...props} />} />
-                <Route
-                  path="/admin/web-template"
-                  exact
-                  render={props => <AdminWebTemplate {...props} />}
-                />
+                <ProtectedRoute path="/admin/web-template" exact component={AdminWebTemplate} />
               </Switch>
             </React.Suspense>
           </Router>

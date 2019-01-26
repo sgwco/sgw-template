@@ -1,6 +1,5 @@
 import React from 'react';
 import { Container, Row, Pagination, PaginationItem } from 'reactstrap';
-import { isEmpty } from 'lodash';
 import { connect } from 'react-redux';
 import TemplateItem from './template-item';
 import { WEB_CATEGORY } from '../../../../constants/enum';
@@ -13,6 +12,7 @@ import {
   PaginationLinkBtn,
 } from '../../style';
 import { TemplateBtnFilter } from './style';
+import { isEmpty } from '../../../../constants/utils';
 
 function mapStateToProps(state) {
   return {

@@ -1,5 +1,4 @@
 import React from 'react';
-import { safari } from 'is_js';
 import { Link } from 'react-router-dom';
 import {
   PortfolioItemStyled,
@@ -12,8 +11,6 @@ import {
 import { PrimaryButton, SuccessButton } from '../../style';
 
 export default class TemplateItem extends React.Component {
-  isSafari = safari();
-
   render() {
     const { template } = this.props;
     return (
@@ -21,9 +18,8 @@ export default class TemplateItem extends React.Component {
         <PortfolioItemStyled className="portfolio-item">
           <TemplateShotItemStyled>
             <TemplateShotPreviewStyled
-              src={`/static/images/uploads/${this.props.template.url}.${
-                this.isSafari ? 'jpg' : 'webp'
-              }`}
+              path={`/static/images/uploads/${this.props.template.url}`}
+              extension="jpg"
               alt={template.name}
             />
             <TemplateSingleContentStyled>
