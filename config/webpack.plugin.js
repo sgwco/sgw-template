@@ -24,6 +24,9 @@ exports.uglifyJs = new UglifyJsPlugin({
     compress: false,
     ecma: 6,
     mangle: true,
+    output: {
+      comments: false,
+    },
   },
   sourceMap: true,
 });
@@ -45,6 +48,12 @@ exports.sw = new SWPrecacheWebpackPlugin({
   minify: true, // minify and uglify the script
   navigateFallback: '/index.html',
   staticFileGlobsIgnorePatterns: [/\.map$/, /asset-manifest\.json$/],
+  runtimeCaching: [
+    {
+      urlPattern: /robots.txt/,
+      handler: 'networkOnly',
+    },
+  ],
 });
 
 exports.copy = new CopyWebpackPlugin([
