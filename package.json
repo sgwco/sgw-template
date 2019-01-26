@@ -6,7 +6,7 @@
     "client": "webpack-dev-server --mode development --devtool inline-source-map --hot --inline --env=dev",
     "build": "npm run build:server && npm run build:client",
     "build:server": "rm -rf dist && babel -d dist/server server/ && babel -d dist/constants constants/",
-    "build:client": "webpack --env=prod --optimize-minimize --optimize-dedupe -p"
+    "build:client": "webpack --env=prod -p"
   },
   "dependencies": {
     "@babel/cli": "^7.2.3",
@@ -57,6 +57,7 @@
     "babel-eslint": "^10.0.1",
     "babel-loader": "^8.0.5",
     "clean-webpack-plugin": "^1.0.0",
+    "copy-webpack-plugin": "^4.6.0",
     "css-loader": "^2.1.0",
     "eslint": "^5.10.0",
     "eslint-plugin-react": "^7.11.1",
@@ -66,6 +67,7 @@
     "nodemon": "^1.18.9",
     "style-loader": "^0.23.1",
     "sw-precache-webpack-plugin": "^0.11.5",
+    "uglifyjs-webpack-plugin": "^2.1.1",
     "webpack": "^4.28.3",
     "webpack-cli": "^3.2.0",
     "webpack-dev-server": "^3.1.14",

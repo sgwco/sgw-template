@@ -23,5 +23,5 @@ module.exports = {
       },
     },
   },
-  plugins: [plugins.clean, plugins.html, plugins.manifest, plugins.sw],
+  plugins: [plugins.clean, plugins.html],
 };

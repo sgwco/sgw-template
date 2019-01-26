@@ -1,7 +1,9 @@
+const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 const ManifestPlugin = require('webpack-manifest-plugin');
 const SWPrecacheWebpackPlugin = require('sw-precache-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 const PATHS = require('./webpack.path');
 
 exports.clean = new CleanWebpackPlugin([PATHS.public]);
@@ -13,6 +15,17 @@ exports.html = new HtmlWebpackPlugin({
 
 exports.manifest = new ManifestPlugin({
   fileName: 'asset-manifest.json',
+});
+
+exports.uglifyJs = new UglifyJsPlugin({
+  cache: true,
+  parallel: true,
+  uglifyOptions: {
+    compress: false,
+    ecma: 6,
+    mangle: true,
+  },
+  sourceMap: true,
 });
 
 exports.sw = new SWPrecacheWebpackPlugin({
@@ -33,3 +46,7 @@ exports.sw = new SWPrecacheWebpackPlugin({
   navigateFallback: '/index.html',
   staticFileGlobsIgnorePatterns: [/\.map$/, /asset-manifest\.json$/],
 });
+
+exports.copy = new CopyWebpackPlugin([
+  { from: PATHS.pwa }, // define the path of the files to be copied
+]);

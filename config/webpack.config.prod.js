@@ -11,5 +11,8 @@ module.exports = {
   module: {
     rules: [loaders.babel, loaders.css, loaders.file],
   },
-  plugins: [plugins.clean, plugins.html, plugins.manifest, plugins.sw],
+  optimization: {
+    minimizer: [plugins.uglifyJs],
+  },
+  plugins: [plugins.clean, plugins.html, plugins.manifest, plugins.sw, plugins.copy],
 };
