@@ -2,18 +2,11 @@ const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 const ManifestPlugin = require('webpack-manifest-plugin');
 const SWPrecacheWebpackPlugin = require('sw-precache-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const CompressionPlugin = require('compression-webpack-plugin');
-const FontminPlugin = require('fontmin-webpack');
 const PATHS = require('./webpack.path');
 
 exports.clean = new CleanWebpackPlugin([PATHS.public]);
-
-exports.html = new HtmlWebpackPlugin({
-  template: PATHS.client + '/index.html',
-  favicon: PATHS.client + '/assets/images/favicon.png',
-});
 
 exports.manifest = new ManifestPlugin({
   fileName: 'asset-manifest.json',
@@ -63,9 +56,4 @@ exports.compress = new CompressionPlugin({
   test: /\.js$|\.css$|\.html$/,
   threshold: 10240,
   minRatio: 0.8,
-});
-
-exports.fontmin = new FontminPlugin({
-  autodetect: true, // automatically pull unicode characters from CSS
-  glyphs: ['\uf0c8' /* extra glyphs to include */],
 });

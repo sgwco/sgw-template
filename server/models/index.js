@@ -1,6 +1,4 @@
 require('dotenv').config();
-import fs from 'fs';
-import path from 'path';
 import Sequelize from 'sequelize';
 
 const sequelize = new Sequelize(process.env.DB_NAME, process.env.DB_USER, process.env.DB_PASSWORD, {
@@ -12,11 +10,14 @@ const sequelize = new Sequelize(process.env.DB_NAME, process.env.DB_USER, proces
 });
 
 const db = {};
-const modelFiles = fs
-  .readdirSync(__dirname)
-  .filter(file => file.indexOf('.') >= 0 && file !== 'index.js');
-for (let file of modelFiles) {
-  const model = sequelize.import(path.join(__dirname, file));
+const modules = [
+  require('./bill-detail'),
+  require('./bill'),
+  require('./template'),
+  require('./user'),
+];
+for (let i = 0; i < modules.length; i++) {
+  const model = modules[i].default(sequelize, Sequelize);
   db[model.name] = model;
 }
 

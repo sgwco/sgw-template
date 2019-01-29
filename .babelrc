@@ -1,11 +1,32 @@
 {
   "presets": [
     "@babel/preset-env",
-    "@babel/preset-react"
+    "next/babel"
   ],
   "plugins": [
+    [
+      "styled-components",
+      {
+        "ssr": true,
+        "displayName": true,
+        "preprocess": false
+      }
+    ],
     "@babel/plugin-transform-runtime",
     "@babel/plugin-proposal-class-properties",
-    "@babel/plugin-syntax-dynamic-import"
+    [
+      "module-resolver",
+      { 
+        "root": ["./"], 
+        "cwd": "packagejson", 
+        "alias": {
+          "components": "./components",
+          "commons": "./commons",
+          "store": "./store",
+          "lib": "./lib",
+          "routes": "./routes",
+        }, 
+      }
+    ]
   ]
 }

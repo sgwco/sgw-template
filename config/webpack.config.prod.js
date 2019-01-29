@@ -6,21 +6,22 @@ module.exports = {
   entry: [PATHS.client],
   output: {
     path: PATHS.public,
-    filename: '[name].[chunkhash].js',
+    filename: '[name].js',
+    publicPath: '/',
   },
   module: {
     rules: [loaders.babel, loaders.css, loaders.file],
   },
   optimization: {
     minimizer: [plugins.uglifyJs],
+    splitChunks: {
+      name: 'manifest',
+      minChunks: Infinity,
+    },
   },
   plugins: [
-    plugins.clean,
-    plugins.html,
     plugins.manifest,
-    plugins.sw,
-    plugins.compress,
-    plugins.fontmin,
+    // plugins.sw,
     plugins.copy,
   ],
 };

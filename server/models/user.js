@@ -58,7 +58,7 @@ export default function(sequelize, Sequelize) {
     }
   );
 
-  users.associate = function(models) {};
+  // users.associate = function(models) {};
 
   return users;
 }

@@ -1,8 +1,8 @@
 import { Router } from 'express';
 import models from '../models';
-import { TEMPLATE_PER_PAGE } from '../../constants/const';
+import { TEMPLATE_PER_PAGE } from 'commons/const';
 import { takeScreenshot } from '../phantom';
-import { keyBy } from '../../constants/utils';
+import { keyBy } from 'commons/utils';
 
 const router = Router();
 

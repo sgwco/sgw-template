@@ -1,23 +1,14 @@
-import React from 'react';
-import { Provider } from 'react-redux';
-import { PersistGate } from 'redux-persist/integration/react';
-import { Router } from 'react-router-dom';
-import history from './history';
-import { store, persistor } from './store';
-import App from './app';
+import UniversalRouter from 'universal-router';
+import routes from './routes';
 
-export default class AppRouter extends React.Component {
-  render() {
-    return (
-      <Provider store={store}>
-        <PersistGate persistor={persistor}>
-          <Router history={history}>
-            <React.Suspense fallback={null}>
-              <App />
-            </React.Suspense>
-          </Router>
-        </PersistGate>
-      </Provider>
-    );
-  }
-}
+export default new UniversalRouter(routes, {
+  resolveRoute(context, params) {
+    if (typeof context.route.load === 'function') {
+      return context.route.load().then(action => action.default(context, params));
+    }
+    if (typeof context.route.action === 'function') {
+      return context.route.action(context, params);
+    }
+    return undefined;
+  },
+});

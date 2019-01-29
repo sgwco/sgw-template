@@ -7,6 +7,7 @@ module.exports = {
   output: {
     path: PATHS.public,
     filename: '[name].bundle.js',
+    publicPath: '/',
   },
   module: {
     rules: [loaders.babel, loaders.css, loaders.file],
@@ -23,5 +24,5 @@ module.exports = {
       },
     },
   },
-  plugins: [plugins.clean, plugins.html],
+  plugins: [plugins.clean],
 };
